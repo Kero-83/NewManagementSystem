@@ -1,0 +1,9 @@
+/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Profile/CMakeFiles/Login.dir
+/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Profile/CMakeFiles/edit_cache.dir
+/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Profile/CMakeFiles/rebuild_cache.dir
+/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Profile/CMakeFiles/list_install_components.dir
+/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Profile/CMakeFiles/install.dir
+/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Profile/CMakeFiles/install/local.dir
+/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Profile/CMakeFiles/install/strip.dir
+/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Profile/CMakeFiles/Login_autogen_timestamp_deps.dir
+/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Profile/CMakeFiles/Login_autogen.dir
