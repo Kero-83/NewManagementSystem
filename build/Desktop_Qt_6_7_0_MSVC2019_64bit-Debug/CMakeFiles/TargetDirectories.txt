@@ -1,0 +1,8 @@
+E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/Login.dir
+E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/edit_cache.dir
+E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/rebuild_cache.dir
+E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/list_install_components.dir
+E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/install.dir
+E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/install/local.dir
+E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/Login_autogen_timestamp_deps.dir
+E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/Login_autogen.dir

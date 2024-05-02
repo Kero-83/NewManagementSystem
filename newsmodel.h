@@ -6,6 +6,7 @@ struct Rate {
     int rate;
 };
 
+
 class NewsModel
 {
 private:
@@ -28,6 +29,7 @@ public:
     string getDate();
     string getCategory();
     double getAvgRate();
+    static void addnew(NewsModel);
 
 };
 

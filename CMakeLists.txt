@@ -32,6 +32,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         newsbasedon.h newsbasedon.cpp newsbasedon.ui
         news.h news.cpp news.ui
         newsmodel.h newsmodel.cpp
+        adminwindow.h adminwindow.cpp adminwindow.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Login APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

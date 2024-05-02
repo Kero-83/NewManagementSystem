@@ -1,5 +1,5 @@
 #include "newsmodel.h"
-
+#include "admin.h"
 NewsModel::NewsModel()
 {}
 
@@ -60,4 +60,7 @@ double NewsModel::getAvgRate()
         count++;
     }
     return ((count) ? (totalRates / count) : 0.0);
+}
+void NewsModel::addnew(NewsModel New){
+    Admin::news.push_back(New);
 }

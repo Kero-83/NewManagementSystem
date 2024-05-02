@@ -21,10 +21,8 @@ User::User(string firstname,string lastname,string username,string password,stri
     this->email=email;
 }
 void User::Search() {}
-void User::ShowNew(BasedOn basedOn)
+void User::ShowNewBasedOnCategory()
 {
-
-
 
 }
 void User::RateNew() {}

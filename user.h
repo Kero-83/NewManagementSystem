@@ -1,13 +1,8 @@
 #ifndef USER_H
 #define USER_H
 #include "stdafx.h"
+#include"newsmodel.h"
 using namespace std;
-enum class BasedOn
-{
-    time,
-    category,
-    trending
-};
 class User
 {
 private:
@@ -19,14 +14,15 @@ private:
     string email;
 
 public:
+    vector<NewsModel>rate;
     User();
     User( string username,string password, string region, string email);
     User(string firstname,string lastname,string username,string password,string email);
     String category ;
-    double rate ;
+    //double rate ;
 
     void Search();
-    void ShowNew(BasedOn basedOn);
+    void ShowNewBasedOnCategory();
     void RateNew();
     void Bookmark();
 

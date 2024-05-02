@@ -18,6 +18,10 @@ public:
     int rateCount= 0 ;
     double  RateAverage(double rate) ;
     ~News();
+    void displayNew();
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::News *ui;

@@ -1,0 +1,114 @@
+# ninja log v5
+12	2571	7363436350932305	Login_autogen/timestamp	da6952d4f45a6c92
+12	2571	7363436350932305	Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+12	2571	7363436350932305	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/timestamp	da6952d4f45a6c92
+12	2571	7363436350932305	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+2572	15571	7363436481610150	CMakeFiles/Login.dir/Login_autogen/mocs_compilation.cpp.obj	45a03d748669c2a0
+2634	15611	7363436481862750	CMakeFiles/Login.dir/user.cpp.obj	1465a57a5845ab48
+2686	15630	7363436481268551	CMakeFiles/Login.dir/news.cpp.obj	13cb3b1ec5f24c62
+2609	15636	7363436481871821	CMakeFiles/Login.dir/signup.cpp.obj	35eb300aff63dec7
+2646	15641	7363436481891756	CMakeFiles/Login.dir/myprofile.cpp.obj	feae8de94de6b106
+2585	15649	7363436481590217	CMakeFiles/Login.dir/main.cpp.obj	2383cd547d0e9f11
+2622	15749	7363436483447328	CMakeFiles/Login.dir/homepage.cpp.obj	61253ca58478429f
+2659	15771	7363436483759001	CMakeFiles/Login.dir/admin.cpp.obj	5006612ce46b8219
+2597	15952	7363436485592816	CMakeFiles/Login.dir/login.cpp.obj	981cdf8aa624454d
+2671	16383	7363436489904164	CMakeFiles/Login.dir/newsbasedon.cpp.obj	47dda940c596b50d
+15611	19892	7363436525077756	CMakeFiles/Login.dir/adminwindow.cpp.obj	3aedf77e69f7b2f6
+15578	21434	7363436540434815	CMakeFiles/Login.dir/newsmodel.cpp.obj	62f47021388377a8
+21435	22433	7363436550087842	Login.exe	db5cc6717269c6d1
+21	416	7363439870924147	Login_autogen/timestamp	da6952d4f45a6c92
+21	416	7363439870924147	Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+21	416	7363439870924147	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/timestamp	da6952d4f45a6c92
+21	416	7363439870924147	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+505	8785	7363439954524286	CMakeFiles/Login.dir/adminwindow.cpp.obj	3aedf77e69f7b2f6
+447	10708	7363439973666926	CMakeFiles/Login.dir/homepage.cpp.obj	61253ca58478429f
+439	10760	7363439974089102	CMakeFiles/Login.dir/signup.cpp.obj	35eb300aff63dec7
+423	10864	7363439975311103	CMakeFiles/Login.dir/main.cpp.obj	2383cd547d0e9f11
+455	10905	7363439975725037	CMakeFiles/Login.dir/myprofile.cpp.obj	feae8de94de6b106
+431	10954	7363439976216168	CMakeFiles/Login.dir/login.cpp.obj	981cdf8aa624454d
+480	10985	7363439976526423	CMakeFiles/Login.dir/news.cpp.obj	13cb3b1ec5f24c62
+463	11146	7363439978151676	CMakeFiles/Login.dir/newsbasedon.cpp.obj	47dda940c596b50d
+11146	11602	7363439981983662	Login.exe	db5cc6717269c6d1
+18	748	7363443888931925	Login_autogen/timestamp	da6952d4f45a6c92
+18	748	7363443888931925	Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+18	748	7363443888931925	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/timestamp	da6952d4f45a6c92
+18	748	7363443888931925	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+819	9503	7363443977298153	CMakeFiles/Login.dir/adminwindow.cpp.obj	3aedf77e69f7b2f6
+756	11753	7363443999588371	CMakeFiles/Login.dir/main.cpp.obj	2383cd547d0e9f11
+779	11854	7363444000664290	CMakeFiles/Login.dir/homepage.cpp.obj	61253ca58478429f
+787	11909	7363444001301310	CMakeFiles/Login.dir/myprofile.cpp.obj	feae8de94de6b106
+771	11928	7363444001541572	CMakeFiles/Login.dir/signup.cpp.obj	35eb300aff63dec7
+763	12210	7363444004392527	CMakeFiles/Login.dir/login.cpp.obj	981cdf8aa624454d
+748	12343	7363444005760390	CMakeFiles/Login.dir/Login_autogen/mocs_compilation.cpp.obj	45a03d748669c2a0
+811	12592	7363444008238363	CMakeFiles/Login.dir/news.cpp.obj	13cb3b1ec5f24c62
+802	12702	7363444009356343	CMakeFiles/Login.dir/newsbasedon.cpp.obj	47dda940c596b50d
+12702	13265	7363444014179142	Login.exe	db5cc6717269c6d1
+20	732	7363446491371472	Login_autogen/timestamp	da6952d4f45a6c92
+20	732	7363446491371472	Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+20	732	7363446491371472	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/timestamp	da6952d4f45a6c92
+20	732	7363446491371472	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+797	9588	7363446580645940	CMakeFiles/Login.dir/adminwindow.cpp.obj	3aedf77e69f7b2f6
+772	11422	7363446598622604	CMakeFiles/Login.dir/myprofile.cpp.obj	feae8de94de6b106
+764	11432	7363446598959809	CMakeFiles/Login.dir/homepage.cpp.obj	61253ca58478429f
+756	11736	7363446602080683	CMakeFiles/Login.dir/signup.cpp.obj	35eb300aff63dec7
+740	11874	7363446603477976	CMakeFiles/Login.dir/main.cpp.obj	2383cd547d0e9f11
+733	11992	7363446604675544	CMakeFiles/Login.dir/Login_autogen/mocs_compilation.cpp.obj	45a03d748669c2a0
+748	12201	7363446606777890	CMakeFiles/Login.dir/login.cpp.obj	981cdf8aa624454d
+789	12374	7363446608509430	CMakeFiles/Login.dir/news.cpp.obj	13cb3b1ec5f24c62
+780	12907	7363446613864860	CMakeFiles/Login.dir/newsbasedon.cpp.obj	47dda940c596b50d
+12907	13495	7363446618512162	Login.exe	db5cc6717269c6d1
+26	965	7363448931097660	Login_autogen/timestamp	da6952d4f45a6c92
+26	965	7363448931097660	Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+26	965	7363448931097660	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/timestamp	da6952d4f45a6c92
+26	965	7363448931097660	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+997	13140	7363449053404260	CMakeFiles/Login.dir/homepage.cpp.obj	61253ca58478429f
+1060	13165	7363449053876789	CMakeFiles/Login.dir/news.cpp.obj	13cb3b1ec5f24c62
+965	13170	7363449053818330	CMakeFiles/Login.dir/Login_autogen/mocs_compilation.cpp.obj	45a03d748669c2a0
+973	13179	7363449054072826	CMakeFiles/Login.dir/main.cpp.obj	2383cd547d0e9f11
+1005	13284	7363449055241930	CMakeFiles/Login.dir/myprofile.cpp.obj	feae8de94de6b106
+989	13352	7363449055921577	CMakeFiles/Login.dir/signup.cpp.obj	35eb300aff63dec7
+1069	13617	7363449058558786	CMakeFiles/Login.dir/adminwindow.cpp.obj	3aedf77e69f7b2f6
+1031	13720	7363449059640911	CMakeFiles/Login.dir/newsbasedon.cpp.obj	47dda940c596b50d
+981	13839	7363449060848982	CMakeFiles/Login.dir/login.cpp.obj	981cdf8aa624454d
+13840	14357	7363449065218585	Login.exe	db5cc6717269c6d1
+21	284	7363449489891386	Login_autogen/timestamp	da6952d4f45a6c92
+21	284	7363449489891386	Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+21	284	7363449489891386	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/timestamp	da6952d4f45a6c92
+21	284	7363449489891386	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+307	10756	7363449594285437	CMakeFiles/Login.dir/homepage.cpp.obj	61253ca58478429f
+291	10763	7363449594454977	CMakeFiles/Login.dir/login.cpp.obj	981cdf8aa624454d
+360	10769	7363449594095590	CMakeFiles/Login.dir/adminwindow.cpp.obj	3aedf77e69f7b2f6
+349	10814	7363449595174595	CMakeFiles/Login.dir/news.cpp.obj	13cb3b1ec5f24c62
+299	11030	7363449597365819	CMakeFiles/Login.dir/signup.cpp.obj	35eb300aff63dec7
+319	11034	7363449597396555	CMakeFiles/Login.dir/myprofile.cpp.obj	feae8de94de6b106
+336	11302	7363449600080502	CMakeFiles/Login.dir/newsbasedon.cpp.obj	47dda940c596b50d
+11302	11839	7363449604470466	Login.exe	db5cc6717269c6d1
+27	584	7363450930619625	Login_autogen/timestamp	da6952d4f45a6c92
+27	584	7363450930619625	Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+27	584	7363450930619625	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/timestamp	da6952d4f45a6c92
+27	584	7363450930619625	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+614	14457	7363451069582868	CMakeFiles/Login.dir/homepage.cpp.obj	61253ca58478429f
+622	14476	7363451069714660	CMakeFiles/Login.dir/myprofile.cpp.obj	feae8de94de6b106
+646	14503	7363451070196540	CMakeFiles/Login.dir/adminwindow.cpp.obj	3aedf77e69f7b2f6
+638	14508	7363451070275879	CMakeFiles/Login.dir/news.cpp.obj	13cb3b1ec5f24c62
+591	14645	7363451071675325	CMakeFiles/Login.dir/login.cpp.obj	981cdf8aa624454d
+605	14768	7363451072925578	CMakeFiles/Login.dir/signup.cpp.obj	35eb300aff63dec7
+630	15009	7363451075340063	CMakeFiles/Login.dir/newsbasedon.cpp.obj	47dda940c596b50d
+15010	15544	7363451079916648	Login.exe	db5cc6717269c6d1
+28	4993	7363481977200912	Login_autogen/timestamp	da6952d4f45a6c92
+28	4993	7363481977200912	Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+28	4993	7363481977200912	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/timestamp	da6952d4f45a6c92
+28	4993	7363481977200912	E:/my projects/NewManagementSystem/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/Login_autogen/mocs_compilation.cpp	da6952d4f45a6c92
+5041	22057	7363482150480554	CMakeFiles/Login.dir/myprofile.cpp.obj	feae8de94de6b106
+5025	22093	7363482150595463	CMakeFiles/Login.dir/homepage.cpp.obj	61253ca58478429f
+5033	22106	7363482150860749	CMakeFiles/Login.dir/user.cpp.obj	1465a57a5845ab48
+5076	22111	7363482150950524	CMakeFiles/Login.dir/news.cpp.obj	13cb3b1ec5f24c62
+5001	22150	7363482151368202	CMakeFiles/Login.dir/main.cpp.obj	2383cd547d0e9f11
+4993	22352	7363482153493691	CMakeFiles/Login.dir/Login_autogen/mocs_compilation.cpp.obj	45a03d748669c2a0
+5050	22361	7363482153655141	CMakeFiles/Login.dir/admin.cpp.obj	5006612ce46b8219
+5009	22389	7363482153948048	CMakeFiles/Login.dir/login.cpp.obj	981cdf8aa624454d
+5058	22575	7363482155873333	CMakeFiles/Login.dir/newsbasedon.cpp.obj	47dda940c596b50d
+5017	22578	7363482155893285	CMakeFiles/Login.dir/signup.cpp.obj	35eb300aff63dec7
+22058	27660	7363482206776340	CMakeFiles/Login.dir/newsmodel.cpp.obj	62f47021388377a8
+22093	28072	7363482210880078	CMakeFiles/Login.dir/adminwindow.cpp.obj	3aedf77e69f7b2f6
+28073	28787	7363482217184314	Login.exe	db5cc6717269c6d1
