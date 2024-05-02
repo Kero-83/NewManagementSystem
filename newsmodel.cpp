@@ -1,5 +1,5 @@
 #include "newsmodel.h"
-
+#include "admin.h"
 NewsModel::NewsModel()
 {}
 
@@ -14,7 +14,10 @@ NewsModel::NewsModel(string title, string description, string date, string categ
 
 NewsModel::NewsModel(string title, string description, string date, string category)
 {
-    NewsModel(title, description, date, category, 0.0);
+    this->title=title;
+    this->description;
+    this->date=date;
+    this->category=category;
 }
 
 void NewsModel::setTitle(string title)
@@ -55,4 +58,7 @@ string NewsModel::getDate()
 double NewsModel::getAvgRate()
 {
     return avgRate;
+}
+void NewsModel::addnew(NewsModel New){
+    Admin::news.push_back(New);
 }

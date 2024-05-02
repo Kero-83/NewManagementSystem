@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="Rate">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>180</y>
+      <x>80</x>
+      <y>170</y>
       <width>141</width>
       <height>61</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QPushButton" name="Category">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>180</y>
+      <x>330</x>
+      <y>170</y>
       <width>151</width>
       <height>61</height>
      </rect>
@@ -56,34 +56,34 @@
    <widget class="QComboBox" name="CaegoryList">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>190</y>
+      <x>220</x>
+      <y>260</y>
       <width>101</width>
       <height>31</height>
      </rect>
     </property>
     <item>
      <property name="text">
-      <string>Sport</string>
+      <string/>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Health</string>
+      <string/>
      </property>
     </item>
    </widget>
-   <widget class="QPushButton" name="OK">
+   <widget class="QPushButton" name="showNew">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>280</y>
-      <width>61</width>
+      <x>200</x>
+      <y>460</y>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Ok</string>
+     <string>Show New</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -99,6 +99,81 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:700; font-style:italic; color:#000000;&quot;&gt;Show News Based on&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_back">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>470</y>
+      <width>83</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>back</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>270</y>
+      <width>101</width>
+      <height>28</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>250</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select category :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>270</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>select title :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>340</y>
+      <width>101</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>show titles</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>310</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select New:</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -106,7 +181,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
@@ -143,6 +218,22 @@
     <hint type="destinationlabel">
      <x>209</x>
      <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Rate</sender>
+   <signal>clicked()</signal>
+   <receiver>Category</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>342</x>
+     <y>237</y>
     </hint>
    </hints>
   </connection>

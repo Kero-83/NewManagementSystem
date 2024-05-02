@@ -2,6 +2,7 @@
 #define NEWSMODEL_H
 #include "stdafx.h"
 
+
 class NewsModel
 {
 private:
@@ -9,6 +10,7 @@ private:
     string description;
     string date;
     string category;
+    int rate;
     double avgRate;
 public:
     NewsModel();
@@ -24,6 +26,7 @@ public:
     string getDate();
     string getCategory();
     double getAvgRate();
+    static void addnew(NewsModel);
 
 };
 

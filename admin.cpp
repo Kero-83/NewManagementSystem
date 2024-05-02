@@ -23,7 +23,7 @@ void Admin::WriteNewsDataInFiles()
         return;
     }
     for (int i = 0; i < news.size(); i++) {
-        file << news[i].getTitle() << news[i].getDescription() << news[i].getDate() << news[i].getCategory() << news[i].getAvgRate() << ((i == (news.size() - 1)) ? " " : "\n");
+        file << news[i].getTitle()<<" " << news[i].getDescription()<<" " << news[i].getDate() <<" "<< news[i].getCategory()<<" " << news[i].getAvgRate() << ((i == (news.size() - 1)) ? " " : "\n");
     }
     qDebug() << "1243";
     file.close();
