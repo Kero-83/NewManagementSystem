@@ -12,6 +12,8 @@ NewsModel::NewsModel(string title, string description, string date, string categ
     this->avgRate = avgRate;
     this->ratedUsersIds = ratedUsersIds;
     this->rates = rates;
+    buildTitles();
+    buildKeyWords();
 }
 NewsModel::NewsModel(string title, string description, string date, string category, double avgRate)
 {
@@ -56,12 +58,34 @@ string NewsModel::getDate()
 }
 double NewsModel::getAvgRate()
 {
-    double totalRates = 0;
-    double count = 0;
-
-    return ((count) ? (totalRates / count) : 0.0);
+    return avgRate;
 }
 
 void NewsModel::addnew(){
     Admin::news.push_back(*this);
+}
+void NewsModel::buildKeyWords()
+{
+    int cur = 0;
+    for(int i = 0; i < description.size(); i++)
+    {
+        if(isspace(description[i]))
+        {
+            keywords.insert(description.substr(cur, i));
+            cur = i;
+        }
+    }
+}
+
+void NewsModel::buildTitles()
+{
+    int cur = 0;
+    for(int i = 0; i < title.size(); i++)
+    {
+        if(isspace(title[i]))
+        {
+            titles.insert(title.substr(cur, i));
+            cur = i;
+        }
+    }
 }

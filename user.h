@@ -3,6 +3,13 @@
 #include "stdafx.h"
 #include"newsmodel.h"
 using namespace std;
+
+enum class SearchBasedOn {
+    Keyword,
+    titles,
+    date
+};
+
 class User
 {
 private:
@@ -12,7 +19,9 @@ private:
     string password;
     string region;
     string email;
-
+    vector<NewsModel> _searchByKeywords(string);
+    vector<NewsModel> _searchByTitles(string);
+    vector<NewsModel> _searchByDate(string);
 public:
     vector<NewsModel>rate;
     User();
@@ -21,11 +30,10 @@ public:
     String category ;
     //double rate ;
 
-    void Search();
+    vector<NewsModel> Search(SearchBasedOn searchBasedOn, string inp);
     void ShowNewBasedOnCategory();
-    void RateNew();
+    void RateNew(NewsModel news, int rate);
     void Bookmark();
-
     void ReadData();
     void setUsername(string username);
     void setPassword(string password);

@@ -14,12 +14,15 @@ public:
     double avgRate;
     set<int> ratedUsersIds;
     map<int, int> rates;
+    unordered_set<string> keywords, titles;
     NewsModel();
     NewsModel(string, string, string,string,double, set<int>, map<int, int>);
     NewsModel(string, string, string,string,double);
     NewsModel(string, string, string, string);
     void setTitle(string);
     void setDescription(string);
+    void buildKeyWords();
+    void buildTitles();
     void setDate(string);
     void setCategory(string);
     string getTitle();

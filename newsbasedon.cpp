@@ -8,11 +8,11 @@ Newsbasedon::Newsbasedon(QWidget *parent)
     , ui(new Ui::Newsbasedon)
 {
     ui->setupUi(this);
-    ui->CaegoryList->hide() ;
-    ui->showNew->hide() ;
-    ui->comboBox->hide();
-    ui->label_3->hide();
-    ui->label_4->hide();
+    // ui->CaegoryList->hide();
+    // ui->showNew->hide();
+    // ui->comboBox->hide();
+    // ui->label_3->hide();
+    // ui->label_4->hide();
 }
  vector<QString>tite;
 Newsbasedon::~Newsbasedon()
@@ -22,8 +22,8 @@ Newsbasedon::~Newsbasedon()
 
 void Newsbasedon::on_Category_clicked()
 {
-    ui->CaegoryList->show();
-    ui->showNew->show();
+    // ui->CaegoryList->show();
+    // ui->showNew->show();
     ShowNewBasedOnCategory();
 }
 
@@ -51,7 +51,7 @@ void Newsbasedon:: ShowNewBasedOnRating(){
     int x=n.size();
     for(int i=0;i<x;i++){
     string q=n.top().getTitle()+" " +"("+n.top().getCategory()+")";
-    ui->comboBox->addItem(q.c_str());
+    ui->CaegoryList->addItem(q.c_str());
     n.pop();
     }
 }
@@ -75,9 +75,9 @@ void Newsbasedon::on_showNew_clicked()
 
 void Newsbasedon::on_pushButton_clicked()
 {
-    ui->comboBox->show();
+    // ui->comboBox->show();
     ui->comboBox->clear();
-    ui->label_2->show();
+    // ui->label_2->show();
     for(int i=0;i<tite.size();i++){
         ui->comboBox->addItem(tite[i]);
     }
@@ -93,8 +93,8 @@ int Newsbasedon::selectTitleToCategory(){
 void Newsbasedon::on_Rate_clicked()
 {
 
-    ui->CaegoryList->show();
-    ui->showNew->show();
+    // ui->CaegoryList->show();
+    // ui->showNew->show();
     ui->CaegoryList->clear();
     ShowNewBasedOnRating();
 }
