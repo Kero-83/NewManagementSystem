@@ -1,11 +1,6 @@
 #ifndef NEWSMODEL_H
 #define NEWSMODEL_H
 #include "stdafx.h"
-struct Rate {
-    int userId;
-    int rate;
-};
-
 
 class NewsModel
 {
@@ -14,11 +9,14 @@ private:
     string description;
     string date;
     string category;
+
 public:
+    double avgRate;
     set<int> ratedUsersIds;
-    vector<Rate> rates;
+    map<int, int> rates;
     NewsModel();
-    NewsModel(string, string, string,string, set<int>, vector<Rate>);
+    NewsModel(string, string, string,string,double, set<int>, map<int, int>);
+    NewsModel(string, string, string,string,double);
     NewsModel(string, string, string, string);
     void setTitle(string);
     void setDescription(string);
@@ -29,8 +27,7 @@ public:
     string getDate();
     string getCategory();
     double getAvgRate();
-    static void addnew(NewsModel);
-
+    void addnew();
 };
 
 #endif // NEWSMODEL_H

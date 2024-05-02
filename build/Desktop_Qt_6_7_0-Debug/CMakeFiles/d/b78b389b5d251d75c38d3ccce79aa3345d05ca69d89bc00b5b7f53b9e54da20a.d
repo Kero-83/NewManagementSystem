@@ -404,6 +404,9 @@ Login_autogen/timestamp: \
   /home/kero/QtProjects/NewManagementSystem/CMakeLists.txt \
   /home/kero/QtProjects/NewManagementSystem/admin.cpp \
   /home/kero/QtProjects/NewManagementSystem/admin.h \
+  /home/kero/QtProjects/NewManagementSystem/adminwindow.cpp \
+  /home/kero/QtProjects/NewManagementSystem/adminwindow.h \
+  /home/kero/QtProjects/NewManagementSystem/adminwindow.ui \
   .qtc/package-manager/auto-setup.cmake \
   CMakeFiles/3.27.7/CMakeCXXCompiler.cmake \
   CMakeFiles/3.27.7/CMakeSystem.cmake \

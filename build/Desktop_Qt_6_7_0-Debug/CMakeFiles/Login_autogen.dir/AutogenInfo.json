@@ -367,6 +367,12 @@
 			null
 		],
 		[
+			"/home/kero/QtProjects/NewManagementSystem/adminwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_adminwindow.cpp",
+			null
+		],
+		[
 			"/home/kero/QtProjects/NewManagementSystem/homepage.h",
 			"MU",
 			"EWIEGA46WW/moc_homepage.cpp",
@@ -481,6 +487,11 @@
 	"SOURCES" : 
 	[
 		[ "/home/kero/QtProjects/NewManagementSystem/admin.cpp", "MU", null ],
+		[
+			"/home/kero/QtProjects/NewManagementSystem/adminwindow.cpp",
+			"MU",
+			null
+		],
 		[ "/home/kero/QtProjects/NewManagementSystem/homepage.cpp", "MU", null ],
 		[ "/home/kero/QtProjects/NewManagementSystem/login.cpp", "MU", null ],
 		[ "/home/kero/QtProjects/NewManagementSystem/main.cpp", "MU", null ],
