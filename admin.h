@@ -13,6 +13,7 @@ public:
 
     static vector<User>users;
     static vector<NewsModel> news;
+   static map<String,vector<string>>AddCategoy_New ;
     Admin();
     void WriteInFiles();
     void ReadFromFiles();

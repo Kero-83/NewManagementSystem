@@ -5,14 +5,17 @@
 #include "admin.h"
 #include"newsmodel.h"
 #include"newsbasedon.h"
+#include"adminwindow.h"
 using namespace std;
 vector<User> Admin::users;
-vector<NewsModel> Admin::news;    ;
+vector<NewsModel> Admin::news;
+map<string ,vector<string>>Admin::AddCategoy_New;
+
 int Login::count;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Login w;
+    Adminwindow w;
     w.show();
     Admin ad;
     NewsModel *n=new NewsModel("a","b","c","d",4);
