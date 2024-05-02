@@ -3,18 +3,19 @@
 NewsModel::NewsModel()
 {}
 
-NewsModel::NewsModel(string title, string description, string date, string category,double avgRate)
+NewsModel::NewsModel(string title, string description, string date, string category, set<int> ratedUsersIds, vector<Rate> rates)
 {
     this->title = title;
     this->description = description;
     this->date = date;
     this->category = category;
-    this->avgRate = avgRate;
+    this->ratedUsersIds = ratedUsersIds;
+    this->rates = rates;
 }
 
 NewsModel::NewsModel(string title, string description, string date, string category)
 {
-    NewsModel(title, description, date, category, 0.0);
+    NewsModel(title, description, date, category, {}, {});
 }
 
 void NewsModel::setTitle(string title)
@@ -33,10 +34,7 @@ void NewsModel::setCategory(string category)
 {
     this->category = category;
 }
-void NewsModel::setAvgRate(double avgRate)
-{
-    this->avgRate = avgRate;
-}
+
 string NewsModel::getTitle()
 {
     return title;
@@ -54,5 +52,12 @@ string NewsModel::getDate()
 }
 double NewsModel::getAvgRate()
 {
-    return avgRate;
+    double totalRates = 0;
+    double count = 0;
+    for(auto &rate : rates)
+    {
+        totalRates += rate.rate;
+        count++;
+    }
+    return ((count) ? (totalRates / count) : 0.0);
 }
