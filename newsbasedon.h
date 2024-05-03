@@ -17,21 +17,34 @@ public:
     ~Newsbasedon();
 
 private slots:
-    void on_Category_clicked();
+    void on_pushButton_Category_clicked();
 
     void on_pushButton_back_clicked();
-    void on_showNew_clicked();
+    void on_pushButton_showNew_clicked();
+
+    void on_pushButton_showTitle_clicked();
+
+    void on_pushButton_Rate_clicked();
 
     void on_pushButton_clicked();
 
-    void on_Rate_clicked();
+    void on_pushButton_2_clicked();
+
+
+    void on_pushButton_Time_clicked();
 
 public:
-    int index;
+    string currentCat;
+    string currentTitle;
+   static int index;
+    static vector<bool>checked;
+   void ShowNewBasedOnDate();
     void ShowNewBasedOnCategory();
     void ShowNewBasedOnRating();
-    int selectTitleToCategory();
+    void selectTitleToCategory();
     int selectTrendingTitles();
+    void RemoveDublicates();
+    void PushTitlesIntoComboBox();
 private:
     Ui::Newsbasedon *ui;
 };

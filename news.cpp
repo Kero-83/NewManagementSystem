@@ -16,18 +16,15 @@ News::~News()
 }
 double News::RateAverage(double rate)
 {
-
-    average=(average*rateCount+rate)/(rateCount+1) ;
-     rateCount++ ;
-    return average ;
+    average=(average*rateCount+rate)/(rateCount+1);
+     rateCount++;
+    return average;
 }
 void News::displayNew(){
-    Newsbasedon n;
-    int i=n.selectTitleToCategory();
-    ui->lineEdit_Category->setText(Admin::news[i].getCategory().c_str());
-    ui->lineEdit_Title->setText(Admin::news[i].getTitle().c_str());
-    ui->lineEdit_Description->setText(Admin::news[i].getDescription().c_str());
-    ui->lineEdit_Date->setText(Admin::news[i].getDate().c_str());
+    ui->lineEdit_Category->setText(Admin::news[Newsbasedon::index].getCategory().c_str());
+    ui->lineEdit_Title->setText(Admin::news[Newsbasedon::index].getTitle().c_str());
+    ui->lineEdit_Description->setText(Admin::news[Newsbasedon::index].getDescription().c_str());
+    ui->lineEdit_Date->setText(Admin::news[Newsbasedon::index].getDate().c_str());
 }
 void News::on_pushButton_clicked()
 {

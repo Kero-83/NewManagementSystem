@@ -1,0 +1,9 @@
+C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/Login.dir
+C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/edit_cache.dir
+C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/rebuild_cache.dir
+C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/list_install_components.dir
+C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/install.dir
+C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/install/local.dir
+C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/install/strip.dir
+C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/Login_autogen_timestamp_deps.dir
+C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/Login_autogen.dir

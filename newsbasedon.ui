@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="Rate">
+   <widget class="QPushButton" name="pushButton_Rate">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -24,10 +24,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>Rating</string>
+     <string>Trending News</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Category">
+   <widget class="QPushButton" name="pushButton_Category">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -37,10 +37,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>Category</string>
+     <string>Category Section</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Time">
+   <widget class="QPushButton" name="pushButton_Time">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -50,7 +50,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Time</string>
+     <string>Latest News</string>
     </property>
    </widget>
    <widget class="QComboBox" name="CaegoryList">
@@ -73,11 +73,11 @@
      </property>
     </item>
    </widget>
-   <widget class="QPushButton" name="showNew">
+   <widget class="QPushButton" name="pushButton_showNew">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>460</y>
+      <x>470</x>
+      <y>440</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -91,7 +91,7 @@
      <rect>
       <x>240</x>
       <y>30</y>
-      <width>311</width>
+      <width>401</width>
       <height>51</height>
      </rect>
     </property>
@@ -103,9 +103,9 @@
     <property name="geometry">
      <rect>
       <x>680</x>
-      <y>470</y>
-      <width>83</width>
-      <height>29</height>
+      <y>500</y>
+      <width>101</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -148,13 +148,13 @@
      <string>select title :</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_showTitle">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>340</y>
+      <x>250</x>
+      <y>450</y>
       <width>101</width>
-      <height>29</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -164,14 +164,92 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>310</y>
+      <x>80</x>
+      <y>290</y>
       <width>161</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>Select New:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>350</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Selected Category:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>350</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>350</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Selected Title:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>350</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>220</y>
+      <width>83</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ok</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>220</y>
+      <width>83</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ok</string>
     </property>
    </widget>
   </widget>
@@ -190,9 +268,9 @@
  <resources/>
  <connections>
   <connection>
-   <sender>Category</sender>
+   <sender>pushButton_Category</sender>
    <signal>clicked()</signal>
-   <receiver>Time</receiver>
+   <receiver>pushButton_Time</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -206,9 +284,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>Category</sender>
+   <sender>pushButton_Category</sender>
    <signal>clicked()</signal>
-   <receiver>Rate</receiver>
+   <receiver>pushButton_Rate</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -222,9 +300,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>Rate</sender>
+   <sender>pushButton_Rate</sender>
    <signal>clicked()</signal>
-   <receiver>Category</receiver>
+   <receiver>pushButton_Category</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">

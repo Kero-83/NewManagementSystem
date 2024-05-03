@@ -18,8 +18,8 @@ public:
     User();
     User( string username,string password, string region, string email);
     User(string firstname,string lastname,string username,string password,string email);
-    String category ;
-    //double rate ;
+    //String category;
+    //double rate;
 
     void Search();
     void ShowNewBasedOnCategory();
