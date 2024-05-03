@@ -51,7 +51,7 @@ public:
         label->setStyleSheet(QString::fromUtf8("color: orange"));
         pushButton = new QPushButton(HomePage);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(240, 250, 101, 41));
+        pushButton->setGeometry(QRect(120, 240, 101, 41));
         pushButton->setFont(font);
         pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(85, 0, 0);"));
         label_2 = new QLabel(HomePage);
@@ -62,7 +62,7 @@ public:
         label_3->setGeometry(QRect(660, 60, 171, 71));
         pushButton_2 = new QPushButton(HomePage);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(590, 250, 101, 41));
+        pushButton_2->setGeometry(QRect(350, 240, 141, 41));
         pushButton_2->setFont(font);
         pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(85, 0, 0);"));
 

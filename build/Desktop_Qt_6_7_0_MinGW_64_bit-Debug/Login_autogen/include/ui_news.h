@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -37,6 +38,7 @@ public:
     QPushButton *pushButton;
     QLabel *label_5;
     QLineEdit *lineEdit_Date;
+    QCheckBox *checkBox;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -58,7 +60,7 @@ public:
         label_2->setGeometry(QRect(20, 150, 101, 41));
         label_3 = new QLabel(groupBox);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(0, 200, 101, 41));
+        label_3->setGeometry(QRect(0, 220, 101, 41));
         label_4 = new QLabel(groupBox);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(10, 440, 101, 41));
@@ -84,6 +86,9 @@ public:
         lineEdit_Date->setObjectName("lineEdit_Date");
         lineEdit_Date->setEnabled(false);
         lineEdit_Date->setGeometry(QRect(110, 40, 171, 28));
+        checkBox = new QCheckBox(groupBox);
+        checkBox->setObjectName("checkBox");
+        checkBox->setGeometry(QRect(330, 450, 111, 41));
         News->setCentralWidget(centralwidget);
         menubar = new QMenuBar(News);
         menubar->setObjectName("menubar");
@@ -108,6 +113,7 @@ public:
         label_4->setText(QCoreApplication::translate("News", "Rate", nullptr));
         pushButton->setText(QCoreApplication::translate("News", "Back", nullptr));
         label_5->setText(QCoreApplication::translate("News", "Date", nullptr));
+        checkBox->setText(QCoreApplication::translate("News", "Favorite", nullptr));
     } // retranslateUi
 
 };
