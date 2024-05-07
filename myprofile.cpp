@@ -1,7 +1,6 @@
 #include "myprofile.h"
 #include "homepage.h"
 #include "ui_myprofile.h"
-#include"admin.h"
 #include"login.h"
 #include"stdafx.h"
 
@@ -17,11 +16,11 @@ MyProfile::~MyProfile()
     delete ui;
 }
 void MyProfile::DisplayData(){
-    string firstname=Admin::users[Login::count].getFirstName();
-    string lastname=Admin::users[Login::count].getLastName();
-    string username=Admin::users[Login::count].getUsername();
-    string password=Admin::users[Login::count].getPassword();
-    string email=Admin::users[Login::count].getEmail();
+    string firstname=Adminx::users[Login::count].getFirstName();
+    string lastname=Adminx::users[Login::count].getLastName();
+    string username=Adminx::users[Login::count].getUsername();
+    string password=Adminx::users[Login::count].getPassword();
+    string email=Adminx::users[Login::count].getEmail();
     ui->label_3->setText(username.c_str());
     ui->label_5->setText(password.c_str());
     ui->label_7->setText(email.c_str());

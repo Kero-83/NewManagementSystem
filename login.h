@@ -1,9 +1,8 @@
 #ifndef LOGIN_H
 #define LOGIN_H
-#include "admin.h"
 #include"signup.h"
 #include "stdafx.h"
-
+#include"adminx.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class Login;
@@ -15,7 +14,7 @@ class Login : public QMainWindow
     Q_OBJECT
 
 public:
-    Admin ad;
+    Adminx ad;
    // QString username;
     //QString password;
     static int count;

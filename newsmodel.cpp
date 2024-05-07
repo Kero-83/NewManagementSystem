@@ -1,8 +1,20 @@
 #include "newsmodel.h"
-#include "admin.h"
+#include "adminx.h"
+#include <iomanip>
+#include <ctime>
+#include <sstream>
 NewsModel::NewsModel()
 {}
-
+string NewsModel:: getCurrentDate() {
+    time_t t = std::time(nullptr);
+    tm tm = *std::localtime(&t);
+    ostringstream oss;
+    oss << setfill('0')
+        << setw(2) << tm.tm_mday << "-" // Day
+        << setw(2) << 1 + tm.tm_mon << "-" // Month (tm_mon is 0-11, so add 1)
+        << 1900 + tm.tm_year; // Year
+    return oss.str();
+}
 NewsModel::NewsModel(string title, string description, string date, string category,double avgRate)
 {
     this->title = title;
@@ -18,6 +30,7 @@ NewsModel::NewsModel(string title, string description, string date, string categ
     this->description;
     this->date=date;
     this->category=category;
+    avgRate=0;
 }
 
 void NewsModel::setTitle(string title)
@@ -60,5 +73,5 @@ double NewsModel::getAvgRate()
     return avgRate;
 }
 void NewsModel::addnew(NewsModel New){
-    Admin::news.push_back(New);
+    Adminx::news.push_back(New);
 }

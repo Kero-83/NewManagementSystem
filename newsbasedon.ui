@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="pushButton_Rate">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>170</y>
+      <x>30</x>
+      <y>140</y>
       <width>141</width>
       <height>61</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QPushButton" name="pushButton_Category">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>170</y>
+      <x>230</x>
+      <y>140</y>
       <width>151</width>
       <height>61</height>
      </rect>
@@ -43,8 +43,8 @@
    <widget class="QPushButton" name="pushButton_Time">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>180</y>
+      <x>620</x>
+      <y>140</y>
       <width>141</width>
       <height>61</height>
      </rect>
@@ -89,7 +89,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>200</x>
       <y>30</y>
       <width>401</width>
       <height>51</height>
@@ -140,19 +140,19 @@
      <rect>
       <x>400</x>
       <y>270</y>
-      <width>81</width>
-      <height>20</height>
+      <width>91</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>select title :</string>
+     <string>select title  :</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_showTitle">
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>450</y>
+      <y>440</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -184,7 +184,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Selected Category:</string>
+     <string>Selected Category :</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
@@ -210,7 +210,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Selected Title:</string>
+     <string>Selected Title :</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
@@ -219,7 +219,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>490</x>
       <y>350</y>
       <width>141</width>
       <height>31</height>
@@ -250,6 +250,19 @@
     </property>
     <property name="text">
      <string>Ok</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_descendingRate">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>140</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rating Section</string>
     </property>
    </widget>
   </widget>

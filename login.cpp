@@ -3,7 +3,7 @@
 #include"homepage.h"
 #include"QMessageBox"
 #include "user.h"
-#include "admin.h"
+#include"news.h"
 using namespace std;
 Login::Login(QWidget *parent)
     :QMainWindow(parent)
@@ -32,7 +32,9 @@ bool Login::write_Data(){
 bool Login::Log_Admin(){
     if(ui->lineEdit_username->text()=="admin"&&ui->lineEdit_password->text()=="admin"){
          QMessageBox::information(this,"Login Success","Welcome Admin");
-        //admin->show();
+        hide();
+        Adminx *adminWindow=new Adminx(this);
+        adminWindow->show();
     return true;
     }
     return false;
@@ -43,6 +45,9 @@ void Login::on_pushButton_Exit_clicked()
     close();
 }
 void Login::on_pushButton_Login_clicked(){
+    for(int i=0;i<Adminx::news.size();i++){
+        qDebug()<<Adminx::news[i].getTitle()<<""<<Adminx::news[i].getCategory();
+    }
     if(Log_Admin()){
         return;
     }
@@ -52,8 +57,8 @@ void Login::on_pushButton_Login_clicked(){
         QMessageBox::warning(this,"login failed","Please fill the requirement data");
     }
      else{
-    for( int i=0;i<Admin::users.size();i++){
-         if(ui->lineEdit_username->text().toStdString() ==Admin::users[i].getUsername() &&ui->lineEdit_password->text().toStdString()==Admin::users[i].getPassword())
+    for( int i=0;i<Adminx::users.size();i++){
+         if(ui->lineEdit_username->text().toStdString() ==Adminx::users[i].getUsername() &&ui->lineEdit_password->text().toStdString()==Adminx::users[i].getPassword())
         {
   QMessageBox::information(this, "", "in");
              count=i;

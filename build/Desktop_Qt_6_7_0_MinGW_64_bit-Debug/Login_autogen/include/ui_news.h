@@ -38,7 +38,10 @@ public:
     QPushButton *pushButton;
     QLabel *label_5;
     QLineEdit *lineEdit_Date;
-    QCheckBox *checkBox;
+    QCheckBox *checkBox_favNews;
+    QPushButton *pushButton_saveNewAdmin;
+    QPushButton *pushButton_editTitle;
+    QPushButton *pushButton_editDesc;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -51,7 +54,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(10, 10, 761, 551));
+        groupBox->setGeometry(QRect(10, 20, 761, 551));
         label = new QLabel(groupBox);
         label->setObjectName("label");
         label->setGeometry(QRect(10, 90, 101, 41));
@@ -75,7 +78,7 @@ public:
         lineEdit_Description = new QLineEdit(groupBox);
         lineEdit_Description->setObjectName("lineEdit_Description");
         lineEdit_Description->setEnabled(false);
-        lineEdit_Description->setGeometry(QRect(110, 220, 331, 181));
+        lineEdit_Description->setGeometry(QRect(120, 230, 331, 181));
         pushButton = new QPushButton(groupBox);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(650, 500, 83, 29));
@@ -86,9 +89,18 @@ public:
         lineEdit_Date->setObjectName("lineEdit_Date");
         lineEdit_Date->setEnabled(false);
         lineEdit_Date->setGeometry(QRect(110, 40, 171, 28));
-        checkBox = new QCheckBox(groupBox);
-        checkBox->setObjectName("checkBox");
-        checkBox->setGeometry(QRect(330, 450, 111, 41));
+        checkBox_favNews = new QCheckBox(groupBox);
+        checkBox_favNews->setObjectName("checkBox_favNews");
+        checkBox_favNews->setGeometry(QRect(290, 440, 111, 41));
+        pushButton_saveNewAdmin = new QPushButton(groupBox);
+        pushButton_saveNewAdmin->setObjectName("pushButton_saveNewAdmin");
+        pushButton_saveNewAdmin->setGeometry(QRect(650, 450, 83, 29));
+        pushButton_editTitle = new QPushButton(groupBox);
+        pushButton_editTitle->setObjectName("pushButton_editTitle");
+        pushButton_editTitle->setGeometry(QRect(390, 150, 83, 29));
+        pushButton_editDesc = new QPushButton(groupBox);
+        pushButton_editDesc->setObjectName("pushButton_editDesc");
+        pushButton_editDesc->setGeometry(QRect(480, 300, 141, 29));
         News->setCentralWidget(centralwidget);
         menubar = new QMenuBar(News);
         menubar->setObjectName("menubar");
@@ -113,7 +125,10 @@ public:
         label_4->setText(QCoreApplication::translate("News", "Rate", nullptr));
         pushButton->setText(QCoreApplication::translate("News", "Back", nullptr));
         label_5->setText(QCoreApplication::translate("News", "Date", nullptr));
-        checkBox->setText(QCoreApplication::translate("News", "Favorite", nullptr));
+        checkBox_favNews->setText(QCoreApplication::translate("News", "Favorite", nullptr));
+        pushButton_saveNewAdmin->setText(QCoreApplication::translate("News", "Save", nullptr));
+        pushButton_editTitle->setText(QCoreApplication::translate("News", "Edit Title", nullptr));
+        pushButton_editDesc->setText(QCoreApplication::translate("News", "Edit Description", nullptr));
     } // retranslateUi
 
 };

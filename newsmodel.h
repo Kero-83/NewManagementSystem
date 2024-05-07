@@ -14,6 +14,7 @@ private:
     double avgRate;
 public:
     NewsModel();
+    string getCurrentDate();
     NewsModel(string, string, string,string, double);
     NewsModel(string, string, string, string);
     void setTitle(string);

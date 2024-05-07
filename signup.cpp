@@ -3,7 +3,6 @@
 #include"login.h"
 #include"QMessageBox"
 #include"user.h"
-#include "admin.h"
 User *user = NULL;
 SignUP::SignUP(QWidget *parent)
     : QDialog(parent)
@@ -42,8 +41,8 @@ bool SignUP::_validEmail(String email)
     return false;
 }
 bool SignUP::_validUsername_email(String username,String email){
-    for( int i=0;i<Admin::users.size();i++){
-        if(username==Admin::users[i].getUsername()||email==Admin::users[i].getEmail())
+    for( int i=0;i<Adminx::users.size();i++){
+        if(username==Adminx::users[i].getUsername()||email==Adminx::users[i].getEmail())
             return true;
         return false;
 }

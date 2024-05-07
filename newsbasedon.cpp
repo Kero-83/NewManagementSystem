@@ -23,7 +23,6 @@ Newsbasedon::Newsbasedon(QWidget *parent)
     ui->pushButton_showNew->hide();
     ui->pushButton_showTitle->hide();
 }
-//bool flag;
 string q;
  vector<QString>tite;
 Newsbasedon::~Newsbasedon()
@@ -36,41 +35,39 @@ void Newsbasedon::on_pushButton_Category_clicked()
     checked[1]=true;
     checked[0]=false;
     checked[2]=false;
+    checked[3]=false;
     ui->pushButton_Rate->hide();
     ui->pushButton_Time->hide();
+    ui->pushButton_descendingRate->hide();
     ui->label_2->show();
     ui->CaegoryList->show();
     ui->pushButton->show();
-    //ui->CaegoryList->clear();
-    //ui->comboBox->clear();
-   // ui->CaegoryList->show();
-    //ui->showNew->show();
     ShowNewBasedOnCategory();
 }
-void Newsbasedon::RemoveDublicates(){
-     QSet<string>uniqueItems;
-    int itemCount=ui->CaegoryList->count();
-    for(int i=0;i<itemCount;++i){
-        QString itemText=ui->CaegoryList->itemText(i);
-        if(uniqueItems.contains(itemText.toStdString())){
-            ui->CaegoryList->removeItem(i);
-            --itemCount;
-            --i;
-        }
-        else{
-            uniqueItems.insert(itemText.toStdString());
-        }
-    }
-}
+// void Newsbasedon::RemoveDublicates(){
+//      QSet<string>uniqueItems;
+//     int itemCount=ui->CaegoryList->count();
+//     for(int i=0;i<itemCount;++i){
+//         QString itemText=ui->CaegoryList->itemText(i);
+//         if(uniqueItems.contains(itemText.toStdString())){
+//             ui->CaegoryList->removeItem(i);
+//             --itemCount;
+//             --i;
+//         }
+//         else{
+//             uniqueItems.insert(itemText.toStdString());
+//         }
+//     }
+// }
 void Newsbasedon::ShowNewBasedOnCategory(){
     ui->CaegoryList->clear();
 
-    for(int i=0;i<Admin::news.size();i++){
-        if(Admin::news[i].getAvgRate()>2){
-        ui->CaegoryList->addItem(Admin::news[i].getCategory().c_str());
+    for(int i=0;i<Adminx::news.size();i++){
+        if(Adminx::news[i].getAvgRate()>2||Adminx::news[i].getAvgRate()==0){
+        ui->CaegoryList->addItem(Adminx::news[i].getCategory().c_str());
         }
     }
-    RemoveDublicates();
+
 }
 void Newsbasedon:: ShowNewBasedOnRating(){
     ui->label_4->show();
@@ -78,8 +75,8 @@ void Newsbasedon:: ShowNewBasedOnRating(){
     ui->pushButton->show();
     ui->CaegoryList->clear();
     multimap<double,NewsModel>New;
-    for(int i=0;i<Admin::news.size();i++){
-        New.insert({Admin::news[i].getAvgRate(),Admin::news[i]});
+    for(int i=0;i<Adminx::news.size();i++){
+        New.insert({Adminx::news[i].getAvgRate(),Adminx::news[i]});
     }
     stack<NewsModel>n;
     for(auto t:New){
@@ -125,10 +122,6 @@ void Newsbasedon::on_pushButton_showTitle_clicked()
     ui->label_3->show();
     ui->comboBox->show();
     ui->pushButton_2->show();
-   // ui->comboBox->show();
-   // ui->comboBox->clear();
-   // ui->label_2->show();
-   // qDebug()<<ui->CaegoryList->currentText();
    for(int i=0;i<tite.size();i++){
         ui->comboBox->addItem(tite[i]);
     }
@@ -138,17 +131,17 @@ void Newsbasedon::on_pushButton_showTitle_clicked()
 }
 void Newsbasedon::selectTitleToCategory(){
     if(checked[1]){
-    for(int i=0;i<Admin::news.size();i++){
-        if(currentTitle==Admin::news[i].getTitle()&&currentCat==Admin::news[i].getCategory()){
+    for(int i=0;i<Adminx::news.size();i++){
+        if(currentTitle==Adminx::news[i].getTitle()&&currentCat==Adminx::news[i].getCategory()){
             index=i;
         }
     }
     qDebug()<<"currenttitle = "<<currentTitle;
     qDebug()<<"index = "<<index;
     }
-    else if(checked[0]||checked[2]){
-        for(int i=0;i<Admin::news.size();i++){
-            if(currentCat==Admin::news[i].getTitle()){
+    else if(checked[0]||checked[2]||checked[3]){
+        for(int i=0;i<Adminx::news.size();i++){
+            if(currentCat==Adminx::news[i].getTitle()){
                 index=i;
             }
         }
@@ -158,14 +151,13 @@ void Newsbasedon::selectTitleToCategory(){
 }
 void Newsbasedon::on_pushButton_Rate_clicked()
 {
+    ui->pushButton_descendingRate->hide();
     ui->pushButton_Category->hide();
     ui->pushButton_Time->hide();
     checked[0]=true;
     checked[1]=false;
     checked[2]=false;
-    //ui->CaegoryList->show();
-   // ui->showNew->show();
-   // ui->CaegoryList->clear();
+    checked[3]=false;
     ShowNewBasedOnRating();
     if(ui->CaegoryList->itemText(ui->CaegoryList->currentIndex()).isEmpty()){
         ui->CaegoryList->removeItem(ui->CaegoryList->currentIndex());
@@ -180,9 +172,9 @@ void Newsbasedon::PushTitlesIntoComboBox(){
         tite.clear();
     ui->lineEdit->setText(ui->CaegoryList->currentText());
     currentCat=ui->lineEdit->text().toStdString();
-    for(int i=0;i<Admin::news.size();i++){
-        if(currentCat==Admin::news[i].getCategory()){
-            tite.push_back(Admin::news[i].getTitle().c_str());
+    for(int i=0;i<Adminx::news.size();i++){
+        if(currentCat==Adminx::news[i].getCategory()){
+            tite.push_back(Adminx::news[i].getTitle().c_str());
         }
     }
     for(auto it:tite){
@@ -190,7 +182,7 @@ void Newsbasedon::PushTitlesIntoComboBox(){
     }
     ui->comboBox->clear();
     }
-    else if(checked[0]){
+    else if(checked[0]||checked[3]){
         ui->label_5->setText("Selected Title");
         ui->lineEdit->setText(ui->CaegoryList->currentText());
         currentCat=ui->lineEdit->text().toStdString();
@@ -209,7 +201,7 @@ void Newsbasedon::on_pushButton_clicked()
     ui->lineEdit->show();
     ui->pushButton_showTitle->show();
     }
-    else if(checked[0]){
+    else if(checked[0]||checked[3]){
         ui->label_5->show();
         ui->lineEdit->show();
             ui->pushButton_showNew->show();
@@ -241,9 +233,11 @@ void Newsbasedon::on_pushButton_Time_clicked()
 
     ui->pushButton_Category->hide();
     ui->pushButton_Rate->hide();
+    ui->pushButton_descendingRate->hide();
     checked[2]=true;
     checked[1]=false;
     checked[0]=false;
+    checked[3]=false;
     ShowNewBasedOnDate();
     if(ui->CaegoryList->itemText(ui->CaegoryList->currentIndex()).isEmpty()){
         ui->CaegoryList->removeItem(ui->CaegoryList->currentIndex());
@@ -257,9 +251,9 @@ void Newsbasedon::ShowNewBasedOnDate(){
     ui->CaegoryList->show();
     ui->label_4->show();
     ui->pushButton->show();
-    for(int i=Admin::news.size()-1;i>=0;i--){
-        if(Admin::news[i].getAvgRate()>2){
-            tite.push_back(Admin::news[i].getTitle().c_str());
+    for(int i=Adminx::news.size()-1;i>=0;i--){
+        if(Adminx::news[i].getAvgRate()>2||Adminx::news[i].getAvgRate()==0){
+            tite.push_back(Adminx::news[i].getTitle().c_str());
         }
     }
     for(auto it:tite){
@@ -271,3 +265,40 @@ void Newsbasedon::ShowNewBasedOnDate(){
     PushTitlesIntoComboBox();
 }
 
+
+void Newsbasedon::on_pushButton_descendingRate_clicked()
+{
+    ui->pushButton_Category->hide();
+    ui->pushButton_Time->hide();
+    checked[3]=true;
+    checked[0]=false;
+    checked[1]=false;
+    checked[2]=false;
+    ShowNewBasedOnDescendingRating();
+    if(ui->CaegoryList->itemText(ui->CaegoryList->currentIndex()).isEmpty())
+        ui->CaegoryList->removeItem(ui->CaegoryList->currentIndex());
+
+}
+void Newsbasedon:: ShowNewBasedOnDescendingRating(){
+    ui->label_4->show();
+    ui->CaegoryList->show();
+    ui->pushButton->show();
+    ui->CaegoryList->clear();
+    multimap<double,NewsModel>New;
+    for(int i=0;i<Adminx::news.size();i++){
+        New.insert({Adminx::news[i].getAvgRate(),Adminx::news[i]});
+    }
+    stack<NewsModel>n;
+    for(auto t:New){
+        if (t.second.getAvgRate()>2)
+            n.push(t.second);
+    }
+    int x=n.size();
+    for(int i=0;i<x;i++){
+        q=n.top().getTitle();
+        ui->CaegoryList->addItem(q.c_str());
+        qDebug()<< n.top().getTitle();
+        n.pop();
+    }
+    qDebug()<<"======";
+}

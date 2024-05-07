@@ -44,6 +44,7 @@ public:
     QLineEdit *lineEdit_2;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
+    QPushButton *pushButton_descendingRate;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -56,13 +57,13 @@ public:
         centralwidget->setObjectName("centralwidget");
         pushButton_Rate = new QPushButton(centralwidget);
         pushButton_Rate->setObjectName("pushButton_Rate");
-        pushButton_Rate->setGeometry(QRect(80, 170, 141, 61));
+        pushButton_Rate->setGeometry(QRect(30, 140, 141, 61));
         pushButton_Category = new QPushButton(centralwidget);
         pushButton_Category->setObjectName("pushButton_Category");
-        pushButton_Category->setGeometry(QRect(330, 170, 151, 61));
+        pushButton_Category->setGeometry(QRect(230, 140, 151, 61));
         pushButton_Time = new QPushButton(centralwidget);
         pushButton_Time->setObjectName("pushButton_Time");
-        pushButton_Time->setGeometry(QRect(600, 180, 141, 61));
+        pushButton_Time->setGeometry(QRect(620, 140, 141, 61));
         CaegoryList = new QComboBox(centralwidget);
         CaegoryList->addItem(QString());
         CaegoryList->addItem(QString());
@@ -73,7 +74,7 @@ public:
         pushButton_showNew->setGeometry(QRect(470, 440, 101, 31));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(240, 30, 401, 51));
+        label->setGeometry(QRect(200, 30, 401, 51));
         pushButton_back = new QPushButton(centralwidget);
         pushButton_back->setObjectName("pushButton_back");
         pushButton_back->setGeometry(QRect(680, 500, 101, 31));
@@ -85,10 +86,10 @@ public:
         label_2->setGeometry(QRect(70, 250, 131, 41));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(400, 270, 81, 20));
+        label_3->setGeometry(QRect(400, 270, 91, 31));
         pushButton_showTitle = new QPushButton(centralwidget);
         pushButton_showTitle->setObjectName("pushButton_showTitle");
-        pushButton_showTitle->setGeometry(QRect(250, 450, 101, 31));
+        pushButton_showTitle->setGeometry(QRect(250, 440, 101, 31));
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(80, 290, 161, 41));
@@ -105,13 +106,16 @@ public:
         lineEdit_2 = new QLineEdit(centralwidget);
         lineEdit_2->setObjectName("lineEdit_2");
         lineEdit_2->setEnabled(false);
-        lineEdit_2->setGeometry(QRect(500, 350, 141, 31));
+        lineEdit_2->setGeometry(QRect(490, 350, 141, 31));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(230, 220, 83, 29));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setGeometry(QRect(510, 220, 83, 29));
+        pushButton_descendingRate = new QPushButton(centralwidget);
+        pushButton_descendingRate->setObjectName("pushButton_descendingRate");
+        pushButton_descendingRate->setGeometry(QRect(420, 140, 151, 61));
         Newsbasedon->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Newsbasedon);
         menubar->setObjectName("menubar");
@@ -142,13 +146,14 @@ public:
         label->setText(QCoreApplication::translate("Newsbasedon", "<html><head/><body><p><span style=\" font-size:22pt; font-weight:700; font-style:italic; color:#000000;\">Show News Based on</span></p></body></html>", nullptr));
         pushButton_back->setText(QCoreApplication::translate("Newsbasedon", "back", nullptr));
         label_2->setText(QCoreApplication::translate("Newsbasedon", "Select category :", nullptr));
-        label_3->setText(QCoreApplication::translate("Newsbasedon", "select title :", nullptr));
+        label_3->setText(QCoreApplication::translate("Newsbasedon", "select title  :", nullptr));
         pushButton_showTitle->setText(QCoreApplication::translate("Newsbasedon", "show titles", nullptr));
         label_4->setText(QCoreApplication::translate("Newsbasedon", "Select New:", nullptr));
-        label_5->setText(QCoreApplication::translate("Newsbasedon", "Selected Category:", nullptr));
-        label_6->setText(QCoreApplication::translate("Newsbasedon", "Selected Title:", nullptr));
+        label_5->setText(QCoreApplication::translate("Newsbasedon", "Selected Category :", nullptr));
+        label_6->setText(QCoreApplication::translate("Newsbasedon", "Selected Title :", nullptr));
         pushButton->setText(QCoreApplication::translate("Newsbasedon", "Ok", nullptr));
         pushButton_2->setText(QCoreApplication::translate("Newsbasedon", "Ok", nullptr));
+        pushButton_descendingRate->setText(QCoreApplication::translate("Newsbasedon", "Rating Section", nullptr));
     } // retranslateUi
 
 };

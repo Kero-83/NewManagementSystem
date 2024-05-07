@@ -1,6 +1,6 @@
 #include "user.h"
 #include "signup.h"
-#include "admin.h"
+#include "adminx.h"
 User::User(){}
 User::User(
     string username,
@@ -51,5 +51,5 @@ string User::getPassword() { return password; }
 string User::getRegion() { return region; }
 string User::getEmail() { return email; }
 void User::addUser(User user){
-    Admin::users.push_back(user);
+    Adminx::users.push_back(user);
 }

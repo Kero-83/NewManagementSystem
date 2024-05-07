@@ -33,6 +33,8 @@ private slots:
 
     void on_pushButton_Time_clicked();
 
+    void on_pushButton_descendingRate_clicked();
+
 public:
     string currentCat;
     string currentTitle;
@@ -43,8 +45,8 @@ public:
     void ShowNewBasedOnRating();
     void selectTitleToCategory();
     int selectTrendingTitles();
-    void RemoveDublicates();
     void PushTitlesIntoComboBox();
+    void ShowNewBasedOnDescendingRating();
 private:
     Ui::Newsbasedon *ui;
 };
