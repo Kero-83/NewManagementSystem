@@ -1,40 +1,84 @@
 # ninja log v5
-265	5785	7367547148534382	CMakeFiles/Login.dir/news.cpp.obj	ce3d82d62147b936
-252	5997	7367547150592451	CMakeFiles/Login.dir/newsbasedon.cpp.obj	8816f85571b29fc7
-6210	6814	7367547158770974	Login.exe	6936290d690fda85
-14	219	7367547092896301	Login_autogen/timestamp	5ae156b066fbb7c2
-14	219	7367547092896301	Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
-14	219	7367547092896301	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/timestamp	5ae156b066fbb7c2
-14	219	7367547092896301	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
-4243	11701	7367537544006471	CMakeFiles/Login.dir/main.cpp.obj	e38430b2b44e439b
-4284	11088	7367537536638977	CMakeFiles/Login.dir/user.cpp.obj	472024ed3421a09c
-4316	11087	7367537535675620	CMakeFiles/Login.dir/newsmodel.cpp.obj	768efb2ea9682ce2
-257	5055	7367547141216101	CMakeFiles/Login.dir/myprofile.cpp.obj	6c2bba9d172dcdfb
+10963	11680	7368214652917129	Login.exe	6936290d690fda85
+25	562	7368214541716598	Login_autogen/timestamp	5ae156b066fbb7c2
+632	10963	7368214645850078	CMakeFiles/Login.dir/newsbasedon.cpp.obj	8816f85571b29fc7
+612	10481	7368214641033754	CMakeFiles/Login.dir/news.cpp.obj	ce3d82d62147b936
+25	562	7368214541716598	Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+25	562	7368214541716598	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/timestamp	5ae156b066fbb7c2
+25	562	7368214541716598	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+582	9946	7368214635692777	CMakeFiles/Login.dir/main.cpp.obj	e38430b2b44e439b
+4159	12147	7368212837005257	CMakeFiles/Login.dir/user.cpp.obj	472024ed3421a09c
+4173	13025	7368212844448607	CMakeFiles/Login.dir/newsmodel.cpp.obj	768efb2ea9682ce2
+620	9407	7368214630267627	CMakeFiles/Login.dir/myprofile.cpp.obj	6c2bba9d172dcdfb
 247	363	7367546247356182	CMakeFiles/Login.dir/admin.cpp.obj	1f5d40861378a91d
-231	5551	7367547146182891	CMakeFiles/Login.dir/homepage.cpp.obj	9d050ea28e0674aa
-14	2862	7367537761713363	CMakeFiles/Login.dir/Login_autogen/mocs_compilation.cpp.obj	cbe7bf4ad066fb80
-239	5428	7367547144945698	CMakeFiles/Login.dir/signup.cpp.obj	df8dd2b29ba8e906
-245	5533	7367547145995147	CMakeFiles/Login.dir/login.cpp.obj	50ddab3e5c7c733c
+605	9437	7368214630559344	CMakeFiles/Login.dir/homepage.cpp.obj	9d050ea28e0674aa
+4115	13172	7368212844814708	CMakeFiles/Login.dir/Login_autogen/mocs_compilation.cpp.obj	cbe7bf4ad066fb80
+598	9892	7368214635159472	CMakeFiles/Login.dir/signup.cpp.obj	df8dd2b29ba8e906
+590	9775	7368214633979849	CMakeFiles/Login.dir/login.cpp.obj	50ddab3e5c7c733c
 253	362	7367546247266530	CMakeFiles/Login.dir/adminui.cpp.obj	41cda912b3f0b101
-273	6210	7367547152786704	CMakeFiles/Login.dir/adminx.cpp.obj	5d8d9fb6b7ed3dac
-14	192	7367548388610492	Login_autogen/timestamp	5ae156b066fbb7c2
-14	192	7367548388610492	Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
-14	192	7367548388610492	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/timestamp	5ae156b066fbb7c2
-14	192	7367548388610492	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
-214	5454	7367548441182202	CMakeFiles/Login.dir/homepage.cpp.obj	9d050ea28e0674aa
-203	5468	7367548441317720	CMakeFiles/Login.dir/login.cpp.obj	50ddab3e5c7c733c
-220	5785	7367548444472056	CMakeFiles/Login.dir/news.cpp.obj	ce3d82d62147b936
-227	6297	7367548449609504	CMakeFiles/Login.dir/newsbasedon.cpp.obj	8816f85571b29fc7
-240	6499	7367548451565320	CMakeFiles/Login.dir/adminx.cpp.obj	5d8d9fb6b7ed3dac
-25	479	7367548645039474	Login_autogen/timestamp	5ae156b066fbb7c2
-25	479	7367548645039474	Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
-25	479	7367548645039474	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/timestamp	5ae156b066fbb7c2
-25	479	7367548645039474	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
-523	6556	7367548705719203	CMakeFiles/Login.dir/myprofile.cpp.obj	6c2bba9d172dcdfb
-510	6596	7367548706175738	CMakeFiles/Login.dir/signup.cpp.obj	df8dd2b29ba8e906
-503	6609	7367548706351442	CMakeFiles/Login.dir/login.cpp.obj	50ddab3e5c7c733c
-496	6708	7367548707314931	CMakeFiles/Login.dir/homepage.cpp.obj	9d050ea28e0674aa
-517	6868	7367548708929330	CMakeFiles/Login.dir/news.cpp.obj	ce3d82d62147b936
-541	7182	7367548711992469	CMakeFiles/Login.dir/adminx.cpp.obj	5d8d9fb6b7ed3dac
-529	7716	7367548717404158	CMakeFiles/Login.dir/newsbasedon.cpp.obj	8816f85571b29fc7
-7716	8460	7367548724764747	Login.exe	6936290d690fda85
+681	9661	7368214632813162	CMakeFiles/Login.dir/adminx.cpp.obj	5d8d9fb6b7ed3dac
+8	331	7368217659816105	Login_autogen/timestamp	5ae156b066fbb7c2
+8	331	7368217659816105	Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+8	331	7368217659816105	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/timestamp	5ae156b066fbb7c2
+8	331	7368217659816105	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+365	11104	7368217755589872	CMakeFiles/Login.dir/homepage.cpp.obj	9d050ea28e0674aa
+349	11108	7368217755905939	CMakeFiles/Login.dir/main.cpp.obj	e38430b2b44e439b
+393	11109	7368217764036904	CMakeFiles/Login.dir/myprofile.cpp.obj	6c2bba9d172dcdfb
+382	11371	7368217770196541	CMakeFiles/Login.dir/newsbasedon.cpp.obj	8816f85571b29fc7
+375	11690	7368217773418889	CMakeFiles/Login.dir/signup.cpp.obj	df8dd2b29ba8e906
+357	11899	7368217775503298	CMakeFiles/Login.dir/login.cpp.obj	50ddab3e5c7c733c
+422	12105	7368217777511993	CMakeFiles/Login.dir/adminx.cpp.obj	5d8d9fb6b7ed3dac
+407	12425	7368217780761878	CMakeFiles/Login.dir/news.cpp.obj	ce3d82d62147b936
+12425	13146	7368217787914861	Login.exe	6936290d690fda85
+17	294	7368218616519187	Login_autogen/timestamp	5ae156b066fbb7c2
+17	294	7368218616519187	Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+17	294	7368218616519187	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/timestamp	5ae156b066fbb7c2
+17	294	7368218616519187	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+340	9115	7368218704644420	CMakeFiles/Login.dir/myprofile.cpp.obj	6c2bba9d172dcdfb
+325	10163	7368218715170826	CMakeFiles/Login.dir/homepage.cpp.obj	9d050ea28e0674aa
+332	10585	7368218719408036	CMakeFiles/Login.dir/news.cpp.obj	ce3d82d62147b936
+345	10865	7368218722169850	CMakeFiles/Login.dir/newsbasedon.cpp.obj	8816f85571b29fc7
+318	11030	7368218723876827	CMakeFiles/Login.dir/signup.cpp.obj	df8dd2b29ba8e906
+311	11645	7368218730029289	CMakeFiles/Login.dir/login.cpp.obj	50ddab3e5c7c733c
+354	11809	7368218731558828	CMakeFiles/Login.dir/adminx.cpp.obj	5d8d9fb6b7ed3dac
+11809	12527	7368218738730344	Login.exe	6936290d690fda85
+16	277	7368222503255278	Login_autogen/timestamp	5ae156b066fbb7c2
+16	277	7368222503255278	Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+16	277	7368222503255278	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/timestamp	5ae156b066fbb7c2
+16	277	7368222503255278	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+323	9872	7368222598988626	CMakeFiles/Login.dir/myprofile.cpp.obj	6c2bba9d172dcdfb
+298	10012	7368222600470169	CMakeFiles/Login.dir/login.cpp.obj	50ddab3e5c7c733c
+316	10744	7368222607885879	CMakeFiles/Login.dir/news.cpp.obj	ce3d82d62147b936
+303	10950	7368222609939589	CMakeFiles/Login.dir/signup.cpp.obj	df8dd2b29ba8e906
+290	11189	7368222612379387	CMakeFiles/Login.dir/homepage.cpp.obj	9d050ea28e0674aa
+331	11355	7368222613997743	CMakeFiles/Login.dir/adminx.cpp.obj	5d8d9fb6b7ed3dac
+310	12014	7368222620613969	CMakeFiles/Login.dir/newsbasedon.cpp.obj	8816f85571b29fc7
+12014	12746	7368222627843282	Login.exe	6936290d690fda85
+11	2613	7368242113403657	Login_autogen/timestamp	5ae156b066fbb7c2
+11	2613	7368242113403657	Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+11	2613	7368242113403657	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/timestamp	5ae156b066fbb7c2
+11	2613	7368242113403657	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+2627	11452	7368242203505333	CMakeFiles/Login.dir/Login_autogen/mocs_compilation.cpp.obj	cbe7bf4ad066fb80
+2664	11793	7368242205514629	CMakeFiles/Login.dir/myprofile.cpp.obj	6c2bba9d172dcdfb
+2648	11795	7368242205705712	CMakeFiles/Login.dir/homepage.cpp.obj	9d050ea28e0674aa
+2642	11897	7368242207924274	CMakeFiles/Login.dir/signup.cpp.obj	df8dd2b29ba8e906
+2635	12159	7368242210546919	CMakeFiles/Login.dir/login.cpp.obj	50ddab3e5c7c733c
+2656	12209	7368242211059008	CMakeFiles/Login.dir/news.cpp.obj	ce3d82d62147b936
+2614	12446	7368242213449736	CMakeFiles/Login.dir/main.cpp.obj	e38430b2b44e439b
+2670	12865	7368242217617911	CMakeFiles/Login.dir/newsbasedon.cpp.obj	8816f85571b29fc7
+2721	13167	7368242220600329	CMakeFiles/Login.dir/adminx.cpp.obj	5d8d9fb6b7ed3dac
+13168	13924	7368242228145868	Login.exe	6936290d690fda85
+8	2692	7368249231389135	Login_autogen/timestamp	5ae156b066fbb7c2
+8	2692	7368249231389135	Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+8	2692	7368249231389135	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/timestamp	5ae156b066fbb7c2
+8	2692	7368249231389135	C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Login_autogen/mocs_compilation.cpp	5ae156b066fbb7c2
+2693	13277	7368249338471861	CMakeFiles/Login.dir/Login_autogen/mocs_compilation.cpp.obj	cbe7bf4ad066fb80
+2706	13441	7368249339947255	CMakeFiles/Login.dir/main.cpp.obj	e38430b2b44e439b
+2754	13770	7368249343552525	CMakeFiles/Login.dir/myprofile.cpp.obj	6c2bba9d172dcdfb
+2715	14454	7368249350422208	CMakeFiles/Login.dir/login.cpp.obj	50ddab3e5c7c733c
+2737	14460	7368249350447269	CMakeFiles/Login.dir/news.cpp.obj	ce3d82d62147b936
+2731	14485	7368249350753606	CMakeFiles/Login.dir/signup.cpp.obj	df8dd2b29ba8e906
+2722	14550	7368249351401845	CMakeFiles/Login.dir/homepage.cpp.obj	9d050ea28e0674aa
+2762	14871	7368249354519920	CMakeFiles/Login.dir/newsbasedon.cpp.obj	8816f85571b29fc7
+2772	15491	7368249360786787	CMakeFiles/Login.dir/adminx.cpp.obj	5d8d9fb6b7ed3dac
+15491	16188	7368249367700981	Login.exe	6936290d690fda85

@@ -47,6 +47,7 @@ public:
     int selectTrendingTitles();
     void PushTitlesIntoComboBox();
     void ShowNewBasedOnDescendingRating();
+    void RemoveDublicates();
 private:
     Ui::Newsbasedon *ui;
 };

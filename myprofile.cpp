@@ -10,7 +10,6 @@ MyProfile::MyProfile(QWidget *parent)
 {
     ui->setupUi(this);
 }
-
 MyProfile::~MyProfile()
 {
     delete ui;

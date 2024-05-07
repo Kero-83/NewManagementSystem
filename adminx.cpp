@@ -24,6 +24,7 @@ Adminx::Adminx(QWidget *parent)
     Adminx::backbuttons[2]=true;
     Adminx::backbuttons[0]=false;
     Adminx::backbuttons[1]=false;
+    Adminx::backbuttons[3]=false;
 }
 
 Adminx::~Adminx()
@@ -71,6 +72,17 @@ void Adminx::WriteNewsDataInFiles()
         file << news[i].getTitle()<<" " << news[i].getDescription()<<" " << news[i].getDate() <<" "<< news[i].getCategory()<<" " << news[i].getAvgRate() << ((i == (news.size() - 1)) ? " " : "\n");
     }
     qDebug() << "1243";
+    file.close();
+}
+void Adminx::WriteRateInFiles(){
+    ofstream file("RateNews.txt");
+    if(!file){
+        qDebug()<<"file not found";
+        return;
+    }
+    for(auto &it:User::Rates){
+        file<<it.first.first<<" "<<it.first.second<<" "<<it.second<<endl;
+    }
     file.close();
 }
 void Adminx::ReadUserDataFromFiles()
@@ -133,17 +145,34 @@ void Adminx::ReadNewsDataFromFiles()
         news.push_back(newsModel);
     }
 }
+void Adminx::ReadRateFromFiles(){
+    ifstream file("RateNews.txt");
+    if(!file){
+        qDebug()<<"file not found";
+        return;
+    }
+    int Id;
+    string Title;
+    int Rate;
+    while(file>>Id>>Title>>Rate){
+        User::Rates[make_pair(Id,Title)]=Rate;
+    }
+    file.close();
+
+}
 void Adminx::WriteInFiles()
 {
     WriteNewsDataInFiles();
     WriteUserDataInFiles();
     WriteFavNewInFiles();
+    WriteRateInFiles();
 }
 void Adminx::ReadFromFiles()
 {
     ReadUserDataFromFiles();
     ReadNewsDataFromFiles();
     ReadFavNewFromFiles();
+    ReadRateFromFiles();
 }
 
 
@@ -155,6 +184,7 @@ void Adminx::on_pushButton_addNew_clicked()
     checkedAdmin[3]=false;
     ui->pushButton_removeNew->hide();
     ui->pushButton_updateNew->hide();
+    ui->pushButton_DisplayAvgRate->hide();
     ui->pushButton_currentCategory->show();
     ui->pushButton_newCategory->show();
 }
@@ -240,6 +270,7 @@ void Adminx::on_pushButton_updateNew_clicked()
     ui->pushButton_Ok->show();
     ui->pushButton_addNew->hide();
     ui->pushButton_removeNew->hide();
+    ui->pushButton_DisplayAvgRate->hide();
     ui->comboBox_selectCurrentCategory->show();
     ui->label_4->show();
     for(int i=0;i<news.size();i++){
@@ -290,6 +321,7 @@ void Adminx::on_pushButton_removeNew_clicked()
     checkedAdmin[3]=false;
     ui->pushButton_addNew->hide();
     ui->pushButton_updateNew->hide();
+    ui->pushButton_DisplayAvgRate->hide();
     ui->label_4->show();
     ui->label_4->setText("Select New to Remove:");
     ui->comboBox_selectCurrentCategory->show();

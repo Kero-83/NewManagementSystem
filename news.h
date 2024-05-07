@@ -23,13 +23,16 @@ public:
     void AddNew();
     bool checkValidateOfTitle();
     void showEditButtons();
+    void saveRate();
+    void editRate();
+    void checkRate();
 
 private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_saveNewAdmin_clicked();
 
-    void on_pushButton_2_clicked();
+   // void on_pushButton_2_clicked();
 
     void on_pushButton_editTitle_clicked();
 
@@ -37,8 +40,9 @@ private slots:
 
     void on_checkBox_favNews_clicked(bool checked);
 
+    void on_pushButton_saveRate_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_pushButton_2_clicked();
 
 private:
     Ui::News *ui;

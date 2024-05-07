@@ -13,8 +13,10 @@ News::News(QWidget *parent)
     ui->pushButton_saveNewAdmin->hide();
     ui->pushButton_editDesc->hide();
     ui->pushButton_editTitle->hide();
+    ui->lineEdit->show();
 }
-
+string h;
+bool f=false;
 News::~News()
 {
     delete ui;
@@ -26,6 +28,7 @@ double News::RateAverage(double rate)
     return average;
 }
 void News::displayNew(){
+    ui->pushButton_2->hide();
     ui->lineEdit_Category->setText(Adminx::news[Newsbasedon::index].getCategory().c_str());
     ui->lineEdit_Title->setText(Adminx::news[Newsbasedon::index].getTitle().c_str());
     ui->lineEdit_Description->setText(Adminx::news[Newsbasedon::index].getDescription().c_str());
@@ -37,6 +40,21 @@ void News::displayNew(){
                     ui->checkBox_favNews->setChecked(true);
                 }
             }
+        }
+     for(auto it:User::Rates)
+        {
+             if(it.first.first==Login::count)
+        {
+            if(it.first.second==Adminx::news[Newsbasedon::index].getTitle())
+                {
+                     string rate=to_string(it.second);
+                    ui->lineEdit->show();
+                    ui->lineEdit->setText(rate.c_str());
+                    ui->lineEdit->setEnabled(false);
+                ui->pushButton_2->show();
+                    ui->pushButton_saveRate->hide();
+                 }
+        }
         }
 }
 void News::on_pushButton_clicked()
@@ -96,7 +114,7 @@ bool News::checkValidateOfTitle()
              string newTitle=ui->lineEdit_Title->text().toStdString();
              string newDescription=ui->lineEdit_Description->text().toStdString();
              string newDate=ui->lineEdit_Date->text().toStdString();
-             NewsModel::addnew(NewsModel(newTitle,newDescription,newDate,newCategory,0.0));
+             NewsModel::addnew(NewsModel(newTitle,newDescription,newDate,newCategory));
              for(auto it:Adminx::news){
                  qDebug()<<it.getCategory()<<" "<<it.getTitle();
              }
@@ -136,6 +154,9 @@ bool News::checkValidateOfTitle()
          ui->pushButton_saveNewAdmin->show();
          ui->checkBox_favNews->hide();
          ui->label_4->hide();
+         ui->lineEdit->hide();
+         ui->pushButton_2->hide();
+         ui->pushButton_saveRate->hide();
      }
      void News::on_pushButton_editTitle_clicked()
      {
@@ -173,3 +194,37 @@ bool News::checkValidateOfTitle()
               }
          }
      }
+     void News::checkRate(){
+           int Rate;
+         h=ui->lineEdit->text().toStdString();
+           Rate=stoi(h);
+           if(Rate>=1&&Rate<=5){
+
+             User::Rates[make_pair(Login::count,Adminx::news[Newsbasedon::index].getTitle())]=Rate;
+              if(f){
+             QMessageBox::information(this,"Success","Rate Added !");
+             ui->lineEdit->setEnabled(false);
+              }
+         }
+          else{
+              QMessageBox::warning(this,"Error","please Entre number between 1 and 5");
+          }
+          for(auto it:User::Rates){
+              qDebug()<<it.first.first<<it.first.second<<it.second;
+
+          }
+          qDebug()<<"========";
+     }
+     void News::on_pushButton_saveRate_clicked()
+     {
+         f=true;
+         checkRate();
+     }
+     void News::on_pushButton_2_clicked()
+     {
+         f=false;
+         checkRate();
+          ui->lineEdit->setEnabled(true);
+         ui->pushButton_saveRate->show();
+         ui->pushButton_2->hide();
+         }

@@ -1,0 +1,5 @@
+0 1 2
+0 mario 5
+0 martin 5
+0 t 3
+0 w 4

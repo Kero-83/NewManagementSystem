@@ -39,12 +39,12 @@ constexpr auto qt_meta_stringdata_CLASSNewsENDCLASS = QtMocHelpers::stringData(
     "on_pushButton_clicked",
     "",
     "on_pushButton_saveNewAdmin_clicked",
-    "on_pushButton_2_clicked",
     "on_pushButton_editTitle_clicked",
     "on_pushButton_editDesc_clicked",
     "on_checkBox_favNews_clicked",
     "checked",
-    "on_pushButton_3_clicked"
+    "on_pushButton_saveRate_clicked",
+    "on_pushButton_2_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -69,8 +69,8 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSNewsENDCLASS[] = {
        3,    0,   57,    2, 0x08,    2 /* Private */,
        4,    0,   58,    2, 0x08,    3 /* Private */,
        5,    0,   59,    2, 0x08,    4 /* Private */,
-       6,    0,   60,    2, 0x08,    5 /* Private */,
-       7,    1,   61,    2, 0x08,    6 /* Private */,
+       6,    1,   60,    2, 0x08,    5 /* Private */,
+       8,    0,   63,    2, 0x08,    7 /* Private */,
        9,    0,   64,    2, 0x08,    8 /* Private */,
 
  // slots: parameters
@@ -78,8 +78,8 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSNewsENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,    7,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Bool,    8,
     QMetaType::Void,
 
        0        // eod
@@ -98,8 +98,6 @@ Q_CONSTINIT const QMetaObject News::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_saveNewAdmin_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButton_2_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_editTitle_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_editDesc_clicked'
@@ -107,7 +105,9 @@ Q_CONSTINIT const QMetaObject News::staticMetaObject = { {
         // method 'on_checkBox_favNews_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        // method 'on_pushButton_3_clicked'
+        // method 'on_pushButton_saveRate_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_2_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -121,9 +121,11 @@ void News::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         switch (_id) {
         case 0: _t->on_pushButton_clicked(); break;
         case 1: _t->on_pushButton_saveNewAdmin_clicked(); break;
-        case 3: _t->on_pushButton_editTitle_clicked(); break;
-        case 4: _t->on_pushButton_editDesc_clicked(); break;
-        case 5: _t->on_checkBox_favNews_clicked((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 2: _t->on_pushButton_editTitle_clicked(); break;
+        case 3: _t->on_pushButton_editDesc_clicked(); break;
+        case 4: _t->on_checkBox_favNews_clicked((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 5: _t->on_pushButton_saveRate_clicked(); break;
+        case 6: _t->on_pushButton_2_clicked(); break;
         default: ;
         }
     }

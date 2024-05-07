@@ -44,21 +44,21 @@ void Newsbasedon::on_pushButton_Category_clicked()
     ui->pushButton->show();
     ShowNewBasedOnCategory();
 }
-// void Newsbasedon::RemoveDublicates(){
-//      QSet<string>uniqueItems;
-//     int itemCount=ui->CaegoryList->count();
-//     for(int i=0;i<itemCount;++i){
-//         QString itemText=ui->CaegoryList->itemText(i);
-//         if(uniqueItems.contains(itemText.toStdString())){
-//             ui->CaegoryList->removeItem(i);
-//             --itemCount;
-//             --i;
-//         }
-//         else{
-//             uniqueItems.insert(itemText.toStdString());
-//         }
-//     }
-// }
+void Newsbasedon::RemoveDublicates(){
+     QSet<string>uniqueItems;
+    int itemCount=ui->CaegoryList->count();
+    for(int i=0;i<itemCount;++i){
+        QString itemText=ui->CaegoryList->itemText(i);
+        if(uniqueItems.contains(itemText.toStdString())){
+            ui->CaegoryList->removeItem(i);
+            --itemCount;
+            --i;
+        }
+        else{
+            uniqueItems.insert(itemText.toStdString());
+        }
+    }
+}
 void Newsbasedon::ShowNewBasedOnCategory(){
     ui->CaegoryList->clear();
 
@@ -67,7 +67,7 @@ void Newsbasedon::ShowNewBasedOnCategory(){
         ui->CaegoryList->addItem(Adminx::news[i].getCategory().c_str());
         }
     }
-
+    RemoveDublicates();
 }
 void Newsbasedon:: ShowNewBasedOnRating(){
     ui->label_4->show();

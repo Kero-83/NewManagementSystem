@@ -14,7 +14,7 @@ private:
     string email;
 
 public:
-    vector<NewsModel>rate;
+    static map<pair<int,string>,int>Rates;
     User();
     User( string username,string password, string region, string email);
     User(string firstname,string lastname,string username,string password,string email);

@@ -79,3 +79,9 @@ void Login::on_pushButton_Login_clicked(){
      }
     }
 }
+// void Login::closeEvent(QCloseEvent* event)
+// {
+//     Adminx a;
+//     a.ReadFromFiles();
+//     QMainWindow::closeEvent(event);
+// }

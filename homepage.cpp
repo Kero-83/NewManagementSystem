@@ -1,6 +1,6 @@
 #include "homepage.h"
 #include "ui_homepage.h"
-#include "login.h" // Make sure to include the header for Login
+#include "login.h"
 #include"myprofile.h"
 #include"newsbasedon.h"
 #include"news.h"
@@ -12,6 +12,7 @@ HomePage::HomePage(QWidget *parent)
     ui->setupUi(this);
     ui->comboBox_favNews->hide();
     ui->pushButton_showNew->hide();
+    ui->label_2->hide();
 }
 
 void HomePage::setUserId(int userId){
@@ -48,7 +49,8 @@ void HomePage::on_pushButton_2_clicked()
     Adminx::backbuttons[0]=true;
     Adminx::backbuttons[1]=false;
     Adminx::backbuttons[2]=false;
-    Newsbasedon *newsbasedon=new Newsbasedon(this) ;\
+    Adminx::backbuttons[3]=false;
+    Newsbasedon *newsbasedon=new Newsbasedon(this) ;
         hide() ;
     newsbasedon->show() ;
 }
@@ -59,6 +61,12 @@ void HomePage::on_pushButton_favNews_clicked()
     Adminx::backbuttons[1]=true;
     Adminx::backbuttons[0]=false;
     Adminx::backbuttons[2]=false;
+    Adminx::backbuttons[3]=false;
+    ui->pushButton->hide();
+    ui->pushButton_2->hide();
+    ui->pushButton_favNews->hide();
+    ui->label->setText("Favourite News");
+    ui->label_2->show();
     ui->pushButton_showNew->show();
     ui->comboBox_favNews->clear();
     ui->comboBox_favNews->show();

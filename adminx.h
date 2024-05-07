@@ -50,9 +50,11 @@ private:
     void WriteUserDataInFiles();
     void WriteNewsDataInFiles();
     void WriteFavNewInFiles();
+    void WriteRateInFiles();
     void ReadFavNewFromFiles();
     void ReadUserDataFromFiles();
     void ReadNewsDataFromFiles();
+    void ReadRateFromFiles();
 };
 
 #endif // ADMINX_H

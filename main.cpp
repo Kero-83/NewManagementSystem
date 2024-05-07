@@ -9,12 +9,13 @@ using namespace std;
 vector<User> Adminx::users;
 vector<NewsModel> Adminx::news;
 map<int,vector<string>>News::favNews;
+map<pair<int,string>,int>User::Rates;
 int Login::count;
 int Newsbasedon :: index;
 string Adminx::NewCat;
 vector<bool> Newsbasedon::checked={false,false,false,false};
 vector<bool> Adminx::checkedAdmin={false,false,false,false};
-vector<bool> Adminx::backbuttons={false,false,false};
+vector<bool> Adminx::backbuttons={false,false,false,false};
 
 int main(int argc, char *argv[])
 {
@@ -38,7 +39,8 @@ int main(int argc, char *argv[])
      q->addnew(*q);//4
 
    r->ReadFromFiles();
-
-
+    for(auto it:User::Rates){
+       qDebug()<<it.first.second<<it.second;
+   }
     return a.exec();
 }
