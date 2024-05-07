@@ -24,6 +24,7 @@ Adminx::Adminx(QWidget *parent)
     Adminx::backbuttons[2]=true;
     Adminx::backbuttons[0]=false;
     Adminx::backbuttons[1]=false;
+    Adminx::backbuttons[3]=false;
 }
 
 Adminx::~Adminx()

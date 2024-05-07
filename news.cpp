@@ -5,6 +5,9 @@
 #include"adminx.h"
 #include"qmessagebox.h"
 #include"login.h"
+#include "search.h"
+
+
 News::News(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::News)
@@ -55,6 +58,13 @@ void News::on_pushButton_clicked()
         Adminx *a=new Adminx(this);
         hide();
         a->show();
+    }
+    else if(Adminx::backbuttons[3])
+    {
+        Search *search = new Search(this);
+        Adminx::backbuttons[3] = false;
+        hide();
+        search->show();
     }
 }
 void News::AddNew(){

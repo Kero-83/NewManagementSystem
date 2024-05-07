@@ -44,8 +44,8 @@ bool SignUP::_validUsername_email(String username,String email){
     for( int i=0;i<Adminx::users.size();i++){
         if(username==Adminx::users[i].getUsername()||email==Adminx::users[i].getEmail())
             return true;
-        return false;
-}
+    }
+    return false;
 }
 void SignUP::_validation(){
     bool check;

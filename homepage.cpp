@@ -83,3 +83,12 @@ void HomePage::on_pushButton_showNew_clicked()
     n->show();
   n->displayNew();
 }
+
+void HomePage::on_pushButton_search_clicked()
+{
+    hide();
+    Search *search = new Search(this);
+    search->show();
+
+}
+
