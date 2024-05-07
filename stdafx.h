@@ -7,5 +7,6 @@
 #include <QMainWindow>
 #include <QString>
 #define String string
+#define Adminx Admin
 using namespace std;
 #endif // STDAFX_H

@@ -373,6 +373,12 @@
 			null
 		],
 		[
+			"/home/kero/QtProjects/NewManagementSystem/favourites.h",
+			"MU",
+			"EWIEGA46WW/moc_favourites.cpp",
+			null
+		],
+		[
 			"/home/kero/QtProjects/NewManagementSystem/homepage.h",
 			"MU",
 			"EWIEGA46WW/moc_homepage.cpp",
@@ -406,6 +412,12 @@
 			"/home/kero/QtProjects/NewManagementSystem/newsmodel.h",
 			"MU",
 			"EWIEGA46WW/moc_newsmodel.cpp",
+			null
+		],
+		[
+			"/home/kero/QtProjects/NewManagementSystem/search.h",
+			"MU",
+			"EWIEGA46WW/moc_search.cpp",
 			null
 		],
 		[
@@ -492,6 +504,11 @@
 			"MU",
 			null
 		],
+		[
+			"/home/kero/QtProjects/NewManagementSystem/favourites.cpp",
+			"MU",
+			null
+		],
 		[ "/home/kero/QtProjects/NewManagementSystem/homepage.cpp", "MU", null ],
 		[ "/home/kero/QtProjects/NewManagementSystem/login.cpp", "MU", null ],
 		[ "/home/kero/QtProjects/NewManagementSystem/main.cpp", "MU", null ],
@@ -503,6 +520,7 @@
 			null
 		],
 		[ "/home/kero/QtProjects/NewManagementSystem/newsmodel.cpp", "MU", null ],
+		[ "/home/kero/QtProjects/NewManagementSystem/search.cpp", "MU", null ],
 		[ "/home/kero/QtProjects/NewManagementSystem/signup.cpp", "MU", null ],
 		[ "/home/kero/QtProjects/NewManagementSystem/user.cpp", "MU", null ]
 	],

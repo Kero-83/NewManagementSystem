@@ -409,6 +409,8 @@ Login_autogen/timestamp: \
 	/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/3.27.7/CMakeCXXCompiler.cmake \
 	/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/3.27.7/CMakeSystem.cmake \
 	/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Debug/Login_autogen/moc_predefs.h \
+	/home/kero/QtProjects/NewManagementSystem/favourites.cpp \
+	/home/kero/QtProjects/NewManagementSystem/favourites.h \
 	/home/kero/QtProjects/NewManagementSystem/homepage.cpp \
 	/home/kero/QtProjects/NewManagementSystem/homepage.h \
 	/home/kero/QtProjects/NewManagementSystem/login.cpp \
@@ -422,6 +424,8 @@ Login_autogen/timestamp: \
 	/home/kero/QtProjects/NewManagementSystem/newsbasedon.h \
 	/home/kero/QtProjects/NewManagementSystem/newsmodel.cpp \
 	/home/kero/QtProjects/NewManagementSystem/newsmodel.h \
+	/home/kero/QtProjects/NewManagementSystem/search.cpp \
+	/home/kero/QtProjects/NewManagementSystem/search.h \
 	/home/kero/QtProjects/NewManagementSystem/signup.cpp \
 	/home/kero/QtProjects/NewManagementSystem/signup.h \
 	/home/kero/QtProjects/NewManagementSystem/stdafx.h \
@@ -832,10 +836,12 @@ Login_autogen/timestamp: \
 	/usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \
 	/usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
 	/home/kero/QtProjects/NewManagementSystem/adminwindow.ui \
+	/home/kero/QtProjects/NewManagementSystem/favourites.ui \
 	/home/kero/QtProjects/NewManagementSystem/homepage.ui \
 	/home/kero/QtProjects/NewManagementSystem/login.ui \
 	/home/kero/QtProjects/NewManagementSystem/myprofile.ui \
 	/home/kero/QtProjects/NewManagementSystem/news.ui \
 	/home/kero/QtProjects/NewManagementSystem/newsbasedon.ui \
+	/home/kero/QtProjects/NewManagementSystem/search.ui \
 	/home/kero/QtProjects/NewManagementSystem/signup.ui \
 	/home/kero/Qt/Tools/CMake/bin/cmake

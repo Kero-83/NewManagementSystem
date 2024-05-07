@@ -99,7 +99,9 @@ void User::RateNew(NewsModel news, double rate) {
         news.rates[id] = rate;
     }
 }
-void User::Bookmark() {}
+void User::Bookmark() {
+
+}
 void User::ReadData() {}
 void User::setUsername(string username)
 {

@@ -72,7 +72,7 @@ void NewsModel::buildKeyWords()
         if(isspace(description[i]))
         {
             keywords.insert(description.substr(cur, i));
-            cur = i;
+            cur = i + 1;
         }
     }
 }
@@ -85,7 +85,7 @@ void NewsModel::buildTitles()
         if(isspace(title[i]))
         {
             titles.insert(title.substr(cur, i));
-            cur = i;
+            cur = i + 1;
         }
     }
 }

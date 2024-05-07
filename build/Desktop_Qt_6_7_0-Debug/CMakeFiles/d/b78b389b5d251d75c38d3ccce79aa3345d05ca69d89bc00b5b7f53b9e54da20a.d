@@ -411,6 +411,9 @@ Login_autogen/timestamp: \
   CMakeFiles/3.27.7/CMakeCXXCompiler.cmake \
   CMakeFiles/3.27.7/CMakeSystem.cmake \
   Login_autogen/moc_predefs.h \
+  /home/kero/QtProjects/NewManagementSystem/favourites.cpp \
+  /home/kero/QtProjects/NewManagementSystem/favourites.h \
+  /home/kero/QtProjects/NewManagementSystem/favourites.ui \
   /home/kero/QtProjects/NewManagementSystem/homepage.cpp \
   /home/kero/QtProjects/NewManagementSystem/homepage.h \
   /home/kero/QtProjects/NewManagementSystem/homepage.ui \
@@ -429,6 +432,9 @@ Login_autogen/timestamp: \
   /home/kero/QtProjects/NewManagementSystem/newsbasedon.ui \
   /home/kero/QtProjects/NewManagementSystem/newsmodel.cpp \
   /home/kero/QtProjects/NewManagementSystem/newsmodel.h \
+  /home/kero/QtProjects/NewManagementSystem/search.cpp \
+  /home/kero/QtProjects/NewManagementSystem/search.h \
+  /home/kero/QtProjects/NewManagementSystem/search.ui \
   /home/kero/QtProjects/NewManagementSystem/signup.cpp \
   /home/kero/QtProjects/NewManagementSystem/signup.h \
   /home/kero/QtProjects/NewManagementSystem/signup.ui \
