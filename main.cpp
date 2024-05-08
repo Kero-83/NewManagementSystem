@@ -43,4 +43,5 @@ int main(int argc, char *argv[])
        qDebug()<<it.first.second<<it.second;
    }
     return a.exec();
+   return 0;
 }

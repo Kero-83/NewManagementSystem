@@ -154,7 +154,7 @@
   /home/kero/Qt/6.7.0/gcc_64/include/QtWidgets/qtwidgetsexports.h \
   /home/kero/Qt/6.7.0/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
   /home/kero/Qt/6.7.0/gcc_64/include/QtWidgets/qwidget.h \
-  /home/kero/QtProjects/NewManagementSystem/admin.h \
+  /home/kero/QtProjects/NewManagementSystem/adminx.h \
   /home/kero/QtProjects/NewManagementSystem/newsmodel.h \
   /home/kero/QtProjects/NewManagementSystem/signup.h \
   /home/kero/QtProjects/NewManagementSystem/stdafx.h \

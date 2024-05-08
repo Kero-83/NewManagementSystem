@@ -361,9 +361,9 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/kero/QtProjects/NewManagementSystem/admin.h",
+			"/home/kero/QtProjects/NewManagementSystem/adminx.h",
 			"MU",
-			"EWIEGA46WW/moc_admin.cpp",
+			"EWIEGA46WW/moc_adminx.cpp",
 			null
 		],
 		[
@@ -400,6 +400,12 @@
 			"/home/kero/QtProjects/NewManagementSystem/newsmodel.h",
 			"MU",
 			"EWIEGA46WW/moc_newsmodel.cpp",
+			null
+		],
+		[
+			"/home/kero/QtProjects/NewManagementSystem/search.h",
+			"MU",
+			"EWIEGA46WW/moc_search.cpp",
 			null
 		],
 		[
@@ -480,7 +486,7 @@
 	"SETTINGS_FILE" : "/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/Login_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/kero/QtProjects/NewManagementSystem/admin.cpp", "MU", null ],
+		[ "/home/kero/QtProjects/NewManagementSystem/adminx.cpp", "MU", null ],
 		[ "/home/kero/QtProjects/NewManagementSystem/homepage.cpp", "MU", null ],
 		[ "/home/kero/QtProjects/NewManagementSystem/login.cpp", "MU", null ],
 		[ "/home/kero/QtProjects/NewManagementSystem/main.cpp", "MU", null ],
@@ -492,6 +498,7 @@
 			null
 		],
 		[ "/home/kero/QtProjects/NewManagementSystem/newsmodel.cpp", "MU", null ],
+		[ "/home/kero/QtProjects/NewManagementSystem/search.cpp", "MU", null ],
 		[ "/home/kero/QtProjects/NewManagementSystem/signup.cpp", "MU", null ],
 		[ "/home/kero/QtProjects/NewManagementSystem/user.cpp", "MU", null ]
 	],

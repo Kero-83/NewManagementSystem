@@ -1,6 +1,7 @@
 #ifndef NEWS_H
 #define NEWS_H
 #include"stdafx.h"
+#include "newsmodel.h"
 #include <QMainWindow>
 
 namespace Ui {
@@ -26,7 +27,7 @@ public:
     void saveRate();
     void editRate();
     void checkRate();
-
+    void calcRate(int, NewsModel&);
 private slots:
     void on_pushButton_clicked();
 

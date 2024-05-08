@@ -402,8 +402,9 @@ Login_autogen/timestamp: \
   /home/kero/Qt/Tools/CMake/share/cmake-3.27/Modules/Platform/Linux.cmake \
   /home/kero/Qt/Tools/CMake/share/cmake-3.27/Modules/Platform/UnixPaths.cmake \
   /home/kero/QtProjects/NewManagementSystem/CMakeLists.txt \
-  /home/kero/QtProjects/NewManagementSystem/admin.cpp \
-  /home/kero/QtProjects/NewManagementSystem/admin.h \
+  /home/kero/QtProjects/NewManagementSystem/adminx.cpp \
+  /home/kero/QtProjects/NewManagementSystem/adminx.h \
+  /home/kero/QtProjects/NewManagementSystem/adminx.ui \
   .qtc/package-manager/auto-setup.cmake \
   CMakeFiles/3.27.7/CMakeCXXCompiler.cmake \
   CMakeFiles/3.27.7/CMakeSystem.cmake \
@@ -426,6 +427,9 @@ Login_autogen/timestamp: \
   /home/kero/QtProjects/NewManagementSystem/newsbasedon.ui \
   /home/kero/QtProjects/NewManagementSystem/newsmodel.cpp \
   /home/kero/QtProjects/NewManagementSystem/newsmodel.h \
+  /home/kero/QtProjects/NewManagementSystem/search.cpp \
+  /home/kero/QtProjects/NewManagementSystem/search.h \
+  /home/kero/QtProjects/NewManagementSystem/search.ui \
   /home/kero/QtProjects/NewManagementSystem/signup.cpp \
   /home/kero/QtProjects/NewManagementSystem/signup.h \
   /home/kero/QtProjects/NewManagementSystem/signup.ui \

@@ -6,6 +6,7 @@
 #include"qmessagebox.h"
 #include"login.h"
 #include"stdafx.h"
+
 News::News(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::News)
@@ -226,8 +227,14 @@ bool News::checkValidateOfTitle()
      }
      void News::on_pushButton_saveRate_clicked()
      {
-         f=true;
-         checkRate();
+        f=true;
+        checkRate();
+        // Logic of Calculation of New Rate
+        int rate = stoi(ui->lineEdit->text().toStdString());
+        if(rate <= 5 && rate >= 1)
+        {
+            calcRate(rate, Adminx::news[Newsbasedon::index]);
+        }
      }
      void News::on_pushButton_2_clicked()
      {
@@ -236,4 +243,36 @@ bool News::checkValidateOfTitle()
           ui->lineEdit->setEnabled(true);
          ui->pushButton_saveRate->show();
          ui->pushButton_2->hide();
-         }
+         // // Logic of Calculation of Edit Rate
+         // int rate = stoi(ui->lineEdit->text().toStdString());
+         // if(rate <= 5 && rate >= 1)
+         // {
+         //     calcRate(rate, Adminx::news[Newsbasedon::index]);
+         // }
+}
+
+
+void News::calcRate(int rate, NewsModel& newsModel)
+{
+    int id = Login::count;
+    if(!newsModel.rates.count(id))
+    {
+        qDebug() << newsModel.avgRate << ' ' << newsModel.rates.size() << '\n';
+        newsModel.rates[id] = rate;
+        newsModel.avgRate = ((newsModel.avgRate * (newsModel.rates.size() - 1)) + rate) / newsModel.rates.size();
+        qDebug() << newsModel.avgRate << ' ' << newsModel.rates.size() << '\n';
+    }
+    else
+    {
+        // avgRate = (new rate - old rate) / size
+        // then we assign new rate to map: rates[id] = rate;
+        qDebug() << newsModel.avgRate << ' ' << newsModel.rates.size() << '\n';
+        newsModel.avgRate += double( rate - newsModel.rates[id]) / double(newsModel.rates.size());
+        qDebug() << rate <<' ' << id << ' ' << newsModel.rates[id] << newsModel.rates.size() << '\n';
+        newsModel.rates[id] = rate;
+        qDebug() << newsModel.avgRate << ' ' << newsModel.rates.size() << '\n';
+    }
+
+}
+
+

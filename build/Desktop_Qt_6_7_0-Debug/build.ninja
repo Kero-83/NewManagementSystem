@@ -105,14 +105,6 @@ build CMakeFiles/Login.dir/myprofile.cpp.o: CXX_COMPILER__Login_unscanned_Debug 
   OBJECT_DIR = CMakeFiles/Login.dir
   OBJECT_FILE_DIR = CMakeFiles/Login.dir
 
-build CMakeFiles/Login.dir/admin.cpp.o: CXX_COMPILER__Login_unscanned_Debug /home/kero/QtProjects/NewManagementSystem/admin.cpp || cmake_object_order_depends_target_Login
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/Login.dir/admin.cpp.o.d
-  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fcolor-diagnostics -fPIC
-  INCLUDES = -I/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Debug/Login_autogen/include -isystem /home/kero/Qt/6.7.0/gcc_64/include/QtCore -isystem /home/kero/Qt/6.7.0/gcc_64/include -isystem /home/kero/Qt/6.7.0/gcc_64/mkspecs/linux-g++ -isystem /home/kero/Qt/6.7.0/gcc_64/include/QtWidgets -isystem /home/kero/Qt/6.7.0/gcc_64/include/QtGui
-  OBJECT_DIR = CMakeFiles/Login.dir
-  OBJECT_FILE_DIR = CMakeFiles/Login.dir
-
 build CMakeFiles/Login.dir/newsbasedon.cpp.o: CXX_COMPILER__Login_unscanned_Debug /home/kero/QtProjects/NewManagementSystem/newsbasedon.cpp || cmake_object_order_depends_target_Login
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/Login.dir/newsbasedon.cpp.o.d
@@ -137,6 +129,22 @@ build CMakeFiles/Login.dir/newsmodel.cpp.o: CXX_COMPILER__Login_unscanned_Debug 
   OBJECT_DIR = CMakeFiles/Login.dir
   OBJECT_FILE_DIR = CMakeFiles/Login.dir
 
+build CMakeFiles/Login.dir/adminx.cpp.o: CXX_COMPILER__Login_unscanned_Debug /home/kero/QtProjects/NewManagementSystem/adminx.cpp || cmake_object_order_depends_target_Login
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Login.dir/adminx.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fcolor-diagnostics -fPIC
+  INCLUDES = -I/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Debug/Login_autogen/include -isystem /home/kero/Qt/6.7.0/gcc_64/include/QtCore -isystem /home/kero/Qt/6.7.0/gcc_64/include -isystem /home/kero/Qt/6.7.0/gcc_64/mkspecs/linux-g++ -isystem /home/kero/Qt/6.7.0/gcc_64/include/QtWidgets -isystem /home/kero/Qt/6.7.0/gcc_64/include/QtGui
+  OBJECT_DIR = CMakeFiles/Login.dir
+  OBJECT_FILE_DIR = CMakeFiles/Login.dir
+
+build CMakeFiles/Login.dir/search.cpp.o: CXX_COMPILER__Login_unscanned_Debug /home/kero/QtProjects/NewManagementSystem/search.cpp || cmake_object_order_depends_target_Login
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Login.dir/search.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fcolor-diagnostics -fPIC
+  INCLUDES = -I/home/kero/QtProjects/NewManagementSystem/build/Desktop_Qt_6_7_0-Debug/Login_autogen/include -isystem /home/kero/Qt/6.7.0/gcc_64/include/QtCore -isystem /home/kero/Qt/6.7.0/gcc_64/include -isystem /home/kero/Qt/6.7.0/gcc_64/mkspecs/linux-g++ -isystem /home/kero/Qt/6.7.0/gcc_64/include/QtWidgets -isystem /home/kero/Qt/6.7.0/gcc_64/include/QtGui
+  OBJECT_DIR = CMakeFiles/Login.dir
+  OBJECT_FILE_DIR = CMakeFiles/Login.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Login
@@ -145,7 +153,7 @@ build CMakeFiles/Login.dir/newsmodel.cpp.o: CXX_COMPILER__Login_unscanned_Debug 
 #############################################
 # Link the executable Login
 
-build Login: CXX_EXECUTABLE_LINKER__Login_Debug CMakeFiles/Login.dir/Login_autogen/mocs_compilation.cpp.o CMakeFiles/Login.dir/main.cpp.o CMakeFiles/Login.dir/login.cpp.o CMakeFiles/Login.dir/signup.cpp.o CMakeFiles/Login.dir/homepage.cpp.o CMakeFiles/Login.dir/user.cpp.o CMakeFiles/Login.dir/myprofile.cpp.o CMakeFiles/Login.dir/admin.cpp.o CMakeFiles/Login.dir/newsbasedon.cpp.o CMakeFiles/Login.dir/news.cpp.o CMakeFiles/Login.dir/newsmodel.cpp.o | /home/kero/Qt/6.7.0/gcc_64/lib/libQt6Widgets.so.6.7.0 /home/kero/Qt/6.7.0/gcc_64/lib/libQt6Gui.so.6.7.0 /home/kero/Qt/6.7.0/gcc_64/lib/libQt6Core.so.6.7.0 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || Login_autogen Login_autogen_timestamp_deps
+build Login: CXX_EXECUTABLE_LINKER__Login_Debug CMakeFiles/Login.dir/Login_autogen/mocs_compilation.cpp.o CMakeFiles/Login.dir/main.cpp.o CMakeFiles/Login.dir/login.cpp.o CMakeFiles/Login.dir/signup.cpp.o CMakeFiles/Login.dir/homepage.cpp.o CMakeFiles/Login.dir/user.cpp.o CMakeFiles/Login.dir/myprofile.cpp.o CMakeFiles/Login.dir/newsbasedon.cpp.o CMakeFiles/Login.dir/news.cpp.o CMakeFiles/Login.dir/newsmodel.cpp.o CMakeFiles/Login.dir/adminx.cpp.o CMakeFiles/Login.dir/search.cpp.o | /home/kero/Qt/6.7.0/gcc_64/lib/libQt6Widgets.so.6.7.0 /home/kero/Qt/6.7.0/gcc_64/lib/libQt6Gui.so.6.7.0 /home/kero/Qt/6.7.0/gcc_64/lib/libQt6Core.so.6.7.0 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || Login_autogen Login_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -Wl,-rpath,/home/kero/Qt/6.7.0/gcc_64/lib:  /home/kero/Qt/6.7.0/gcc_64/lib/libQt6Widgets.so.6.7.0  /home/kero/Qt/6.7.0/gcc_64/lib/libQt6Gui.so.6.7.0  /home/kero/Qt/6.7.0/gcc_64/lib/libQt6Core.so.6.7.0  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/Login.dir
@@ -230,7 +238,7 @@ build Login_autogen_timestamp_deps: phony CMakeFiles/Login_autogen_timestamp_dep
 #############################################
 # Utility command for Login_autogen
 
-build Login_autogen: phony CMakeFiles/Login_autogen Login_autogen/include/ui_login.h Login_autogen/include/ui_signup.h Login_autogen/include/ui_homepage.h Login_autogen/include/ui_myprofile.h Login_autogen/include/ui_newsbasedon.h Login_autogen/include/ui_news.h Login_autogen/timestamp Login_autogen/mocs_compilation.cpp Login_autogen_timestamp_deps
+build Login_autogen: phony CMakeFiles/Login_autogen Login_autogen/include/ui_login.h Login_autogen/include/ui_signup.h Login_autogen/include/ui_homepage.h Login_autogen/include/ui_myprofile.h Login_autogen/include/ui_newsbasedon.h Login_autogen/include/ui_news.h Login_autogen/include/ui_adminx.h Login_autogen/include/ui_search.h Login_autogen/timestamp Login_autogen/mocs_compilation.cpp Login_autogen_timestamp_deps
 
 
 #############################################
@@ -252,7 +260,7 @@ build CMakeFiles/Login_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles
 #############################################
 # Phony custom command for CMakeFiles/Login_autogen
 
-build CMakeFiles/Login_autogen Login_autogen/include/ui_login.h Login_autogen/include/ui_signup.h Login_autogen/include/ui_homepage.h Login_autogen/include/ui_myprofile.h Login_autogen/include/ui_newsbasedon.h Login_autogen/include/ui_news.h | ${cmake_ninja_workdir}CMakeFiles/Login_autogen ${cmake_ninja_workdir}Login_autogen/include/ui_login.h ${cmake_ninja_workdir}Login_autogen/include/ui_signup.h ${cmake_ninja_workdir}Login_autogen/include/ui_homepage.h ${cmake_ninja_workdir}Login_autogen/include/ui_myprofile.h ${cmake_ninja_workdir}Login_autogen/include/ui_newsbasedon.h ${cmake_ninja_workdir}Login_autogen/include/ui_news.h: phony Login_autogen/timestamp || Login_autogen_timestamp_deps
+build CMakeFiles/Login_autogen Login_autogen/include/ui_login.h Login_autogen/include/ui_signup.h Login_autogen/include/ui_homepage.h Login_autogen/include/ui_myprofile.h Login_autogen/include/ui_newsbasedon.h Login_autogen/include/ui_news.h Login_autogen/include/ui_adminx.h Login_autogen/include/ui_search.h | ${cmake_ninja_workdir}CMakeFiles/Login_autogen ${cmake_ninja_workdir}Login_autogen/include/ui_login.h ${cmake_ninja_workdir}Login_autogen/include/ui_signup.h ${cmake_ninja_workdir}Login_autogen/include/ui_homepage.h ${cmake_ninja_workdir}Login_autogen/include/ui_myprofile.h ${cmake_ninja_workdir}Login_autogen/include/ui_newsbasedon.h ${cmake_ninja_workdir}Login_autogen/include/ui_news.h ${cmake_ninja_workdir}Login_autogen/include/ui_adminx.h ${cmake_ninja_workdir}Login_autogen/include/ui_search.h: phony Login_autogen/timestamp || Login_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

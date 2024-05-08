@@ -345,6 +345,6 @@ void Adminx::on_pushButton_DisplayAvgRate_clicked()
      ui->label_4->setText("Select New :");
          for(int i=0;i<news.size();i++){
          ui->comboBox_selectCurrentCategory->addItem(news[i].getTitle().c_str());
-}
+        }
 }
 
