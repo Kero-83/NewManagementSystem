@@ -10,7 +10,6 @@ private:
     string description;
     string date;
     string category;
-    int rate;
 
 public:
     NewsModel();

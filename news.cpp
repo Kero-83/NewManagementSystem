@@ -268,7 +268,7 @@ void News::calcRate(int rate, NewsModel& newsModel)
         // then we assign new rate to map: rates[id] = rate;
         qDebug() << newsModel.avgRate << ' ' << newsModel.rates.size() << '\n';
         newsModel.avgRate += double( rate - newsModel.rates[id]) / double(newsModel.rates.size());
-        qDebug() << rate <<' ' << id << ' ' << newsModel.rates[id] << newsModel.rates.size() << '\n';
+        qDebug() << rate << ' ' << id << ' ' << newsModel.rates[id] << ' ' << newsModel.rates.size() << '\n';
         newsModel.rates[id] = rate;
         qDebug() << newsModel.avgRate << ' ' << newsModel.rates.size() << '\n';
     }

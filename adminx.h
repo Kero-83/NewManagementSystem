@@ -14,6 +14,7 @@ class Adminx : public QDialog
 
 public:
     static string NewCat;
+    int newsSize;
     explicit Adminx(QWidget *parent = nullptr);
     static vector<User>users;
     static vector<NewsModel> news;
@@ -50,10 +51,12 @@ private:
     void WriteUserDataInFiles();
     void WriteNewsDataInFiles();
     void WriteFavNewInFiles();
+    void WriteNewsNumInFiles();
     void WriteRateInFiles();
     void ReadFavNewFromFiles();
     void ReadUserDataFromFiles();
     void ReadNewsDataFromFiles();
+    void ReadNewsNumFromFiles();
     void ReadRateFromFiles();
 };
 

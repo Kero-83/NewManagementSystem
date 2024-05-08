@@ -69,10 +69,15 @@ void Adminx::WriteNewsDataInFiles()
         return;
     }
     for (int i = 0; i < news.size(); i++) {
-        file << news[i].getTitle()<<" " << news[i].getDescription()<<" " << news[i].getDate() <<" "<< news[i].getCategory()<<" " << news[i].getAvgRate() << ((i == (news.size() - 1)) ? " " : "\n");
+        file << news[i].getTitle() << " " << news[i].getDate() << " " << news[i].getCategory()<< " " << news[i].getAvgRate() << "\n";
+        file << news[i].getDescription() << "|" << ((i == news.size() - 1) ? ' ' : '\n');
     }
     qDebug() << "1243";
     file.close();
+}
+void Adminx::WriteNewsNumInFiles(){
+    ofstream file("NewsNum.txt");
+    file << Adminx::news.size();
 }
 void Adminx::WriteRateInFiles(){
     ofstream file("RateNews.txt");
@@ -80,8 +85,21 @@ void Adminx::WriteRateInFiles(){
         qDebug()<<"file not found";
         return;
     }
-    for(auto &it:User::Rates){
-        file<<it.first.first<<" "<<it.first.second<<" "<<it.second<<endl;
+    for(int i = 0; i < Adminx::news.size(); i++)
+    {
+        file << Adminx::news[i].rates.size();
+        // auto it = Adminx::news[i].rates.begin();
+        // for(; it != Adminx::news[i].rates.end(); it++)
+        // {
+        //     file << '\n';
+        //     auto [key, value] = *it;
+        //     file << key << ' ' << value ;
+        // }
+        for(auto [key, value] : Adminx::news[i].rates)
+        {
+            file << '\n' << key << ' ' << value;
+        }
+        file << ((i == Adminx::news.size() - 1) ? "" : "\n");
     }
     file.close();
 }
@@ -104,6 +122,7 @@ void Adminx::ReadUserDataFromFiles()
         temp=User(tfirstname,tlastname,tusername,tpassword,temail);
         users.push_back(temp);
     }
+    file.close();
 }
 void Adminx::ReadFavNewFromFiles(){
     ifstream file("FavNewsData.txt");
@@ -128,22 +147,39 @@ void Adminx::ReadFavNewFromFiles(){
 void Adminx::ReadNewsDataFromFiles()
 {
     NewsModel newsModel;
-    fstream file("newsData.txt",ios::in);
+    ifstream file("newsData.txt",ios::in);
     if(!file){
         qDebug()<<"file not found";
         return;
     }
-    for(int i = 0;!file.eof(); i++)
+    for(int i = 0;i < newsSize; i++)
     {
         string title;
         string description;
         string date;
         string category;
         double avgRate;
-        file >> title >> description >> date >> category >> avgRate;
+        file >> title >> date >> category >> avgRate;
+        char ch;
+        file.get(ch);
+        if(ch == '\n')
+        {
+            file.get(ch);
+        }
+        while(ch != '|')
+        {
+            description.push_back(ch);
+            file.get(ch);
+        }
         newsModel = NewsModel(title, description, date, category, avgRate);
         news.push_back(newsModel);
     }
+    file.close();
+
+}
+void Adminx::ReadNewsNumFromFiles(){
+    ifstream file("NewsNum.txt");
+    file >> newsSize;
 }
 void Adminx::ReadRateFromFiles(){
     ifstream file("RateNews.txt");
@@ -151,24 +187,33 @@ void Adminx::ReadRateFromFiles(){
         qDebug()<<"file not found";
         return;
     }
-    int Id;
-    string Title;
-    int Rate;
-    while(file>>Id>>Title>>Rate){
-        User::Rates[make_pair(Id,Title)]=Rate;
+    int news;
+    for(int i = 0; i < newsSize; i++)
+    {
+        file >> news;
+        while(news != 0)
+        {
+            news--;
+            int key, value;
+            file >> key >> value;
+            Adminx::news[i].rates[key] = value;
+            User::Rates[{key, Adminx::news[i].getTitle()}] = value;
+        }
     }
     file.close();
 
 }
 void Adminx::WriteInFiles()
 {
-    WriteNewsDataInFiles();
+    WriteNewsNumInFiles();
     WriteUserDataInFiles();
+    WriteNewsDataInFiles();
     WriteFavNewInFiles();
     WriteRateInFiles();
 }
 void Adminx::ReadFromFiles()
 {
+    ReadNewsNumFromFiles();
     ReadUserDataFromFiles();
     ReadNewsDataFromFiles();
     ReadFavNewFromFiles();
