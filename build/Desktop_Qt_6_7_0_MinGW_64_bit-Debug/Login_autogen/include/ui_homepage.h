@@ -29,7 +29,7 @@ public:
     QPushButton *pushButton_favNews;
     QComboBox *comboBox_favNews;
     QPushButton *pushButton_showNew;
-    QLabel *label_2;
+    QPushButton *pushButton_search;
 
     void setupUi(QDialog *HomePage)
     {
@@ -55,7 +55,7 @@ public:
         label->setStyleSheet(QString::fromUtf8("color: orange"));
         pushButton = new QPushButton(HomePage);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(120, 240, 101, 41));
+        pushButton->setGeometry(QRect(60, 240, 101, 41));
         pushButton->setFont(font);
         pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(85, 0, 0);"));
         label_3 = new QLabel(HomePage);
@@ -63,7 +63,7 @@ public:
         label_3->setGeometry(QRect(660, 60, 171, 71));
         pushButton_2 = new QPushButton(HomePage);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(350, 240, 141, 41));
+        pushButton_2->setGeometry(QRect(220, 240, 141, 41));
         pushButton_2->setFont(font);
         pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(85, 0, 0);"));
         pushButton_favNews = new QPushButton(HomePage);
@@ -73,13 +73,15 @@ public:
         pushButton_favNews->setStyleSheet(QString::fromUtf8("background-color: rgb(85, 0, 0);"));
         comboBox_favNews = new QComboBox(HomePage);
         comboBox_favNews->setObjectName("comboBox_favNews");
-        comboBox_favNews->setGeometry(QRect(230, 310, 101, 31));
+        comboBox_favNews->setGeometry(QRect(620, 330, 101, 31));
         pushButton_showNew = new QPushButton(HomePage);
         pushButton_showNew->setObjectName("pushButton_showNew");
-        pushButton_showNew->setGeometry(QRect(250, 430, 101, 29));
-        label_2 = new QLabel(HomePage);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(110, 290, 141, 51));
+        pushButton_showNew->setGeometry(QRect(630, 460, 101, 29));
+        pushButton_search = new QPushButton(HomePage);
+        pushButton_search->setObjectName("pushButton_search");
+        pushButton_search->setGeometry(QRect(400, 240, 141, 41));
+        pushButton_search->setFont(font);
+        pushButton_search->setStyleSheet(QString::fromUtf8("background-color: rgb(85, 0, 0);"));
 
         retranslateUi(HomePage);
 
@@ -96,7 +98,7 @@ public:
         pushButton_2->setText(QCoreApplication::translate("HomePage", "Display News", nullptr));
         pushButton_favNews->setText(QCoreApplication::translate("HomePage", "Favourite News", nullptr));
         pushButton_showNew->setText(QCoreApplication::translate("HomePage", "Show New", nullptr));
-        label_2->setText(QCoreApplication::translate("HomePage", "<html><head/><body><p><span style=\" font-size:20pt; font-weight:700; color:#0000ff;\">News</span></p></body></html>", nullptr));
+        pushButton_search->setText(QCoreApplication::translate("HomePage", "Search", nullptr));
     } // retranslateUi
 
 };

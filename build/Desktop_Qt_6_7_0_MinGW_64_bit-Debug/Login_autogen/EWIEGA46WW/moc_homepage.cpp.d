@@ -477,6 +477,7 @@ C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/adminx.h \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/login.h \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/newsmodel.h \
+  C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/search.h \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/signup.h \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/stdafx.h \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/user.h

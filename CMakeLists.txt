@@ -32,6 +32,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         newsbasedon.h newsbasedon.cpp newsbasedon.ui
         news.h news.cpp news.ui
         newsmodel.h newsmodel.cpp
+        search.h search.cpp search.ui
         adminx.h adminx.cpp adminx.ui
 
 

@@ -1,7 +1,8 @@
 #ifndef HOMEPAGE_H
 #define HOMEPAGE_H
 #include "stdafx.h"
-#include"login.h"
+#include "login.h"
+#include "search.h"
 
 namespace Ui {
 class HomePage;
@@ -27,6 +28,8 @@ private slots:
     void on_pushButton_favNews_clicked();
 
     void on_pushButton_showNew_clicked();
+
+    void on_pushButton_search_clicked();
 
 private:
     int userId;

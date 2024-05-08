@@ -297,6 +297,12 @@
 			null
 		],
 		[
+			"C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/search.h",
+			"MU",
+			"EWIEGA46WW/moc_search.cpp",
+			null
+		],
+		[
 			"C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/signup.h",
 			"MU",
 			"EWIEGA46WW/moc_signup.cpp",
@@ -423,6 +429,11 @@
 		],
 		[
 			"C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/newsmodel.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/search.cpp",
 			"MU",
 			null
 		],

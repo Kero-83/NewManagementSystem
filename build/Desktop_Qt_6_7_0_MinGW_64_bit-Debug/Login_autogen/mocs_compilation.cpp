@@ -5,4 +5,5 @@
 #include "EWIEGA46WW/moc_myprofile.cpp"
 #include "EWIEGA46WW/moc_news.cpp"
 #include "EWIEGA46WW/moc_newsbasedon.cpp"
+#include "EWIEGA46WW/moc_search.cpp"
 #include "EWIEGA46WW/moc_signup.cpp"

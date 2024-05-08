@@ -5,6 +5,7 @@
 #include"adminx.h"
 #include"qmessagebox.h"
 #include"login.h"
+#include"stdafx.h"
 News::News(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::News)
@@ -74,8 +75,16 @@ void News::on_pushButton_clicked()
         hide();
         a->show();
     }
+    else if(Adminx::backbuttons[3]){
+        Search *s=new Search(this);
+        hide();
+        s->show();
+    }
 }
 void News::AddNew(){
+    ui->pushButton_2->hide();
+    ui->pushButton_saveRate->hide();
+    ui->lineEdit->hide();
     ui->checkBox_favNews->hide();
     ui->label_4->hide();
     NewsModel n;
@@ -114,7 +123,7 @@ bool News::checkValidateOfTitle()
              string newTitle=ui->lineEdit_Title->text().toStdString();
              string newDescription=ui->lineEdit_Description->text().toStdString();
              string newDate=ui->lineEdit_Date->text().toStdString();
-             NewsModel::addnew(NewsModel(newTitle,newDescription,newDate,newCategory));
+             NewsModel::addnew(NewsModel(newTitle,newDescription,newDate,newCategory,0.0));
              for(auto it:Adminx::news){
                  qDebug()<<it.getCategory()<<" "<<it.getTitle();
              }

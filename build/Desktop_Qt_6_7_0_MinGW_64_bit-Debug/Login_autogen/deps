@@ -661,6 +661,8 @@ Login_autogen/timestamp: \
 	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/newsbasedon.h \
 	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/newsmodel.cpp \
 	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/newsmodel.h \
+	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/search.cpp \
+	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/search.h \
 	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/signup.cpp \
 	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/signup.h \
 	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/stdafx.h \
@@ -672,5 +674,6 @@ Login_autogen/timestamp: \
 	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/myprofile.ui \
 	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/news.ui \
 	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/newsbasedon.ui \
+	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/search.ui \
 	C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/signup.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

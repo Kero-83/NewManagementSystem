@@ -668,6 +668,9 @@ Login_autogen/timestamp: \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/newsbasedon.ui \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/newsmodel.cpp \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/newsmodel.h \
+  C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/search.cpp \
+  C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/search.h \
+  C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/search.ui \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/signup.cpp \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/signup.h \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/signup.ui \

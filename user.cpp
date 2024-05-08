@@ -1,6 +1,8 @@
 #include "user.h"
 #include "signup.h"
+#include "login.h"
 #include "adminx.h"
+
 User::User(){}
 User::User(
     string username,
@@ -20,13 +22,85 @@ User::User(string firstname,string lastname,string username,string password,stri
     this->password=password;
     this->email=email;
 }
-void User::Search() {}
+vector<NewsModel> User::Search(SearchBasedOn searchBasedOn, string inp) {
+    if(searchBasedOn == SearchBasedOn::Keyword)
+    {
+        return _searchByKeywords(inp);
+    }
+    else if(searchBasedOn == SearchBasedOn::titles)
+    {
+        return _searchByTitles(inp);
+    }
+    else if(searchBasedOn == SearchBasedOn::date)
+    {
+        return _searchByDate(inp);
+    }
+    else
+    {
+        qDebug() << "Undefined Type\n";
+        return {};
+    }
+}
+
+vector<NewsModel> User::_searchByKeywords(string keyword)
+{
+    vector<NewsModel> ans;
+    for(auto &newModel : Adminx::news)
+    {
+        if(newModel.keywords.count(keyword))
+        {
+            ans.push_back(newModel);
+            continue;
+        }
+    }
+    return ans;
+}
+vector<NewsModel> User::_searchByTitles(string title)
+{
+    vector<NewsModel> ans;
+    for(auto &newModel : Adminx::news)
+    {
+        if(newModel.titles.count(title))
+        {
+            ans.push_back(newModel);
+            continue;
+        }
+    }
+    return ans;
+}
+vector<NewsModel> User::_searchByDate(string date)
+{
+    vector<NewsModel> ans;
+    for(auto &newModel : Adminx::news)
+    {
+        if(newModel.getDate() == date)
+        {
+            ans.push_back(newModel);
+            continue;
+        }
+    }
+    return ans;
+}
 void User::ShowNewBasedOnCategory()
 {
 
 }
-void User::RateNew() {}
-void User::Bookmark() {}
+void User::RateNew(NewsModel news, double rate) {
+    int id = Login::count;
+    if(news.rates.count(id))
+    {
+        news.avgRate += (rate - news.avgRate)*news.rates.size();
+        news.rates[id] = rate;
+    }
+    else
+    {
+        news.avgRate = ((news.avgRate * (news.rates.size())) + rate) / (news.rates.size() + 1);
+        news.rates[id] = rate;
+    }
+}
+void User::Bookmark() {
+
+}
 void User::ReadData() {}
 void User::setUsername(string username)
 {
