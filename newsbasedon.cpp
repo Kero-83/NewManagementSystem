@@ -270,6 +270,7 @@ void Newsbasedon::on_pushButton_descendingRate_clicked()
 {
     ui->pushButton_Category->hide();
     ui->pushButton_Time->hide();
+    ui->pushButton_Rate->hide();
     checked[3]=true;
     checked[0]=false;
     checked[1]=false;

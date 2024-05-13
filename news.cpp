@@ -27,16 +27,16 @@ News::~News()
     delete ui;
 }
 void News::displayNew(){
-
     ui->pushButton_2->hide();
+    ui->plainTextEdit_Description->setPlainText("In \"Mija,\" director Isabel Castro combined music documentaries with the style of \"Euphoria\" and \"Clueless\" to tell a more nuanced immigration story.");
     ui->lineEdit_Category->setText(Adminx::news[Newsbasedon::index].getCategory().c_str());
-    ui->lineEdit_Title->setText(Adminx::news[Newsbasedon::index].getTitle().c_str());
-    ui->lineEdit_Description->setText(Adminx::news[Newsbasedon::index].getDescription().c_str());
+    ui->plainTextEdit_Title->setPlainText(Adminx::news[Newsbasedon::index].getTitle().c_str());
+    ui->plainTextEdit_Description->setPlainText(Adminx::news[Newsbasedon::index].getDescription().c_str());
     ui->lineEdit_Date->setText(Adminx::news[Newsbasedon::index].getDate().c_str());
     for(auto it:favNews){
         if(it.first==Login::count){
             for(int i=0;i<it.second.size();i++){
-                if(ui->lineEdit_Title->text()==it.second[i].c_str())
+                if(ui->plainTextEdit_Title->toPlainText()==it.second[i].c_str())
                     ui->checkBox_favNews->setChecked(true);
             }
         }
@@ -89,16 +89,16 @@ void News::AddNew(){
     NewsModel n;
     string date=n.getCurrentDate();
     ui->lineEdit_Date->setText(date.c_str());
-    ui->lineEdit_Title->setEnabled(true);
+    ui->plainTextEdit_Title->setEnabled(true);
     ui->lineEdit_Category->setText(Adminx::NewCat.c_str());
-    ui->lineEdit_Description->setEnabled(true);
+    ui->plainTextEdit_Description->setEnabled(true);
     ui->pushButton_saveNewAdmin->show();
     qDebug()<<Adminx::NewCat;
 }
 bool News::checkValidateOfTitle()
 {
     for(int i=0;i<Adminx::news.size();i++){
-        if(ui->lineEdit_Title->text().toStdString()==Adminx::news[i].getTitle())
+        if(ui->plainTextEdit_Title->toPlainText().toStdString()==Adminx::news[i].getTitle())
 
         return true;
     }
@@ -117,10 +117,10 @@ void News::on_pushButton_saveNewAdmin_clicked()
 {
     if(Adminx::checkedAdmin[0]){
         //addnew
-        if(ui->lineEdit_Category->text()=="\0"||ui->lineEdit_Title->text()=="\0"||ui->lineEdit_Description->text()=="\0"){
+        if(ui->lineEdit_Category->text()=="\0"||ui->plainTextEdit_Title->toPlainText()=="\0"||ui->plainTextEdit_Description->toPlainText()=="\0"){
             QMessageBox::warning(this,"Error","Please fill the data");
         }
-        else if(ui->lineEdit_Category->text()==ui->lineEdit_Title->text()){
+        else if(ui->lineEdit_Category->text()==ui->plainTextEdit_Title->toPlainText()){
             QMessageBox::warning(this,"Error","Category and Title can't have same name ");
         }
         else if(checkValidateOfTitle()){
@@ -129,8 +129,8 @@ void News::on_pushButton_saveNewAdmin_clicked()
         else{
             QMessageBox::information(this,"Success","New Added");
             string newCategory=ui->lineEdit_Category->text().toStdString();
-            string newTitle=ui->lineEdit_Title->text().toStdString();
-            string newDescription=ui->lineEdit_Description->text().toStdString();
+            string newTitle=ui->plainTextEdit_Title->toPlainText().toStdString();
+            string newDescription=ui->plainTextEdit_Description->toPlainText().toStdString();
             string newDate=ui->lineEdit_Date->text().toStdString();
             NewsModel::addnew(NewsModel(newTitle,newDescription,newDate,newCategory,0.0));
             for(auto it:Adminx::news){
@@ -140,7 +140,7 @@ void News::on_pushButton_saveNewAdmin_clicked()
     }
     else if(Adminx::checkedAdmin[1]){
         //update New
-        if(ui->lineEdit_Title->text()=="\0"||ui->lineEdit_Description->text()=="\0"||ui->lineEdit_Category->text()=="\0"){
+        if(ui->plainTextEdit_Title->toPlainText()=="\0"||ui->plainTextEdit_Description->toPlainText()=="\0"||ui->lineEdit_Category->text()=="\0"){
             QMessageBox::warning(this,"Error","Please fill the data");
         }
         else if(checkValidateOfTitle()&&checkEditTitle){
@@ -155,9 +155,9 @@ void News::on_pushButton_saveNewAdmin_clicked()
             checkEditTitle=false;
             checkEditCategory=false;
             QMessageBox::information(this,"success","New Updated !");
-            string NewTitle=ui->lineEdit_Title->text().toStdString();
+            string NewTitle=ui->plainTextEdit_Title->toPlainText().toStdString();
             Adminx::news[Newsbasedon::index].setTitle(NewTitle);
-            string NewDesc=ui->lineEdit_Description->text().toStdString();
+            string NewDesc=ui->plainTextEdit_Description->toPlainText().toStdString();
             Adminx::news[Newsbasedon::index].setDescription(NewDesc);
             string NewCat=ui->lineEdit_Category->text().toStdString();
             Adminx::news[Newsbasedon::index].setCategory(NewCat);
@@ -187,11 +187,11 @@ void News:: showEditButtons(){
 void News::on_pushButton_editTitle_clicked()
 {
     checkEditTitle=true;
-    ui->lineEdit_Title->setEnabled(true);
+    ui->plainTextEdit_Title->setEnabled(true);
 }
 void News::on_pushButton_editDesc_clicked()
 {
-    ui->lineEdit_Description->setEnabled(true);
+    ui->plainTextEdit_Description->setEnabled(true);
 }
 void News::on_pushButton_editCategory_clicked()
 {
@@ -213,7 +213,7 @@ void News::on_checkBox_favNews_clicked(bool checked)
             {
                 for(int i=0;i<it.second.size();i++)
                 {
-                    if(ui->lineEdit_Title->text()==it.second[i].c_str())
+                    if(ui->plainTextEdit_Title->toPlainText()==it.second[i].c_str())
                     {
                         favNews[it.first].erase(favNews[it.first].begin()+i);
                         qDebug()<<Adminx::news[Newsbasedon::index].getTitle();

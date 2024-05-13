@@ -17,6 +17,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -33,8 +34,6 @@ public:
     QLabel *label_3;
     QLabel *label_4;
     QLineEdit *lineEdit_Category;
-    QLineEdit *lineEdit_Title;
-    QLineEdit *lineEdit_Description;
     QPushButton *pushButton;
     QLabel *label_5;
     QLineEdit *lineEdit_Date;
@@ -46,6 +45,8 @@ public:
     QLineEdit *lineEdit;
     QPushButton *pushButton_2;
     QPushButton *pushButton_editCategory;
+    QPlainTextEdit *plainTextEdit_Description;
+    QPlainTextEdit *plainTextEdit_Title;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -58,7 +59,8 @@ public:
         centralwidget->setObjectName("centralwidget");
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(10, -10, 791, 621));
+        groupBox->setEnabled(true);
+        groupBox->setGeometry(QRect(10, 0, 791, 621));
         label = new QLabel(groupBox);
         label->setObjectName("label");
         label->setGeometry(QRect(10, 90, 101, 41));
@@ -75,14 +77,6 @@ public:
         lineEdit_Category->setObjectName("lineEdit_Category");
         lineEdit_Category->setEnabled(false);
         lineEdit_Category->setGeometry(QRect(110, 100, 171, 28));
-        lineEdit_Title = new QLineEdit(groupBox);
-        lineEdit_Title->setObjectName("lineEdit_Title");
-        lineEdit_Title->setEnabled(false);
-        lineEdit_Title->setGeometry(QRect(110, 150, 171, 28));
-        lineEdit_Description = new QLineEdit(groupBox);
-        lineEdit_Description->setObjectName("lineEdit_Description");
-        lineEdit_Description->setEnabled(false);
-        lineEdit_Description->setGeometry(QRect(120, 230, 331, 181));
         pushButton = new QPushButton(groupBox);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(650, 500, 83, 29));
@@ -101,7 +95,7 @@ public:
         pushButton_saveNewAdmin->setGeometry(QRect(650, 450, 83, 29));
         pushButton_editTitle = new QPushButton(groupBox);
         pushButton_editTitle->setObjectName("pushButton_editTitle");
-        pushButton_editTitle->setGeometry(QRect(390, 150, 83, 29));
+        pushButton_editTitle->setGeometry(QRect(480, 160, 83, 29));
         pushButton_editDesc = new QPushButton(groupBox);
         pushButton_editDesc->setObjectName("pushButton_editDesc");
         pushButton_editDesc->setGeometry(QRect(480, 300, 141, 29));
@@ -117,6 +111,16 @@ public:
         pushButton_editCategory = new QPushButton(groupBox);
         pushButton_editCategory->setObjectName("pushButton_editCategory");
         pushButton_editCategory->setGeometry(QRect(380, 100, 111, 29));
+        plainTextEdit_Description = new QPlainTextEdit(groupBox);
+        plainTextEdit_Description->setObjectName("plainTextEdit_Description");
+        plainTextEdit_Description->setEnabled(false);
+        plainTextEdit_Description->setGeometry(QRect(100, 230, 341, 151));
+        plainTextEdit_Description->setStyleSheet(QString::fromUtf8("border-color: rgb(255, 255, 255);"));
+        plainTextEdit_Title = new QPlainTextEdit(groupBox);
+        plainTextEdit_Title->setObjectName("plainTextEdit_Title");
+        plainTextEdit_Title->setEnabled(false);
+        plainTextEdit_Title->setGeometry(QRect(100, 150, 341, 41));
+        plainTextEdit_Title->setStyleSheet(QString::fromUtf8("border-color: rgb(255, 255, 255);"));
         News->setCentralWidget(centralwidget);
         menubar = new QMenuBar(News);
         menubar->setObjectName("menubar");
