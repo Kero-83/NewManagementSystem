@@ -45,6 +45,7 @@ public:
     QPushButton *pushButton_saveRate;
     QLineEdit *lineEdit;
     QPushButton *pushButton_2;
+    QPushButton *pushButton_editCategory;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -113,6 +114,9 @@ public:
         pushButton_2 = new QPushButton(groupBox);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setGeometry(QRect(200, 490, 83, 29));
+        pushButton_editCategory = new QPushButton(groupBox);
+        pushButton_editCategory->setObjectName("pushButton_editCategory");
+        pushButton_editCategory->setGeometry(QRect(380, 100, 111, 29));
         News->setCentralWidget(centralwidget);
         menubar = new QMenuBar(News);
         menubar->setObjectName("menubar");
@@ -143,6 +147,7 @@ public:
         pushButton_editDesc->setText(QCoreApplication::translate("News", "Edit Description", nullptr));
         pushButton_saveRate->setText(QCoreApplication::translate("News", "Save Rate", nullptr));
         pushButton_2->setText(QCoreApplication::translate("News", "Edit Rate", nullptr));
+        pushButton_editCategory->setText(QCoreApplication::translate("News", "Edit Category", nullptr));
     } // retranslateUi
 
 };

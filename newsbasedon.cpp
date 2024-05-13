@@ -63,7 +63,7 @@ void Newsbasedon::ShowNewBasedOnCategory(){
     ui->CaegoryList->clear();
 
     for(int i=0;i<Adminx::news.size();i++){
-        if(Adminx::news[i].getAvgRate()>2||Adminx::news[i].getAvgRate()==0){
+        if(Adminx::news[i].getAvgRate()>=2||Adminx::news[i].getAvgRate()==0){
         ui->CaegoryList->addItem(Adminx::news[i].getCategory().c_str());
         }
     }
@@ -252,7 +252,7 @@ void Newsbasedon::ShowNewBasedOnDate(){
     ui->label_4->show();
     ui->pushButton->show();
     for(int i=Adminx::news.size()-1;i>=0;i--){
-        if(Adminx::news[i].getAvgRate()>2||Adminx::news[i].getAvgRate()==0){
+        if(Adminx::news[i].getAvgRate()>=2||Adminx::news[i].getAvgRate()==0){
             tite.push_back(Adminx::news[i].getTitle().c_str());
         }
     }
@@ -290,7 +290,7 @@ void Newsbasedon:: ShowNewBasedOnDescendingRating(){
     }
     stack<NewsModel>n;
     for(auto t:New){
-        if (t.second.getAvgRate()>2)
+        if (t.second.getAvgRate()>=2)
             n.push(t.second);
     }
     int x=n.size();

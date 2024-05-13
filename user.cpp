@@ -85,19 +85,19 @@ void User::ShowNewBasedOnCategory()
 {
 
 }
-void User::RateNew(NewsModel news, double rate) {
-    int id = Login::count;
-    if(news.rates.count(id))
-    {
-        news.avgRate += (rate - news.avgRate)*news.rates.size();
-        news.rates[id] = rate;
-    }
-    else
-    {
-        news.avgRate = ((news.avgRate * (news.rates.size())) + rate) / (news.rates.size() + 1);
-        news.rates[id] = rate;
-    }
-}
+// void User::RateNew(NewsModel news, double rate) {
+//     int id = Login::count;
+//     if(news.rates.count(id))
+//     {
+//         news.avgRate += (rate - news.avgRate)*news.rates.size();
+//         news.rates[id] = rate;
+//     }
+//     else
+//     {
+//         news.avgRate = ((news.avgRate * (news.rates.size())) + rate) / (news.rates.size() + 1);
+//         news.rates[id] = rate;
+//     }
+// }
 void User::Bookmark() {
 
 }

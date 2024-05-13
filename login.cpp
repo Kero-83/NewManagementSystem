@@ -60,8 +60,8 @@ void Login::on_pushButton_Login_clicked(){
     for( int i=0;i<Adminx::users.size();i++){
          if(ui->lineEdit_username->text().toStdString() ==Adminx::users[i].getUsername() &&ui->lineEdit_password->text().toStdString()==Adminx::users[i].getPassword())
         {
-  QMessageBox::information(this, "", "in");
-             count=i;
+            count=i;
+             QMessageBox::information(this, "Success",string("Welceome " + Adminx::users[count].getUsername() ).c_str());
              flag=true;
              break;
         }
@@ -70,8 +70,8 @@ void Login::on_pushButton_Login_clicked(){
     if(flag){
 
         HomePage *HP=new HomePage;
-             connect(ui->pushButton_Login,&QPushButton::clicked,HP,&HomePage::show_window);
-             connect(ui->pushButton_Login,&QPushButton::clicked,this,&Login::close_window);
+        hide();
+        HP->show();
              qDebug()<<count;
      }
       else{
@@ -79,9 +79,3 @@ void Login::on_pushButton_Login_clicked(){
      }
     }
 }
-// void Login::closeEvent(QCloseEvent* event)
-// {
-//     Adminx a;
-//     a.ReadFromFiles();
-//     QMainWindow::closeEvent(event);
-// }

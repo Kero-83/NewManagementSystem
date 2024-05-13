@@ -1,6 +1,12 @@
-w w11 08-05-2024 hm 4.5
-t d 08-05-2024 health 4.5
-h s 08-05-2024 hr 1
-1 2 08-05-2024 hk 5
-mario m1 08-05-2024 sport 4
-martin m2 08-05-2024 health 5 
+c 09-05-2024 hm 0
+helloaaaaaaa|
+t 09-05-2024 health 0
+d|
+h 09-05-2024 hr 0
+s|
+1 09-05-2024 hk 0
+2|
+mario 09-05-2024 sport 4
+m1|
+martin 09-05-2024 health 5
+m2| 

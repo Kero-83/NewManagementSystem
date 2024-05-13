@@ -244,6 +244,19 @@
       <string>Edit Rate</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_editCategory">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>100</y>
+       <width>111</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Edit Category</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

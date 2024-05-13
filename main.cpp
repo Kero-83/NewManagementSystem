@@ -43,10 +43,10 @@ int main(int argc, char *argv[])
     Adminx*r=new Adminx();
     r->ReadFromFiles();
     qDebug() << Adminx::news.size() << r->newsSize;
-    // test();
-   //  for(auto it:User::Rates){
-   //     qDebug()<<it.first.second<<it.second;
-   // }
+   // test();
+    for(auto it:User::Rates){
+       qDebug()<<it.first.second<<it.second;
+   }
     return a.exec();
    return 0;
 }
