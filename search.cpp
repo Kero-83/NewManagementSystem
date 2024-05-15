@@ -39,6 +39,7 @@ Search::~Search()
 
 void Search::on_pushButton_clicked()
 {
+    ui->comboBox_news->clear();
     ui->pushButton->setStyleSheet(_clickedStyleSheet);
     ui->pushButton_2->setStyleSheet(_defaultStyleSheet);
     ui->pushButton_3->setStyleSheet(_defaultStyleSheet);
@@ -54,7 +55,6 @@ void Search::on_pushButton_clicked()
     ui->searchButton_2->show();
     // show Show News Button;
     ui->pushButton_4->show();
-
     // Logic of Search By Date
     ui->comboBox_dates->clear();
     for(auto newsModel : Adminx::news)
