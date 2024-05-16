@@ -14,24 +14,66 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_Rate">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>140</y>
-      <width>141</width>
-      <height>61</height>
+      <x>-50</x>
+      <y>-70</y>
+      <width>871</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/realistic-news-studio-background_23-2149985600.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>20</y>
+      <width>401</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>Trending News</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:700; font-style:italic; color:#ffffff;&quot;&gt;Show News Based on&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>280</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;font color =white&gt;Select New:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>260</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;font color =white&gt;select title  :</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_Category">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>140</y>
+      <x>220</x>
+      <y>130</y>
       <width>151</width>
       <height>61</height>
      </rect>
@@ -40,44 +82,11 @@
      <string>Category Section</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Time">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>140</y>
-      <width>141</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Latest News</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="CaegoryList">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>260</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-   </widget>
    <widget class="QPushButton" name="pushButton_showNew">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>440</y>
+      <x>460</x>
+      <y>430</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -86,24 +95,47 @@
      <string>Show New</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QPushButton" name="pushButton_descendingRate">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>30</y>
-      <width>401</width>
-      <height>51</height>
+      <x>410</x>
+      <y>130</y>
+      <width>151</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:700; font-style:italic; color:#000000;&quot;&gt;Show News Based on&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>Rating Section</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>340</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;font color =white&gt;Selected Category :</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>260</y>
+      <width>101</width>
+      <height>28</height>
+     </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_back">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>500</y>
+      <x>670</x>
+      <y>490</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -112,79 +144,17 @@
      <string>back</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QPushButton" name="pushButton_Rate">
     <property name="geometry">
      <rect>
-      <x>500</x>
-      <y>270</y>
-      <width>101</width>
-      <height>28</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>250</y>
-      <width>131</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Select category :</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>270</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>select title  :</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_showTitle">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>440</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>show titles</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>290</y>
-      <width>161</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Select New:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>350</y>
+      <x>20</x>
+      <y>130</y>
       <width>141</width>
-      <height>31</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>Selected Category :</string>
+     <string>Trending News</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
@@ -193,24 +163,102 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>350</y>
+      <x>190</x>
+      <y>340</y>
       <width>141</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+border-style: solid;
+    border-width: 2px;
+border-color: blue;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_showTitle">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>430</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>show titles</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="CaegoryList">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>250</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>210</y>
+      <width>83</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ok</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Time">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>130</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Latest News</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>210</y>
+      <width>83</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ok</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>350</y>
-      <width>141</width>
-      <height>31</height>
+      <x>60</x>
+      <y>240</y>
+      <width>131</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>Selected Title :</string>
+     <string>&lt;font color =white&gt;Select category :</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
@@ -219,50 +267,30 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>350</y>
+      <x>480</x>
+      <y>340</y>
       <width>141</width>
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+border-style: solid;
+    border-width: 2px;
+border-color: blue;</string>
+    </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>220</y>
-      <width>83</width>
-      <height>29</height>
+      <x>370</x>
+      <y>340</y>
+      <width>141</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Ok</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>220</y>
-      <width>83</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ok</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_descendingRate">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>140</y>
-      <width>151</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Rating Section</string>
+     <string>&lt;font color =white&gt;Selected Title :</string>
     </property>
    </widget>
   </widget>
@@ -279,54 +307,5 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>pushButton_Category</sender>
-   <signal>clicked()</signal>
-   <receiver>pushButton_Time</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>448</x>
-     <y>228</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>615</x>
-     <y>227</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_Category</sender>
-   <signal>clicked()</signal>
-   <receiver>pushButton_Rate</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>361</x>
-     <y>228</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>209</x>
-     <y>227</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_Rate</sender>
-   <signal>clicked()</signal>
-   <receiver>pushButton_Category</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>217</x>
-     <y>250</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>342</x>
-     <y>237</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

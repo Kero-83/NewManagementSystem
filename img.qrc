@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/res"/>
+    <qresource prefix="/">
+        <file>build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/185395508-creative-glowing-blue-breaking-news-pattern-background-with-globe-headline-communication-and-global.png</file>
+        <file>build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/global-technology-earth-news-bulletin-background_1017-33687.png</file>
+        <file>build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/gradient-breaking-news-background_23-2151136573.png</file>
+        <file>build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/images.png</file>
+        <file>build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/realistic-news-studio-background_23-2149985600.png</file>
+        <file>build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/realistic-news-studio-background_23-2149985612.png</file>
+        <file>build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/vecteezy_zigzag-blue-background-epl-english-premier-league-thumbnail_35674784.jpg</file>
+        <file>build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/world-map-background-3d-rendering_327072-1957.png</file>
+        <file>build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/Picsart_24-05-16_01-04-15-280.png</file>
+    </qresource>
+</RCC>

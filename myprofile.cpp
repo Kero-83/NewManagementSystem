@@ -15,11 +15,11 @@ MyProfile::~MyProfile()
     delete ui;
 }
 void MyProfile::DisplayData(){
-    string firstname=Adminx::users[Login::count].getFirstName();
-    string lastname=Adminx::users[Login::count].getLastName();
-    string username=Adminx::users[Login::count].getUsername();
-    string password=Adminx::users[Login::count].getPassword();
-    string email=Adminx::users[Login::count].getEmail();
+    string firstname=Adminx::users[Login::UserID].getFirstName();
+    string lastname=Adminx::users[Login::UserID].getLastName();
+    string username=Adminx::users[Login::UserID].getUsername();
+    string password=Adminx::users[Login::UserID].getPassword();
+    string email=Adminx::users[Login::UserID].getEmail();
     ui->label_3->setText(username.c_str());
     ui->label_5->setText(password.c_str());
     ui->label_7->setText(email.c_str());

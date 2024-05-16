@@ -25,15 +25,16 @@ class Ui_Login
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton_Login;
-    QLabel *label;
+    QLabel *label_5;
     QLabel *label_2;
-    QLabel *label_3;
+    QLabel *label_4;
+    QPushButton *pushButton_CreateAccount;
+    QPushButton *pushButton_Login;
     QPushButton *pushButton_Exit;
+    QLabel *label_3;
     QLineEdit *lineEdit_username;
     QLineEdit *lineEdit_password;
-    QPushButton *pushButton_CreateAccount;
-    QLabel *label_4;
+    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -41,60 +42,72 @@ public:
     {
         if (Login->objectName().isEmpty())
             Login->setObjectName("Login");
-        Login->resize(857, 654);
+        Login->resize(817, 614);
         centralwidget = new QWidget(Login);
         centralwidget->setObjectName("centralwidget");
-        pushButton_Login = new QPushButton(centralwidget);
-        pushButton_Login->setObjectName("pushButton_Login");
-        pushButton_Login->setGeometry(QRect(250, 380, 101, 31));
-        pushButton_Login->setStyleSheet(QString::fromUtf8("font: 12pt \"Segoe UI\";\n"
-"background-color: rgb(0, 0, 127);"));
-        label = new QLabel(centralwidget);
-        label->setObjectName("label");
-        label->setGeometry(QRect(80, 40, 211, 71));
-        QFont font;
-        font.setPointSize(30);
-        label->setFont(font);
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(-200, -100, 1071, 791));
+        label_5->setStyleSheet(QString::fromUtf8("image: url(:/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/world-map-background-3d-rendering_327072-1957.png);"));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(170, 130, 111, 31));
+        label_2->setGeometry(QRect(170, 240, 111, 31));
+        QFont font;
+        font.setPointSize(12);
+        label_2->setFont(font);
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(310, 410, 181, 31));
         QFont font1;
-        font1.setPointSize(12);
-        label_2->setFont(font1);
+        font1.setPointSize(10);
+        label_4->setFont(font1);
+        label_4->setStyleSheet(QString::fromUtf8("color: rgb(85, 85, 127);"));
+        pushButton_CreateAccount = new QPushButton(centralwidget);
+        pushButton_CreateAccount->setObjectName("pushButton_CreateAccount");
+        pushButton_CreateAccount->setGeometry(QRect(310, 450, 141, 41));
+        pushButton_CreateAccount->setFont(font);
+        pushButton_CreateAccount->setStyleSheet(QString::fromUtf8("background-color:rgb(255, 255, 255)"));
+        pushButton_Login = new QPushButton(centralwidget);
+        pushButton_Login->setObjectName("pushButton_Login");
+        pushButton_Login->setGeometry(QRect(330, 360, 101, 31));
+        pushButton_Login->setStyleSheet(QString::fromUtf8("font: 12pt \"Segoe UI\";\n"
+"background-color: rgb(rgb(186, 255, 129)0, 0, 127);"));
+        pushButton_Exit = new QPushButton(centralwidget);
+        pushButton_Exit->setObjectName("pushButton_Exit");
+        pushButton_Exit->setGeometry(QRect(710, 530, 101, 29));
+        pushButton_Exit->setFont(font);
+        pushButton_Exit->setStyleSheet(QString::fromUtf8("backgroud color: rgb(0, 255, 0)"));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(170, 200, 111, 31));
+        label_3->setGeometry(QRect(170, 300, 111, 31));
         QFont font2;
         font2.setPointSize(12);
         font2.setItalic(true);
         label_3->setFont(font2);
-        pushButton_Exit = new QPushButton(centralwidget);
-        pushButton_Exit->setObjectName("pushButton_Exit");
-        pushButton_Exit->setGeometry(QRect(450, 380, 101, 29));
-        pushButton_Exit->setFont(font1);
-        pushButton_Exit->setStyleSheet(QString::fromUtf8("background-color: rgb(170, 0, 0);"));
         lineEdit_username = new QLineEdit(centralwidget);
         lineEdit_username->setObjectName("lineEdit_username");
-        lineEdit_username->setGeometry(QRect(300, 130, 171, 28));
+        lineEdit_username->setGeometry(QRect(300, 240, 171, 28));
+        lineEdit_username->setStyleSheet(QString::fromUtf8("border-radius: 10px;\n"
+"border-style: solid;\n"
+"    border-width: 2px;\n"
+"border-color: blue;"));
         lineEdit_password = new QLineEdit(centralwidget);
         lineEdit_password->setObjectName("lineEdit_password");
-        lineEdit_password->setGeometry(QRect(300, 200, 171, 28));
+        lineEdit_password->setGeometry(QRect(300, 300, 171, 28));
+        lineEdit_password->setStyleSheet(QString::fromUtf8("border-radius: 10px;\n"
+"border-style: solid;\n"
+"    border-width: 2px;\n"
+"border-color: blue;\n"
+""));
         lineEdit_password->setEchoMode(QLineEdit::Password);
-        pushButton_CreateAccount = new QPushButton(centralwidget);
-        pushButton_CreateAccount->setObjectName("pushButton_CreateAccount");
-        pushButton_CreateAccount->setGeometry(QRect(320, 280, 141, 41));
-        pushButton_CreateAccount->setFont(font1);
-        pushButton_CreateAccount->setStyleSheet(QString::fromUtf8("background-color: rgb(170, 85, 0);"));
-        label_4 = new QLabel(centralwidget);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(130, 290, 171, 20));
-        QFont font3;
-        font3.setPointSize(10);
-        label_4->setFont(font3);
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(300, 70, 161, 161));
+        label->setStyleSheet(QString::fromUtf8("image: url(:/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/Picsart_24-05-16_01-04-15-280.png);"));
         Login->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Login);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 857, 25));
+        menubar->setGeometry(QRect(0, 0, 817, 25));
         Login->setMenuBar(menubar);
         statusbar = new QStatusBar(Login);
         statusbar->setObjectName("statusbar");
@@ -108,14 +121,15 @@ public:
     void retranslateUi(QMainWindow *Login)
     {
         Login->setWindowTitle(QCoreApplication::translate("Login", "Login", nullptr));
-        pushButton_Login->setText(QCoreApplication::translate("Login", "Login", nullptr));
-        label->setText(QCoreApplication::translate("Login", "<html><head/><body><p><span style=\" font-size:24pt; font-weight:700; font-style:italic; color:#ff0000;\">Sign in</span></p></body></html>", nullptr));
-        label_2->setText(QCoreApplication::translate("Login", "<html><head/><body><p><span style=\" font-style:italic; color:#0000ff;\">Username :</span></p></body></html>", nullptr));
-        label_3->setText(QCoreApplication::translate("Login", "<font color=blue>Password :", nullptr));
-        pushButton_Exit->setText(QCoreApplication::translate("Login", "Exit", nullptr));
-        lineEdit_password->setText(QString());
+        label_5->setText(QString());
+        label_2->setText(QCoreApplication::translate("Login", "<html><head/><body><p><span style=\" font-weight:700; font-style:italic; color:#ffffff;\">Username :</span></p></body></html>", nullptr));
+        label_4->setText(QCoreApplication::translate("Login", "<html><head/><body><p><span style=\" font-weight:700; font-style:italic; text-decoration: underline; color:#ffffff;\">Don't have account?</span></p></body></html>", nullptr));
         pushButton_CreateAccount->setText(QCoreApplication::translate("Login", "create account", nullptr));
-        label_4->setText(QCoreApplication::translate("Login", "<html><head/><body><p><span style=\" font-style:italic; text-decoration: underline; color:#ffa500;\">Don't have account?</span></p></body></html>", nullptr));
+        pushButton_Login->setText(QCoreApplication::translate("Login", "Login", nullptr));
+        pushButton_Exit->setText(QCoreApplication::translate("Login", "Exit", nullptr));
+        label_3->setText(QCoreApplication::translate("Login", "<html><head/><body><p><span style=\" font-weight:700; color:#ffffff;\">Password :</span></p></body></html>", nullptr));
+        lineEdit_password->setText(QString());
+        label->setText(QString());
     } // retranslateUi
 
 };

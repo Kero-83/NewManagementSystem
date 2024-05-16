@@ -1,4 +1,5 @@
-    #include "login.h"
+    #include "homepage.h"
+#include "login.h"
 #include"QVector"
 #include <QApplication>
 #include"QMessageBox"
@@ -9,9 +10,9 @@ using namespace std;
 vector<User> Adminx::users;
 vector<NewsModel> Adminx::news;
 map<int,vector<string>>News::favNews;
-    map<pair<int,string>,int>User::Rates;
-    int Login::count;
-int Newsbasedon :: index;
+map<pair<int,string>,int>User::Rates;
+int Login::UserID;
+int Newsbasedon :: currentNew;
 string Adminx::NewCat;
 vector<bool> Newsbasedon::checked={false,false,false,false};
 vector<bool> Adminx::checkedAdmin={false,false,false,false};

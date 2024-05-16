@@ -6,44 +6,74 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1299</width>
-    <height>647</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="searchButton">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>150</y>
-     <width>161</width>
-     <height>61</height>
+     <x>920</x>
+     <y>190</y>
+     <width>31</width>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string>By Date</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>150</y>
-     <width>161</width>
-     <height>61</height>
+     <x>-110</x>
+     <y>-160</y>
+     <width>911</width>
+     <height>911</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/realistic-news-studio-background_23-2149985600.png);</string>
+   </property>
    <property name="text">
-    <string>By Keywords</string>
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_Search">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>200</y>
+     <width>571</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 10px;
+border-style: solid;
+    border-width: 2px;
+box-shadow: 10px 10px 5px grey;
+border-color: blue;</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_news">
+   <property name="geometry">
+    <rect>
+     <x>398</x>
+     <y>240</y>
+     <width>351</width>
+     <height>29</height>
+    </rect>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>740</x>
-     <y>150</y>
+     <x>590</x>
+     <y>90</y>
      <width>161</width>
      <height>61</height>
     </rect>
@@ -52,57 +82,47 @@
     <string>By title</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>260</y>
-     <width>61</width>
+     <x>50</x>
+     <y>200</y>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>Search :</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700; color:#ffffff;&quot;&gt;Search :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="comboBox_dates">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>330</y>
-     <width>681</width>
+     <x>70</x>
+     <y>240</y>
+     <width>281</width>
      <height>29</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_Search">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>260</y>
-     <width>571</width>
-     <height>29</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="searchButton">
-   <property name="geometry">
-    <rect>
-     <x>870</x>
-     <y>260</y>
-     <width>31</width>
-     <height>30</height>
+     <x>70</x>
+     <y>90</y>
+     <width>161</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>By Date</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>390</y>
+     <x>70</x>
+     <y>340</y>
      <width>681</width>
      <height>30</height>
     </rect>
@@ -111,50 +131,53 @@
     <string>Show News</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_back">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>90</y>
-     <width>51</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Back</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBox_dates">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>300</y>
-     <width>281</width>
-     <height>29</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBox_news">
-   <property name="geometry">
-    <rect>
-     <x>548</x>
-     <y>300</y>
-     <width>351</width>
-     <height>29</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="searchButton_2">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>300</y>
+     <x>360</x>
+     <y>240</y>
      <width>31</width>
      <height>30</height>
     </rect>
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>270</y>
+     <width>681</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>90</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>By Keywords</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_back">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>560</y>
+     <width>81</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>

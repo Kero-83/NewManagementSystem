@@ -19,7 +19,7 @@ Search::Search(QWidget *parent)
     // hide Search(title, keywords) items
     ui->lineEdit_Search->hide();
     ui->comboBox->hide();
-    ui->label->hide();
+    ui->label_2->hide();
     ui->searchButton->hide();
 
     // hide Search(date) items
@@ -39,7 +39,11 @@ Search::~Search()
 
 void Search::on_pushButton_clicked()
 {
+     ui->comboBox_dates->clear();
     ui->comboBox_news->clear();
+     ui->comboBox->clear();
+    ui->lineEdit_Search->clear();
+    ui->label_2->show();
     ui->pushButton->setStyleSheet(_clickedStyleSheet);
     ui->pushButton_2->setStyleSheet(_defaultStyleSheet);
     ui->pushButton_3->setStyleSheet(_defaultStyleSheet);
@@ -47,7 +51,6 @@ void Search::on_pushButton_clicked()
     // hide Search(title, keywords) items
     ui->lineEdit_Search->hide();
     ui->comboBox->hide();
-    ui->label->hide();
     ui->searchButton->hide();
     // show search by date items
     ui->comboBox_dates->show();
@@ -57,9 +60,11 @@ void Search::on_pushButton_clicked()
     ui->pushButton_4->show();
     // Logic of Search By Date
     ui->comboBox_dates->clear();
-    for(auto newsModel : Adminx::news)
-    {
-        _newsByDate[newsModel.getDate()].push_back(newsModel);
+    if(_newsByDate.empty()){
+        for(auto newsModel : Adminx::news)
+        {
+            _newsByDate[newsModel.getDate()].push_back(newsModel);
+        }
     }
     for(auto &[key, list] : _newsByDate)
     {
@@ -71,8 +76,15 @@ void Search::on_pushButton_clicked()
 }
 
 
+
 void Search::on_pushButton_2_clicked()
 {
+    ui->label_2->show();
+    ui->comboBox_dates->clear();
+    ui->comboBox_news->clear();
+    ui->comboBox->clear();
+    ui->lineEdit_Search->clear();
+    ui->searchButton->show();
     ui->pushButton->setStyleSheet(_defaultStyleSheet);
     ui->pushButton_2->setStyleSheet(_clickedStyleSheet);
     ui->pushButton_3->setStyleSheet(_defaultStyleSheet);
@@ -93,6 +105,13 @@ void Search::on_pushButton_2_clicked()
 
 void Search::on_pushButton_3_clicked()
 {
+    // clear comboBoxes
+    ui->comboBox_dates->clear();
+    ui->comboBox_news->clear();
+    ui->comboBox->clear();
+    ui->lineEdit_Search->clear();
+    ui->label_2->show();
+    ui->searchButton->show();
     ui->pushButton->setStyleSheet(_defaultStyleSheet);
     ui->pushButton_2->setStyleSheet(_defaultStyleSheet);
     ui->pushButton_3->setStyleSheet(_clickedStyleSheet);
@@ -115,7 +134,7 @@ void Search::on_pushButton_3_clicked()
 void Search::on_searchButton_clicked()
 {
     ui->comboBox->clear();
-    int id = Login::count;
+    int id = Login::UserID;
     if(_searchBasedOn == SearchBasedOn::notAdded)
     {
         QMessageBox::warning(this, "error", "No Selected Type of Search!");
@@ -123,15 +142,19 @@ void Search::on_searchButton_clicked()
     }
 
     String searchInput = ui->lineEdit_Search->text().toStdString();
-    for(int it = 0; it < searchInput.size(); it++)
+    if(_searchBasedOn == SearchBasedOn::Keyword)
     {
-        searchInput[it] = tolower(searchInput[it]);
+        for(int it = 0; it < searchInput.size(); it++)
+        {
+            searchInput[it] = tolower(searchInput[it]);
+        }
     }
     _searchAns = Adminx::users[id].Search(_searchBasedOn, searchInput);
     for (auto news : _searchAns) {
         ui->comboBox->addItem(QString(news.getTitle().c_str()));
     }
 }
+
 
 
 void Search::on_pushButton_back_clicked()
@@ -152,8 +175,20 @@ void Search::on_searchButton_2_clicked()
 }
 
 
+
 void Search::on_pushButton_4_clicked()
 {
+    if(_searchBasedOn == SearchBasedOn::notAdded)
+    {
+        QMessageBox::warning(this, "error", "No Search Type Selected!");
+        return;
+    }
+
+    if((ui->comboBox->count() == 0 && (_searchBasedOn == SearchBasedOn::Keyword || _searchBasedOn == SearchBasedOn::titles)) || (ui->comboBox_news->count() == 0 && _searchBasedOn == SearchBasedOn::date))
+    {
+        QMessageBox::warning(this, "error", "No Found Data!");
+        return;
+    }
     Adminx::backbuttons[3] = true;
     Adminx::backbuttons[2] = false;
     Adminx::backbuttons[1] = false;
@@ -165,7 +200,7 @@ void Search::on_pushButton_4_clicked()
         {
             if(ui->comboBox_news->currentText().toStdString() == Adminx::news[i].getTitle())
             {
-                Newsbasedon::index = i;
+                Newsbasedon::currentNew = i;
             }
         }
     }
@@ -175,7 +210,7 @@ void Search::on_pushButton_4_clicked()
         {
             if(ui->comboBox->currentText().toStdString() == Adminx::news[i].getTitle())
             {
-                Newsbasedon::index = i;
+                Newsbasedon::currentNew = i;
             }
         }
     }
@@ -183,4 +218,3 @@ void Search::on_pushButton_4_clicked()
     news->show();
     news->displayNew();
 }
-

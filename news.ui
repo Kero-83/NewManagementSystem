@@ -26,8 +26,12 @@
       <height>621</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 255);
+background-color: rgb(115, 117, 184);</string>
+    </property>
     <property name="title">
-     <string>New</string>
+     <string>New Data</string>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
@@ -93,12 +97,18 @@
        <height>28</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+border-style: solid;
+    border-width: 2px;
+</string>
+     </property>
     </widget>
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>500</y>
+       <x>700</x>
+       <y>560</y>
        <width>83</width>
        <height>29</height>
       </rect>
@@ -117,7 +127,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Date</string>
+      <string>&lt;font color = black&gt;Date</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_Date">
@@ -131,6 +141,12 @@
        <width>171</width>
        <height>28</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+border-style: solid;
+    border-width: 2px;
+</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_favNews">
@@ -149,8 +165,8 @@
     <widget class="QPushButton" name="pushButton_saveNewAdmin">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>450</y>
+       <x>700</x>
+       <y>520</y>
        <width>83</width>
        <height>29</height>
       </rect>
@@ -207,6 +223,12 @@
        <height>28</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+border-style: solid;
+    border-width: 2px;
+</string>
+     </property>
     </widget>
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
@@ -247,7 +269,9 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-color: rgb(255, 255, 255);</string>
+      <string notr="true">border-radius: 10px;
+border-style: solid;
+    border-width: 2px;</string>
      </property>
     </widget>
     <widget class="QPlainTextEdit" name="plainTextEdit_Title">
@@ -263,7 +287,9 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-color: rgb(255, 255, 255);</string>
+      <string notr="true">border-radius: 10px;
+border-style: solid;
+    border-width: 2px;</string>
      </property>
     </widget>
    </widget>

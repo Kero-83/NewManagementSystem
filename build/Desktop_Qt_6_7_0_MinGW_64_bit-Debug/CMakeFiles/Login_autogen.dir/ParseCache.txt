@@ -3744,3 +3744,4 @@ C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/search.cpp
 C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/signup.cpp
  uic:ui_signup.h
 C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/user.cpp
+C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/stdafx.cpp

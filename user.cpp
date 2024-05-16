@@ -42,32 +42,52 @@ vector<NewsModel> User::Search(SearchBasedOn searchBasedOn, string inp) {
     }
 }
 
-vector<NewsModel> User::_searchByKeywords(string keyword)
+vector<NewsModel> User::_searchByKeywords(string input)
 {
+    unordered_set<string> keywords;
+    buildKeys(input, keywords); // build keyword for input to search with
     vector<NewsModel> ans;
-    for(auto &newModel : Adminx::news)
+    auto &news = Adminx::news;
+    map<int, bool> checked;
+    for(int i = 0; i < news.size(); i++) // iterates for all news
     {
-        if(newModel.keywords.count(keyword))
+        bool loop2 = false;
+        for(auto &keyword : news[i].keywords)
         {
-            ans.push_back(newModel);
-            continue;
+            qDebug() << keyword << '\n';
+        }
+        qDebug() << "------------------------------------------------\n";
+        for(auto &keyword : keywords) // iterates for all keywords
+        {
+            if(news[i].keywords.find(keyword) != news[i].keywords.end()) // search if keyword is found in newModel or not
+            {
+                if(!checked.count(i))
+                {
+                    ans.push_back(news[i]);
+                    checked[i] = true; // break the second loop to prevent the repeat of newModel in answer
+                }
+            }
         }
     }
+
     return ans;
 }
+
 vector<NewsModel> User::_searchByTitles(string title)
 {
     vector<NewsModel> ans;
+
     for(auto &newModel : Adminx::news)
     {
-        if(newModel.titles.count(title))
+        if(title == newModel.getTitle())
         {
             ans.push_back(newModel);
-            continue;
+            break;
         }
     }
     return ans;
 }
+
 vector<NewsModel> User::_searchByDate(string date)
 {
     vector<NewsModel> ans;
@@ -81,27 +101,7 @@ vector<NewsModel> User::_searchByDate(string date)
     }
     return ans;
 }
-void User::ShowNewBasedOnCategory()
-{
 
-}
-// void User::RateNew(NewsModel news, double rate) {
-//     int id = Login::count;
-//     if(news.rates.count(id))
-//     {
-//         news.avgRate += (rate - news.avgRate)*news.rates.size();
-//         news.rates[id] = rate;
-//     }
-//     else
-//     {
-//         news.avgRate = ((news.avgRate * (news.rates.size())) + rate) / (news.rates.size() + 1);
-//         news.rates[id] = rate;
-//     }
-// }
-void User::Bookmark() {
-
-}
-void User::ReadData() {}
 void User::setUsername(string username)
 {
     this->username = username;

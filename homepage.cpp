@@ -4,12 +4,15 @@
 #include"myprofile.h"
 #include"newsbasedon.h"
 #include"news.h"
+#include<qpixmap>
 
 HomePage::HomePage(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::HomePage)
 {
     ui->setupUi(this);
+    QPixmap pix("C:/Users/asus/Desktop/Qt Apps/NewManagementSystem/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug\image_2024-05-15_23-28-12");
+    ui->label_Image->setPixmap(pix.scaled(100,100,Qt::KeepAspectRatio));
     ui->comboBox_favNews->hide();
     ui->pushButton_showNew->hide();
 }
@@ -63,7 +66,7 @@ void HomePage::on_pushButton_favNews_clicked()
     ui->comboBox_favNews->clear();
     ui->comboBox_favNews->show();
     for(auto it:News::favNews)
-        if(it.first==Login::count){
+        if(it.first==Login::UserID){
             for(int i=0;i<it.second.size();i++){
                 ui->comboBox_favNews->addItem(it.second[i].c_str());
         }
@@ -76,7 +79,7 @@ void HomePage::on_pushButton_showNew_clicked()
   string title=ui->comboBox_favNews->currentText().toStdString();
     for(int i=0;i<Adminx::news.size();i++){
       if(title==Adminx::news[i].getTitle()){
-            Newsbasedon::index=i;
+            Newsbasedon::currentNew=i;
         }
   }
     hide();

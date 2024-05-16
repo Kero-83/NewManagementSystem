@@ -22,60 +22,70 @@ QT_BEGIN_NAMESPACE
 class Ui_Search
 {
 public:
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QLabel *label;
-    QComboBox *comboBox;
-    QLineEdit *lineEdit_Search;
     QPushButton *searchButton;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_back;
-    QComboBox *comboBox_dates;
+    QLabel *label;
+    QLineEdit *lineEdit_Search;
     QComboBox *comboBox_news;
+    QPushButton *pushButton_3;
+    QLabel *label_2;
+    QComboBox *comboBox_dates;
+    QPushButton *pushButton;
+    QPushButton *pushButton_4;
     QPushButton *searchButton_2;
+    QComboBox *comboBox;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_back;
 
     void setupUi(QDialog *Search)
     {
         if (Search->objectName().isEmpty())
             Search->setObjectName("Search");
-        Search->resize(1299, 647);
-        pushButton = new QPushButton(Search);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(220, 150, 161, 61));
-        pushButton_2 = new QPushButton(Search);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(480, 150, 161, 61));
-        pushButton_3 = new QPushButton(Search);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(740, 150, 161, 61));
-        label = new QLabel(Search);
-        label->setObjectName("label");
-        label->setGeometry(QRect(220, 260, 61, 31));
-        comboBox = new QComboBox(Search);
-        comboBox->setObjectName("comboBox");
-        comboBox->setGeometry(QRect(220, 330, 681, 29));
-        lineEdit_Search = new QLineEdit(Search);
-        lineEdit_Search->setObjectName("lineEdit_Search");
-        lineEdit_Search->setGeometry(QRect(290, 260, 571, 29));
+        Search->resize(800, 600);
         searchButton = new QPushButton(Search);
         searchButton->setObjectName("searchButton");
-        searchButton->setGeometry(QRect(870, 260, 31, 30));
-        pushButton_4 = new QPushButton(Search);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(220, 390, 681, 30));
-        pushButton_back = new QPushButton(Search);
-        pushButton_back->setObjectName("pushButton_back");
-        pushButton_back->setGeometry(QRect(220, 90, 51, 30));
-        comboBox_dates = new QComboBox(Search);
-        comboBox_dates->setObjectName("comboBox_dates");
-        comboBox_dates->setGeometry(QRect(220, 300, 281, 29));
+        searchButton->setGeometry(QRect(920, 190, 31, 30));
+        label = new QLabel(Search);
+        label->setObjectName("label");
+        label->setGeometry(QRect(-110, -160, 911, 911));
+        label->setStyleSheet(QString::fromUtf8("image: url(:/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Photos/realistic-news-studio-background_23-2149985600.png);"));
+        lineEdit_Search = new QLineEdit(Search);
+        lineEdit_Search->setObjectName("lineEdit_Search");
+        lineEdit_Search->setGeometry(QRect(140, 200, 571, 29));
+        lineEdit_Search->setStyleSheet(QString::fromUtf8("border-radius: 10px;\n"
+"border-style: solid;\n"
+"    border-width: 2px;\n"
+"box-shadow: 10px 10px 5px grey;\n"
+"border-color: blue;"));
         comboBox_news = new QComboBox(Search);
         comboBox_news->setObjectName("comboBox_news");
-        comboBox_news->setGeometry(QRect(548, 300, 351, 29));
+        comboBox_news->setGeometry(QRect(398, 240, 351, 29));
+        pushButton_3 = new QPushButton(Search);
+        pushButton_3->setObjectName("pushButton_3");
+        pushButton_3->setGeometry(QRect(590, 90, 161, 61));
+        label_2 = new QLabel(Search);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(50, 200, 81, 31));
+        comboBox_dates = new QComboBox(Search);
+        comboBox_dates->setObjectName("comboBox_dates");
+        comboBox_dates->setGeometry(QRect(70, 240, 281, 29));
+        pushButton = new QPushButton(Search);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(70, 90, 161, 61));
+        pushButton_4 = new QPushButton(Search);
+        pushButton_4->setObjectName("pushButton_4");
+        pushButton_4->setGeometry(QRect(70, 340, 681, 30));
         searchButton_2 = new QPushButton(Search);
         searchButton_2->setObjectName("searchButton_2");
-        searchButton_2->setGeometry(QRect(510, 300, 31, 30));
+        searchButton_2->setGeometry(QRect(360, 240, 31, 30));
+        comboBox = new QComboBox(Search);
+        comboBox->setObjectName("comboBox");
+        comboBox->setGeometry(QRect(70, 270, 681, 29));
+        pushButton_2 = new QPushButton(Search);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setGeometry(QRect(330, 90, 161, 61));
+        pushButton_back = new QPushButton(Search);
+        pushButton_back->setObjectName("pushButton_back");
+        pushButton_back->setGeometry(QRect(710, 560, 81, 30));
 
         retranslateUi(Search);
 
@@ -85,14 +95,15 @@ public:
     void retranslateUi(QDialog *Search)
     {
         Search->setWindowTitle(QCoreApplication::translate("Search", "Dialog", nullptr));
-        pushButton->setText(QCoreApplication::translate("Search", "By Date", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Search", "By Keywords", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("Search", "By title", nullptr));
-        label->setText(QCoreApplication::translate("Search", "Search :", nullptr));
         searchButton->setText(QString());
+        label->setText(QString());
+        pushButton_3->setText(QCoreApplication::translate("Search", "By title", nullptr));
+        label_2->setText(QCoreApplication::translate("Search", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:700; color:#ffffff;\">Search :</span></p></body></html>", nullptr));
+        pushButton->setText(QCoreApplication::translate("Search", "By Date", nullptr));
         pushButton_4->setText(QCoreApplication::translate("Search", "Show News", nullptr));
-        pushButton_back->setText(QCoreApplication::translate("Search", "Back", nullptr));
         searchButton_2->setText(QString());
+        pushButton_2->setText(QCoreApplication::translate("Search", "By Keywords", nullptr));
+        pushButton_back->setText(QCoreApplication::translate("Search", "Back", nullptr));
     } // retranslateUi
 
 };

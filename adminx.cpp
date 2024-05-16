@@ -96,13 +96,7 @@ void Adminx::WriteRateInFiles(){
     for(int i = 0; i < Adminx::news.size(); i++)
     {
         file << Adminx::news[i].rates.size();
-        // auto it = Adminx::news[i].rates.begin();
-        // for(; it != Adminx::news[i].rates.end(); it++)
-        // {
-        //     file << '\n';
-        //     auto [key, value] = *it;
-        //     file << key << ' ' << value ;
-        // }
+
         for(auto [key, value] : Adminx::news[i].rates)
         {
             file << '\n' << key << ' ' << value;
@@ -333,7 +327,7 @@ void Adminx::on_pushButton_Ok_clicked()
     NewCat=ui->lineEdit->text().toStdString();
     for(int i=0;i<news.size();i++){
         if(NewCat==news[i].getTitle()){
-            Newsbasedon::index=i;
+            Newsbasedon::currentNew=i;
         }
     }
     if(checkedAdmin[1]){
@@ -343,8 +337,8 @@ void Adminx::on_pushButton_Ok_clicked()
         n->showEditButtons();
     }
     else if(checkedAdmin[2]){
-        qDebug()<<news[Newsbasedon::index].getTitle();
-        news.erase(news.begin()+Newsbasedon::index);
+        qDebug()<<news[Newsbasedon::currentNew].getTitle();
+        news.erase(news.begin()+Newsbasedon::currentNew);
         QMessageBox::information(this,"Success","New removed");
         ui->comboBox_selectCurrentCategory->clear();
 
@@ -356,7 +350,7 @@ void Adminx::on_pushButton_Ok_clicked()
         ui->label_2->show();
         ui->label_2->setText("Average rate");
         ui->lineEdit->show();
-        string avgRate=to_string(news[Newsbasedon::index].getAvgRate());
+        string avgRate=to_string(news[Newsbasedon::currentNew].getAvgRate());
         ui->lineEdit->setText(avgRate.c_str());
     }
 }

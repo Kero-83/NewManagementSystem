@@ -14,7 +14,6 @@ private:
 public:
     NewsModel();
     double avgRate;
-    // set<int> ratedUsersIds;
     map<int, int> rates;
     unordered_set<String> keywords, titles;
     string getCurrentDate();
@@ -30,7 +29,6 @@ public:
     string getDate();
     string getCategory();
     double getAvgRate();
-    void buildTitles();
     void buildKeywords();
     static void addnew(NewsModel);
 

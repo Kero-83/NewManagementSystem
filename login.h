@@ -15,7 +15,7 @@ class Login : public QMainWindow
 
 public:
     Adminx ad;
-    static int count;
+    static int UserID;
     Login(QWidget *parent = nullptr);
     ~Login();
 

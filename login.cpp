@@ -10,6 +10,7 @@ Login::Login(QWidget *parent)
     , ui(new Ui::Login)
 {
     ui->setupUi(this);
+    this->setFixedSize(this->width(), this->height());
     connect(ui->pushButton_CreateAccount,&QPushButton::clicked,sign,&SignUP::show_window);
     connect(ui->pushButton_CreateAccount,&QPushButton::clicked,this,&Login::close_window);
 
@@ -51,28 +52,28 @@ void Login::on_pushButton_Login_clicked(){
     if(Log_Admin()){
         return;
     }
-     bool flag=false;
-    bool check=write_Data();
-     if(check){
+     bool switchToHomePage=false;
+    bool checkemptyData=write_Data();
+     if(checkemptyData){
         QMessageBox::warning(this,"login failed","Please fill the requirement data");
     }
      else{
     for( int i=0;i<Adminx::users.size();i++){
          if(ui->lineEdit_username->text().toStdString() ==Adminx::users[i].getUsername() &&ui->lineEdit_password->text().toStdString()==Adminx::users[i].getPassword())
         {
-            count=i;
-             QMessageBox::information(this, "Success",string("Welceome " + Adminx::users[count].getUsername() ).c_str());
-             flag=true;
+            UserID=i;
+             QMessageBox::information(this, "Success",string("Welceome " + Adminx::users[UserID].getUsername() ).c_str());
+             switchToHomePage=true;
              break;
         }
     }
 
-    if(flag){
+    if(switchToHomePage){
 
         HomePage *HP=new HomePage;
         hide();
         HP->show();
-             qDebug()<<count;
+             qDebug()<<UserID;
      }
       else{
           QMessageBox::warning(this, "Registration Error", "incorrect username or password.");

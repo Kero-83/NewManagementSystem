@@ -18,23 +18,22 @@ News::News(QWidget *parent)
     ui->pushButton_editCategory->hide();
     ui->lineEdit->show();
 }
-string h;
+string RatefromUser;
 bool checkEditTitle=false;
 bool checkEditCategory=false;
-bool f=false;
+bool flag=false;
 News::~News()
 {
     delete ui;
 }
 void News::displayNew(){
     ui->pushButton_2->hide();
-    ui->plainTextEdit_Description->setPlainText("In \"Mija,\" director Isabel Castro combined music documentaries with the style of \"Euphoria\" and \"Clueless\" to tell a more nuanced immigration story.");
-    ui->lineEdit_Category->setText(Adminx::news[Newsbasedon::index].getCategory().c_str());
-    ui->plainTextEdit_Title->setPlainText(Adminx::news[Newsbasedon::index].getTitle().c_str());
-    ui->plainTextEdit_Description->setPlainText(Adminx::news[Newsbasedon::index].getDescription().c_str());
-    ui->lineEdit_Date->setText(Adminx::news[Newsbasedon::index].getDate().c_str());
+    ui->lineEdit_Category->setText(Adminx::news[Newsbasedon::currentNew].getCategory().c_str());
+    ui->plainTextEdit_Title->setPlainText(Adminx::news[Newsbasedon::currentNew].getTitle().c_str());
+    ui->plainTextEdit_Description->setPlainText(Adminx::news[Newsbasedon::currentNew].getDescription().c_str());
+    ui->lineEdit_Date->setText(Adminx::news[Newsbasedon::currentNew].getDate().c_str());
     for(auto it:favNews){
-        if(it.first==Login::count){
+        if(it.first==Login::UserID){
             for(int i=0;i<it.second.size();i++){
                 if(ui->plainTextEdit_Title->toPlainText()==it.second[i].c_str())
                     ui->checkBox_favNews->setChecked(true);
@@ -43,9 +42,9 @@ void News::displayNew(){
     }
     for(auto it:User::Rates)
     {
-        if(it.first.first==Login::count)
+        if(it.first.first==Login::UserID)
         {
-            if(it.first.second==Adminx::news[Newsbasedon::index].getTitle())
+            if(it.first.second==Adminx::news[Newsbasedon::currentNew].getTitle())
             {
                 string rate=to_string(it.second);
                 ui->lineEdit->show();
@@ -86,8 +85,8 @@ void News::AddNew(){
     ui->lineEdit->hide();
     ui->checkBox_favNews->hide();
     ui->label_4->hide();
-    NewsModel n;
-    string date=n.getCurrentDate();
+    NewsModel getCurrentdate;
+    string date=getCurrentdate.getCurrentDate();
     ui->lineEdit_Date->setText(date.c_str());
     ui->plainTextEdit_Title->setEnabled(true);
     ui->lineEdit_Category->setText(Adminx::NewCat.c_str());
@@ -156,12 +155,12 @@ void News::on_pushButton_saveNewAdmin_clicked()
             checkEditCategory=false;
             QMessageBox::information(this,"success","New Updated !");
             string NewTitle=ui->plainTextEdit_Title->toPlainText().toStdString();
-            Adminx::news[Newsbasedon::index].setTitle(NewTitle);
+            Adminx::news[Newsbasedon::currentNew].setTitle(NewTitle);
             string NewDesc=ui->plainTextEdit_Description->toPlainText().toStdString();
-            Adminx::news[Newsbasedon::index].setDescription(NewDesc);
+            Adminx::news[Newsbasedon::currentNew].setDescription(NewDesc);
             string NewCat=ui->lineEdit_Category->text().toStdString();
-            Adminx::news[Newsbasedon::index].setCategory(NewCat);
-            qDebug()<<Adminx::news[Newsbasedon::index].getTitle()<<Adminx::news[Newsbasedon::index].getDescription();
+            Adminx::news[Newsbasedon::currentNew].setCategory(NewCat);
+            qDebug()<<Adminx::news[Newsbasedon::currentNew].getTitle()<<Adminx::news[Newsbasedon::currentNew].getDescription();
             qDebug()<<"==============";
             for(auto it:Adminx::news){
                 qDebug()<<it.getTitle()<<it.getDescription();
@@ -200,23 +199,23 @@ void News::on_pushButton_editCategory_clicked()
 }
 void News::on_checkBox_favNews_clicked(bool checked)
 {
-    bool check=ui->checkBox_favNews->isChecked();
-    if(check){
-        favNews[Login::count].push_back(Adminx::news[Newsbasedon::index].getTitle());
+    bool checkFavNews=ui->checkBox_favNews->isChecked();
+    if(checkFavNews){
+        favNews[Login::UserID].push_back(Adminx::news[Newsbasedon::currentNew].getTitle());
         QMessageBox::information(this,"Success","New Added to ur Favourite News");
     }
-    else if(!check)
+    else if(!checkFavNews)
     {
         for(auto it:favNews)
         {
-            if(it.first==Login::count)
+            if(it.first==Login::UserID)
             {
                 for(int i=0;i<it.second.size();i++)
                 {
                     if(ui->plainTextEdit_Title->toPlainText()==it.second[i].c_str())
                     {
                         favNews[it.first].erase(favNews[it.first].begin()+i);
-                        qDebug()<<Adminx::news[Newsbasedon::index].getTitle();
+                        qDebug()<<Adminx::news[Newsbasedon::currentNew].getTitle();
                         QMessageBox::information(this,"Success","New Removed from ur Favourite News");
                     }
                 }
@@ -226,13 +225,12 @@ void News::on_checkBox_favNews_clicked(bool checked)
 }
 void News::checkRate(){
     int Rate;
-    h=ui->lineEdit->text().toStdString();
-    Rate=stoi(h);
-    if(Rate>=1&&Rate<=5){
-
-        User::Rates[make_pair(Login::count,Adminx::news[Newsbasedon::index].getTitle())]=Rate;
-        calcRate(Rate, Adminx::news[Newsbasedon::index]);
-        if(f){
+    RatefromUser=ui->lineEdit->text().toStdString();
+    if(RatefromUser>="1"&&RatefromUser<="5"){
+        Rate=stoi(RatefromUser);
+        User::Rates[make_pair(Login::UserID,Adminx::news[Newsbasedon::currentNew].getTitle())]=Rate;
+        calcRate(Rate, Adminx::news[Newsbasedon::currentNew]);
+        if(flag){
             QMessageBox::information(this,"Success","Rate Added !");
             ui->lineEdit->setEnabled(false);
         }
@@ -248,12 +246,12 @@ void News::checkRate(){
 }
 void News::on_pushButton_saveRate_clicked()
 {
-    f=true;
+    flag=true;
     checkRate();
 }
 void News::on_pushButton_2_clicked()
 {
-    f=false;
+    flag=false;
     checkRate();
     ui->lineEdit->setEnabled(true);
     ui->pushButton_saveRate->show();
@@ -263,7 +261,7 @@ void News::on_pushButton_2_clicked()
 
 void News::calcRate(int rate, NewsModel& newsModel)
 {
-    int id = Login::count;
+    int id = Login::UserID;
     if(!newsModel.rates.count(id))
     {
         qDebug() << newsModel.avgRate << ' ' << newsModel.rates.size() << '\n';
