@@ -653,6 +653,7 @@ Login_autogen/timestamp: \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/homepage.cpp \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/homepage.h \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/homepage.ui \
+  C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/img.qrc \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/login.cpp \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/login.h \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/login.ui \
@@ -674,6 +675,7 @@ Login_autogen/timestamp: \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/signup.cpp \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/signup.h \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/signup.ui \
+  C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/stdafx.cpp \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/stdafx.h \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/user.cpp \
   C:/Users/asus/Desktop/Qt\ Apps/NewManagementSystem/user.h

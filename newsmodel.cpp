@@ -4,10 +4,6 @@
 #include <ctime>
 #include <sstream>
 
-bool isSymbol(char ch) {
-    return !std::isalpha(ch) && !std::isdigit(ch) && !std::isspace(ch);
-}
-
 NewsModel::NewsModel()
 {}
 
@@ -19,7 +15,6 @@ NewsModel::NewsModel(string title, string description, string date, string categ
     this->category = category;
     this->avgRate = avgRate;
     this->rates = rates;
-    buildTitles();
     buildKeywords();
 }
 
@@ -30,7 +25,6 @@ NewsModel::NewsModel(string title, string description, string date, string categ
     this->date = date;
     this->category = category;
     this->avgRate = avgRate;
-    buildTitles();
     buildKeywords();
 }
 
@@ -91,84 +85,6 @@ void NewsModel::addnew(NewsModel New){
 
 void NewsModel::buildKeywords()
 {
-    int cur = 0;
-    for(int i = 0; i < description.size(); i++)
-    {
-        if(isspace(description[cur]) || isSymbol(description[cur]))
-        {
-            cur++;
-        }
-        if(cur > i)
-        {
-            continue;
-        }
-        if(isspace(description[i]) || isSymbol(description[i]))
-        {
-            String subStr = description.substr(cur, i);
-            for(int j = 0; j < subStr.size(); j++)
-            {
-                subStr[j] = tolower(subStr[j]);
-            }
-            if(subStr != "an" && subStr != "a" && subStr != "the")
-            {
-                keywords.insert(subStr);
-            }
-            cur = i + 1;
-        }
-        if(i == description.size() - 1)
-        {
-            String subStr = description.substr(cur, i + 1);
-            for(int j = 0;  j < subStr.size(); j++)
-            {
-                subStr[j] = tolower(subStr[j]);
-            }
-            if(subStr != "an" && subStr != "a" && subStr != "the")
-            {
-                keywords.insert(subStr);
-            }
-            cur = i + 1;
-        }
-    }
-}
-
-void NewsModel::buildTitles()
-{
-    int cur = 0;
-    for(int i = 0; i < title.size(); i++)
-    {
-        if(isspace(title[i]) || isSymbol(title[i]))
-        {
-            cur++;
-        }
-        if(cur > i)
-        {
-            continue;
-        }
-        if(isspace(title[i]) || isSymbol(title[i]))
-        {
-            String subStr = title.substr(cur, i);
-            for(int j = 0; j < subStr.size(); j++)
-            {
-                subStr[j] = tolower(subStr[j]);
-            }
-            if(subStr != "an" && subStr != "a" && subStr != "the")
-            {
-                titles.insert(subStr);
-            }
-            cur = i + 1;
-        }
-        if(i == title.size() - 1)
-        {
-            String subStr = title.substr(cur, i + 1);
-            for(int j = 0;  j < subStr.size(); j++)
-            {
-                subStr[j] = tolower(subStr[j]);
-            }
-            if(subStr != "an" && subStr != "a" && subStr != "the")
-            {
-                titles.insert(subStr);
-            }
-            cur = i + 1;
-        }
-    }
+    keywords.clear();
+    buildKeys(description, keywords);
 }

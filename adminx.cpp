@@ -50,27 +50,35 @@ void Adminx::WriteFavNewInFiles(){
         qDebug()<<"file not found";
         return;
     }
-    for(const auto& it:News::favNews){
-        file<<it.first<<" ";
+    int i = 0;
+    for(const auto& it :News::favNews){
+        i++;
+        file<<it.first<< endl;
+        int j = 0;
         for(string favn :it.second){
-            file<<favn<<" ";
+            j++;
+            file << favn<< endl;
         }
-        file<<"\n";
+        file << "|" << ((j == it.second.size() && i == News::favNews.size()) ? "" : "\n");
     }
+
     qDebug() << "1253";
     file.close();
 
 }
 void Adminx::WriteNewsDataInFiles()
 {
-    fstream file("newsData.txt",ios::out);
-    if(!file){
-        qDebug()<<"file not found";
+    fstream file("newsData.txt", ios::out);
+    if (!file) {
+        qDebug() << "file not found";
         return;
     }
     for (int i = 0; i < news.size(); i++) {
-        file << news[i].getTitle() << " " << news[i].getDate() << " " << news[i].getCategory()<< " " << news[i].getAvgRate() << "\n";
-        file << news[i].getDescription() << "|" << ((i == news.size() - 1) ? ' ' : '\n');
+        file << news[i].getTitle() << "\n";
+        file << news[i].getDate() << "\n";
+        file << news[i].getCategory() << "\n";
+        file << news[i].getAvgRate() << "\n";
+        file << news[i].getDescription() << ((i == news.size() - 1) ? "" : "\n");
     }
     qDebug() << "1243";
     file.close();
@@ -88,13 +96,7 @@ void Adminx::WriteRateInFiles(){
     for(int i = 0; i < Adminx::news.size(); i++)
     {
         file << Adminx::news[i].rates.size();
-        // auto it = Adminx::news[i].rates.begin();
-        // for(; it != Adminx::news[i].rates.end(); it++)
-        // {
-        //     file << '\n';
-        //     auto [key, value] = *it;
-        //     file << key << ' ' << value ;
-        // }
+
         for(auto [key, value] : Adminx::news[i].rates)
         {
             file << '\n' << key << ' ' << value;
@@ -130,17 +132,20 @@ void Adminx::ReadFavNewFromFiles(){
         qDebug()<<"file not found";
         return;
     }
-    string line;
-    while(getline(file,line)){
-        istringstream iss(line);
-        int key;
-        string value;
-        vector<string>fn;
-        iss>>key;
-        while(iss>>value){
-            fn.push_back(value);
+    while(!file.eof())
+    {
+        string key; // getting key as string
+        vector<string> favourites; // getting favourites vector
+        getline(file, key);
+        while(true)
+        {
+            string favourite;
+            getline(file, favourite);
+            if(favourite == "|") // stops when we found the charcater '|'
+                break;
+            favourites.push_back(favourite);
         }
-        News::favNews[key]=fn;
+        News::favNews[stoi(key)] = favourites;
     }
     file.close();
 }
@@ -158,24 +163,16 @@ void Adminx::ReadNewsDataFromFiles()
         string description;
         string date;
         string category;
-        double avgRate;
-        file >> title >> date >> category >> avgRate;
-        char ch;
-        file.get(ch);
-        if(ch == '\n')
-        {
-            file.get(ch);
-        }
-        while(ch != '|')
-        {
-            description.push_back(ch);
-            file.get(ch);
-        }
-        newsModel = NewsModel(title, description, date, category, avgRate);
+        string avgRate;
+        getline(file, title);
+        getline(file, date);
+        getline(file, category);
+        getline(file, avgRate);
+        getline(file, description);
+        newsModel = NewsModel(title, description, date, category, stod(avgRate));
         news.push_back(newsModel);
     }
     file.close();
-
 }
 void Adminx::ReadNewsNumFromFiles(){
     ifstream file("NewsNum.txt");
@@ -330,18 +327,18 @@ void Adminx::on_pushButton_Ok_clicked()
     NewCat=ui->lineEdit->text().toStdString();
     for(int i=0;i<news.size();i++){
         if(NewCat==news[i].getTitle()){
-            Newsbasedon::index=i;
+            Newsbasedon::currentNew=i;
         }
     }
     if(checkedAdmin[1]){
-    hide();
-    n->displayNew();
-    n->show();
-    n->showEditButtons();
+        hide();
+        n->displayNew();
+        n->show();
+        n->showEditButtons();
     }
     else if(checkedAdmin[2]){
-        qDebug()<<news[Newsbasedon::index].getTitle();
-        news.erase(news.begin()+Newsbasedon::index);
+        qDebug()<<news[Newsbasedon::currentNew].getTitle();
+        news.erase(news.begin()+Newsbasedon::currentNew);
         QMessageBox::information(this,"Success","New removed");
         ui->comboBox_selectCurrentCategory->clear();
 
@@ -353,7 +350,7 @@ void Adminx::on_pushButton_Ok_clicked()
         ui->label_2->show();
         ui->label_2->setText("Average rate");
         ui->lineEdit->show();
-        string avgRate=to_string(news[Newsbasedon::index].getAvgRate());
+        string avgRate=to_string(news[Newsbasedon::currentNew].getAvgRate());
         ui->lineEdit->setText(avgRate.c_str());
     }
 }
@@ -380,16 +377,16 @@ void Adminx::on_pushButton_DisplayAvgRate_clicked()
     ui->comboBox_selectCurrentCategory->clear();
     checkedAdmin[3]=true;
     checkedAdmin[0]=false;
-     checkedAdmin[1]=false;
-     checkedAdmin[2]=false;
-     ui->pushButton_addNew->hide();
-     ui->pushButton_removeNew->hide();
-     ui->pushButton_updateNew->hide();
-     ui->comboBox_selectCurrentCategory->show();
-     ui->pushButton_Ok->show();
-     ui->label_4->setText("Select New :");
-         for(int i=0;i<news.size();i++){
-         ui->comboBox_selectCurrentCategory->addItem(news[i].getTitle().c_str());
-        }
+    checkedAdmin[1]=false;
+    checkedAdmin[2]=false;
+    ui->pushButton_addNew->hide();
+    ui->pushButton_removeNew->hide();
+    ui->pushButton_updateNew->hide();
+    ui->comboBox_selectCurrentCategory->show();
+    ui->pushButton_Ok->show();
+    ui->label_4->setText("Select New :");
+    for(int i=0;i<news.size();i++){
+        ui->comboBox_selectCurrentCategory->addItem(news[i].getTitle().c_str());
+    }
 }
 

@@ -15,9 +15,7 @@ class Login : public QMainWindow
 
 public:
     Adminx ad;
-   // QString username;
-    //QString password;
-    static int count;
+    static int UserID;
     Login(QWidget *parent = nullptr);
     ~Login();
 
@@ -36,7 +34,5 @@ private slots:
 private:
     Ui::Login *ui;
     SignUP *sign=new SignUP;
-    // protected:
-    // void closeEvent(QCloseEvent* event) override;
 };
 #endif // LOGIN_H

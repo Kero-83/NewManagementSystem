@@ -31,7 +31,7 @@ public:
     User( string username,string password, string region, string email);
     User(string firstname,string lastname,string username,string password,string email);
     String category ;
-    //double rate ;
+    // double rate ;
 
     vector<NewsModel> Search(SearchBasedOn searchBasedOn, string inp);
     void ShowNewBasedOnCategory();

@@ -33,6 +33,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         newsmodel.h newsmodel.cpp
         adminx.h adminx.cpp adminx.ui
         search.h search.cpp search.ui
+        img.qrc
+        stdafx.h stdafx.cpp
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Login APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

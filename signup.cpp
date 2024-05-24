@@ -26,7 +26,7 @@ void SignUP::close_window(){
 
 bool SignUP::_validEmail(String email)
 {
-    int atOccur = 0;
+
     int i = 0;
     for(auto &ch : email)
     {
@@ -40,12 +40,14 @@ bool SignUP::_validEmail(String email)
     }
     return false;
 }
-bool SignUP::_validUsername_email(String username,String email){
-    for( int i=0;i<Adminx::users.size();i++){
+bool SignUP::_validUsername_email(String username,String email)
+{
+    for( int i=0;i<Adminx::users.size();i++)
+    {
         if(username==Adminx::users[i].getUsername()||email==Adminx::users[i].getEmail())
             return true;
+    }
         return false;
-}
 }
 void SignUP::_validation(){
     bool check;

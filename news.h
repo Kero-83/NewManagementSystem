@@ -28,12 +28,11 @@ public:
     void editRate();
     void checkRate();
     void calcRate(int, NewsModel&);
+    bool checkValidateOfCategory();
 private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_saveNewAdmin_clicked();
-
-   // void on_pushButton_2_clicked();
 
     void on_pushButton_editTitle_clicked();
 
@@ -44,6 +43,8 @@ private slots:
     void on_pushButton_saveRate_clicked();
 
     void on_pushButton_2_clicked();
+
+    void on_pushButton_editCategory_clicked();
 
 private:
     Ui::News *ui;

@@ -38,7 +38,7 @@ private slots:
 public:
     string currentCat;
     string currentTitle;
-   static int index;
+   static int currentNew;
     static vector<bool>checked;
    void ShowNewBasedOnDate();
     void ShowNewBasedOnCategory();
